@@ -405,7 +405,7 @@
         .footer {
             background-color: var(--primary-color);
             color: white;
-            padding: 50px 0 20px;
+            padding: 80px 0 50px 0;
         }
 
         .footer-logo {
@@ -417,19 +417,25 @@
             font-family: var(--font-secondary);
             font-style: italic;
             margin-bottom: 30px;
-            font-size: 1.2rem;
+            margin-top: 20px;
+            font-size: 1.35rem;
         }
 
         .footer-heading {
             color: white;
             text-transform: uppercase;
+            font-size: 1.25rem;
+            margin-bottom: 7px;
+        }
+
+        .footer-heading-2 {
+            color: white;
             font-size: 1rem;
-            margin-bottom: 20px;
         }
 
         .footer-info {
             font-size: 0.9rem;
-            margin-bottom: 15px;
+            margin-bottom: 3px;
         }
 
         .social-links {
@@ -454,8 +460,9 @@
         }
 
         .equal-housing {
-            max-width: 30px;
             margin-left: 10px;
+            height: 50px;
+            width: auto;
         }
 
         @media (max-width: 991px) {
@@ -464,7 +471,22 @@
             }
         }
 
+        .info-cobank {
+            margin-bottom: 3px;
+        }
+        .contact-us {
+            margin-right: 110px;
+            padding-left: 90px;
+        }
+        .fab {
+            height: 30px;
+        }
         
+        @media (max-width: 1400px) {
+            .contact-us {
+                margin-right: 70px;
+            }
+        }
         /* Responsive Adjustments */
         @media (max-width: 991px) {
             .gallery-container {
@@ -474,6 +496,14 @@
             
             .electric-images {
                 margin-top: 30px;
+            }
+
+            .contact-us {
+                padding: 10px;
+            }
+
+            .footer-bottom {
+                margin-top: 0px;
             }
         }
         
@@ -751,36 +781,55 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <svg id="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 64.6" fill="#fff" xmlns:v="https://vecta.io/nano"><path d="M86.7 15.5c4.4 0 8.7 1.5 10.8 2.8l1.1-5.7C96 11.1 91.9 9.8 86 9.8c-10.7 0-23.1 7.5-23.1 22.3S75.2 54.4 86 54.4s10-1.3 12.7-2.7l-1.3-5s-.5.3-.6.3c-2.6 1.1-6 1.8-10 1.8-8.6 0-17.3-5.5-17.3-16.6s8.9-16.7 17.3-16.7m33.2.5c-9.8 0-19.6 7.3-19.6 19.2s9.7 19.2 19.6 19.2 19.6-7.2 19.6-19.2S129.9 16 120 16m0 32.8c-6.5 0-13.2-5-13.2-13.7s6.7-13.6 13.2-13.6 13.2 4.9 13.2 13.6-6.8 13.7-13.2 13.7M250 31l.1 10.1h-.1c-2.6-3.2-6.5-7.5-9-10.2l-18.4-20.2h-4.5v42.9h6.5V32.1l-.1-10.8h.1l9.9 11.2s8.1 9.3 16.1 17.7c1.8 1.9 4.2 3.4 5.9 3.4h0V10.7H250V31zm-84.9-1.6c2.5-1.1 4-4.4 4-7.5 0-7.5-6.3-11.2-12-11.2h-12v42.9H159c6.7 0 14.1-4.2 14.1-13s-4-10-7.9-11.1m-13.7-13.3h4.4c3.5 0 6.5 1.7 6.5 5.7s-3 5.6-6.5 5.6h-4.4V16.2zm6.2 31.9h-6.1V33h6.1c4.5 0 8.7 2.4 8.7 7.5s-4.2 7.5-8.7 7.5m121.1-16.1l17.8-21.2c-2.2-.2-7.1-.3-10.6 3.6C281.8 19 272.1 31 272.1 31V10.7h-6.5v42.9h6.5V49v-.6-14.9l13.6 16.1c3 3.5 6.6 4.6 10.7 4.6h1.1l-18.8-22.3zm-86.1-21.8l-18.3 43.5h.4c2.9 0 6.1-.7 7.3-3.2 1-1.9 3.3-7.9 3.3-7.9h16.7s2.1 5.4 3 7.1c1.1 2 2.7 4 8.1 4h.1L195 10.1h-2.4zm7.2 27.2h-12.2l6.1-15.7h.1l6.1 15.7M8.5 8.7v32.9s.6 12.6 12.9 12.6h25.8L18.5 18.7l-10-10zm291.9 7.5c-1.7 0-2.9-1.2-2.9-2.8s1.3-2.8 2.9-2.8 2.8 1.1 2.8 2.8-1.3 2.8-2.8 2.8zm0-5c-1.3 0-2.2.9-2.2 2.3s.9 2.3 2.2 2.3 2.2-.9 2.2-2.3-1-2.3-2.2-2.3zm-.5 3.8h-.5v-3.1h1.2c.8 0 1.2.3 1.2.9s-.4.8-.8.8l.9 1.3h-.6l-.8-1.3h-.5v1.3zm.6-1.7c.4 0 .7 0 .7-.5s-.4-.4-.7-.4h-.6v.9h.6z"/><path d="M8.5 8.7h32.9S54 9.3 54 21.6v25.8L18.5 18.7l-10-10z" opacity=".7"/></svg>
+                    <svg width="200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 64.6" fill="#fff" xmlns:v="https://vecta.io/nano"><path d="M86.7 15.5c4.4 0 8.7 1.5 10.8 2.8l1.1-5.7C96 11.1 91.9 9.8 86 9.8c-10.7 0-23.1 7.5-23.1 22.3S75.2 54.4 86 54.4s10-1.3 12.7-2.7l-1.3-5s-.5.3-.6.3c-2.6 1.1-6 1.8-10 1.8-8.6 0-17.3-5.5-17.3-16.6s8.9-16.7 17.3-16.7m33.2.5c-9.8 0-19.6 7.3-19.6 19.2s9.7 19.2 19.6 19.2 19.6-7.2 19.6-19.2S129.9 16 120 16m0 32.8c-6.5 0-13.2-5-13.2-13.7s6.7-13.6 13.2-13.6 13.2 4.9 13.2 13.6-6.8 13.7-13.2 13.7M250 31l.1 10.1h-.1c-2.6-3.2-6.5-7.5-9-10.2l-18.4-20.2h-4.5v42.9h6.5V32.1l-.1-10.8h.1l9.9 11.2s8.1 9.3 16.1 17.7c1.8 1.9 4.2 3.4 5.9 3.4h0V10.7H250V31zm-84.9-1.6c2.5-1.1 4-4.4 4-7.5 0-7.5-6.3-11.2-12-11.2h-12v42.9H159c6.7 0 14.1-4.2 14.1-13s-4-10-7.9-11.1m-13.7-13.3h4.4c3.5 0 6.5 1.7 6.5 5.7s-3 5.6-6.5 5.6h-4.4V16.2zm6.2 31.9h-6.1V33h6.1c4.5 0 8.7 2.4 8.7 7.5s-4.2 7.5-8.7 7.5m121.1-16.1l17.8-21.2c-2.2-.2-7.1-.3-10.6 3.6C281.8 19 272.1 31 272.1 31V10.7h-6.5v42.9h6.5V49v-.6-14.9l13.6 16.1c3 3.5 6.6 4.6 10.7 4.6h1.1l-18.8-22.3zm-86.1-21.8l-18.3 43.5h.4c2.9 0 6.1-.7 7.3-3.2 1-1.9 3.3-7.9 3.3-7.9h16.7s2.1 5.4 3 7.1c1.1 2 2.7 4 8.1 4h.1L195 10.1h-2.4zm7.2 27.2h-12.2l6.1-15.7h.1l6.1 15.7M8.5 8.7v32.9s.6 12.6 12.9 12.6h25.8L18.5 18.7l-10-10zm291.9 7.5c-1.7 0-2.9-1.2-2.9-2.8s1.3-2.8 2.9-2.8 2.8 1.1 2.8 2.8-1.3 2.8-2.8 2.8zm0-5c-1.3 0-2.2.9-2.2 2.3s.9 2.3 2.2 2.3 2.2-.9 2.2-2.3-1-2.3-2.2-2.3zm-.5 3.8h-.5v-3.1h1.2c.8 0 1.2.3 1.2.9s-.4.8-.8.8l.9 1.3h-.6l-.8-1.3h-.5v1.3zm.6-1.7c.4 0 .7 0 .7-.5s-.4-.4-.7-.4h-.6v.9h.6z"/><path d="M8.5 8.7h32.9S54 9.3 54 21.6v25.8L18.5 18.7l-10-10z" opacity=".7"/></svg>
                     <p class="footer-tagline">Life is bigger in a small town.</p>
                 </div>
-                <div class="col-lg-4 offset-lg-1">
+                <div class="col-lg-4 contact-us">
+                    <h4 class="footer-heading">About Us</h4>
                     <p class="footer-info">CoBank is a national cooperative bank serving vital industries across rural America. The bank provides loans, leasing, and other financial services to agribusinesses, rural infrastructure providers and Farm Credit customers in all 50 states.</p>
                 </div>
                 <div class="col-lg-3">
                     <h4 class="footer-heading">Contact Us</h4>
+                    <p class="footer-info">CoBank National Office</p>
                     <p class="footer-info">6340 S. Fiddlers Green Circle</p>
                     <p class="footer-info">Greenwood Village, CO 80111</p>
                     <p class="footer-info">800-542-8072</p>
                     
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <h5 class="footer-heading-2">More Contact Information</h5>
+                        <a href="#">
+                            <svg id="Group_94" data-name="Group 94" class="fab" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.737" height="34.975" viewBox="0 0 37.737 34.975"><defs><clipPath id="clip-path"><rect id="Rectangle_144" data-name="Rectangle 144" width="37.737" height="34.975" fill="#fff"/></clipPath></defs><g id="Group_84" data-name="Group 84" clip-path="url(#clip-path)">
+                                <path id="Path_247" data-name="Path 247" d="M36.738,28.415a1,1,0,1,0,1,1,.986.986,0,0,0-1-1m0,1.847a.848.848,0,1,1,.848-.848.839.839,0,0,1-.848.848m.218-.75a.3.3,0,0,0,.226-.3c0-.19-.129-.3-.345-.3h-.486v1h.173v-.38h.22l.268.38h.213l-.282-.4Zm-.432-.118v-.326h.285c.124,0,.195.057.195.157s-.073.169-.195.169ZM32.394,0H2.582A2.582,2.582,0,0,0,0,2.582V32.393a2.582,2.582,0,0,0,2.582,2.582H32.394a2.582,2.582,0,0,0,2.582-2.582V2.582A2.582,2.582,0,0,0,32.394,0M10.424,29.8H5.166v-16.7h5.258ZM7.8,10.777A2.976,2.976,0,0,1,4.764,7.759,2.978,2.978,0,0,1,7.8,4.74a2.978,2.978,0,0,1,3.032,3.019A2.977,2.977,0,0,1,7.8,10.777M29.809,29.808H24.551V20.685c0-2.692-1.144-3.522-2.62-3.522-1.56,0-3.09,1.174-3.09,3.589v9.056H13.583V13.1H18.64v2.314h.067a5.736,5.736,0,0,1,5-2.784c2.934,0,6.1,1.74,6.1,6.843Z" fill="#fff"/></g>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fab" width="35.769" height="35.551" viewBox="0 0 35.769 35.551">
+                                <path id="Icon_simple-facebook" data-name="Icon simple-facebook" d="M35.769,17.884A17.884,17.884,0,1,0,15.09,35.551v-12.5H10.549v-5.17H15.09v-3.94c0-4.482,2.67-6.958,6.755-6.958a27.5,27.5,0,0,1,4,.349v4.4H23.593a2.585,2.585,0,0,0-2.915,2.793v3.355h4.96l-.793,5.17H20.679v12.5A17.889,17.889,0,0,0,35.769,17.884Z" transform="translate(0 0)" fill="#fff"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fab" width="35.771" height="35.771" viewBox="0 0 35.771 35.771">
+                                <path id="Icon_simple-instagram" data-name="Icon simple-instagram" d="M17.886,0c-4.859,0-5.466.022-7.373.107A13.189,13.189,0,0,0,6.171.939,8.759,8.759,0,0,0,3,3,8.727,8.727,0,0,0,.939,6.171a13.15,13.15,0,0,0-.832,4.342C.018,12.42,0,13.027,0,17.886s.022,5.466.107,7.373A13.2,13.2,0,0,0,.939,29.6,8.771,8.771,0,0,0,3,32.77a8.746,8.746,0,0,0,3.169,2.063,13.205,13.205,0,0,0,4.342.832c1.908.089,2.514.107,7.373.107s5.466-.022,7.373-.107a13.236,13.236,0,0,0,4.342-.832A9.141,9.141,0,0,0,34.832,29.6a13.2,13.2,0,0,0,.832-4.342c.089-1.908.107-2.514.107-7.373s-.022-5.466-.107-7.373a13.227,13.227,0,0,0-.832-4.342A8.778,8.778,0,0,0,32.77,3,8.715,8.715,0,0,0,29.6.939,13.158,13.158,0,0,0,25.259.107C23.351.018,22.745,0,17.886,0Zm0,3.219c4.774,0,5.343.024,7.229.106a9.854,9.854,0,0,1,3.319.619,5.886,5.886,0,0,1,3.4,3.394,9.875,9.875,0,0,1,.616,3.319c.085,1.887.1,2.453.1,7.229s-.022,5.343-.11,7.229a10.065,10.065,0,0,1-.627,3.319,5.679,5.679,0,0,1-1.34,2.06,5.58,5.58,0,0,1-2.057,1.335,9.948,9.948,0,0,1-3.331.616c-1.9.085-2.458.1-7.242.1s-5.345-.022-7.242-.11a10.142,10.142,0,0,1-3.333-.627,5.539,5.539,0,0,1-2.055-1.34,5.431,5.431,0,0,1-1.341-2.057,10.15,10.15,0,0,1-.626-3.331c-.067-1.878-.091-2.458-.091-7.22s.024-5.345.091-7.245a10.139,10.139,0,0,1,.626-3.33A5.3,5.3,0,0,1,5.211,5.23,5.29,5.29,0,0,1,7.266,3.892a9.9,9.9,0,0,1,3.31-.627c1.9-.067,2.459-.089,7.242-.089l.067.045Zm0,5.482a9.184,9.184,0,1,0,9.184,9.184A9.184,9.184,0,0,0,17.886,8.7Zm0,15.146a5.962,5.962,0,1,1,5.962-5.962A5.96,5.96,0,0,1,17.886,23.848ZM29.58,8.339a2.146,2.146,0,1,1-2.146-2.145A2.148,2.148,0,0,1,29.58,8.339Z" transform="translate(0 0)" fill="#fff"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fab" viewBox="0 0 35.653 32.229">
+                                <path id="x-twitter" d="M54.876,48h5.47L48.4,61.651,62.453,80.229h-11L42.829,68.964,32.975,80.229H27.5l12.775-14.6L26.8,48H38.08l7.786,10.3ZM52.955,76.96h3.029L36.43,51.1H33.176Z" transform="translate(-26.8 -48)" fill="#fff"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="row">
-                    <div class="col-md-9">
-                        <p>2025 CoBank. All Rights Reserved.</p>
-                        <p>Farm Credit is an Equal Housing Lender, and an Equal Credit Opportunity Lender.</p>
-                        <p>Conditions of Use  |  Privacy  |  Transparency in Coverage  |  Anti-Money Laundering  |  CoBank Code of Ethics  |  Confidential Hotline</p>
-                        <p>1‑888‑525‑5391 or online at cobank.ethicspoint.com</p>
+                    <div class="col-md-8">
+                        <p class="info-cobank">2025 CoBank. All Rights Reserved.</p>
+                        <p class="info-cobank">Farm Credit is an Equal Housing Lender, and an Equal Credit Opportunity Lender.</p>
+                        <p class="info-cobank">Conditions of Use  |  Privacy  |  Transparency in Coverage  |  Anti-Money Laundering  |  CoBank Code of Ethics  |  Confidential Hotline</p>
+                        <p class="info-cobank">1‑888‑525‑5391 or online at cobank.ethicspoint.com</p>
                     </div>
-                    <div class="col-md-3 text-md-end">
-                        <p>Equal Housing Lender <img src="/images/Clover.webp" alt="Equal Housing Lender" class="equal-housing"></p>
+                    <div class="col-md-4 text-md-end">
+                        <p>Proud member of the Farm Credit System <img src="/images/Clover.webp" alt="Equal Housing Lender" class="equal-housing"></p>
                     </div>
                 </div>
             </div>
