@@ -60,14 +60,6 @@
             padding: 60px 0;
         }
         
-        #nav-svg {
-            width: 300px;
-        }
-
-        #footer-svg {
-            width: 200px;
-        }
-
         .section-title {
             position: relative;
             margin-bottom: 40px;
@@ -120,8 +112,12 @@
             border-bottom: 4px solid var(--secondary-color);
         }
         
-        .logo {
-            max-width: 180px;
+        #nav-svg {
+            width: 300px;
+        }
+
+        #footer-svg {
+            width: 200px;
         }
         
         /* Hero Section - Photo Gallery */
@@ -132,10 +128,10 @@
         
         .gallery-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             gap: 10px;
-            padding: 10px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -145,6 +141,7 @@
             overflow: hidden;
             border-radius: 5px;
             height: 200px;
+            align-self: stretch;
         }
         
         .gallery-item img {
@@ -158,11 +155,61 @@
             transform: scale(1.05);
         }
         
+        /* Gallery item specific positions */
+        .gallery-item-1 {
+            grid-column: 1 / span 4;
+        }
+        
+        .gallery-item-2 {
+            grid-column: 5 / span 4;
+        }
+        
+        .gallery-item-3 {
+            grid-column: 9 / span 4;
+        }
+        
+        .gallery-item-4 {
+            grid-column: 13 / span 4;
+            grid-row: span 2;
+            height: 100%;
+        }
+        
+        .gallery-item-5 {
+            grid-column: 1 / span 3;
+            grid-row: span 2;
+            height: 100%;
+        }
+        
+        .gallery-item-6 {
+            grid-column: 4 / span 5;
+        }
+        
+        .gallery-item-7 {
+            grid-column: 9 / span 4;
+        }
+        
+        .gallery-item-8 {
+            grid-column: 13 / span 4;
+            grid-row: 3;
+        }
+        
+        /* Tagline section inside gallery */
+        .gallery-tagline {
+            grid-column: 4 / span 9;
+            grid-row: span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: center;
+        }
+        
         /* Tagline Section */
         .tagline-section {
             text-align: center;
             padding: 40px 0;
-            background-color: var(--light-gray);
         }
         
         .tagline-text {
@@ -255,12 +302,27 @@
             margin-bottom: 20px;
         }
         
-        .electric-images {
+        .electric-images-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
             gap: 10px;
             height: 100%;
+        }
+        
+        .electric-image-1 {
+            grid-column: 1 / span 12;
+            grid-row: 1 / span 6;
+        }
+        
+        .electric-image-2 {
+            grid-column: 1 / span 7;
+            grid-row: 7 / span 6;
+        }
+        
+        .electric-image-3 {
+            grid-column: 8 / span 5;
+            grid-row: 7 / span 6;
         }
         
         .electric-image {
@@ -407,12 +469,12 @@
             color: white;
             padding: 80px 0 50px 0;
         }
-
+        
         .footer-logo {
             margin-bottom: 20px;
             max-width: 150px;
         }
-
+        
         .footer-tagline {
             font-family: var(--font-secondary);
             font-style: italic;
@@ -420,7 +482,7 @@
             margin-top: 20px;
             font-size: 1.35rem;
         }
-
+        
         .footer-heading {
             color: white;
             text-transform: uppercase;
@@ -432,33 +494,34 @@
             color: white;
             font-size: 1rem;
         }
-
+        
         .footer-info {
             font-size: 0.9rem;
             margin-bottom: 3px;
         }
-
+        
         .social-links {
             margin-top: 20px;
         }
-
+        
         .social-links a {
             display: inline-block;
             color: white;
             margin-right: 15px;
             font-size: 1.2rem;
         }
-
+        
         .social-links a:hover {
             color: var(--secondary-color);
         }
-
+        
         .footer-bottom {
             margin-top: 40px;
             padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.8rem;
         }
-
+        
         .equal-housing {
             margin-left: 10px;
             height: 50px;
@@ -491,11 +554,47 @@
         @media (max-width: 991px) {
             .gallery-container {
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(4, 1fr);
+                grid-template-rows: auto;
             }
             
-            .electric-images {
+            /* Reset all gallery items for mobile layout */
+            .gallery-item-1, .gallery-item-2, .gallery-item-3, .gallery-item-4,
+            .gallery-item-5, .gallery-item-6, .gallery-item-7, .gallery-item-8,
+            .gallery-tagline {
+                grid-column: auto;
+                grid-row: auto;
+                height: 200px;
+            }
+            
+            /* Make tagline full width in mobile */
+            .gallery-tagline {
+                grid-column: 1 / span 2;
+                padding: 40px 20px;
+            }
+            
+            /* Electric grid adjustments */
+            .electric-images-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                gap: 10px;
                 margin-top: 30px;
+            }
+            
+            .electric-image-1, .electric-image-2, .electric-image-3 {
+                grid-column: 1;
+                height: 250px;
+            }
+            
+            .electric-image-1 {
+                grid-row: 1;
+            }
+            
+            .electric-image-2 {
+                grid-row: 2;
+            }
+            
+            .electric-image-3 {
+                grid-row: 3;
             }
 
             .contact-us {
@@ -565,42 +664,38 @@
         </div>
     </header>
 
-    <!-- Photo Gallery Section -->
+    <!-- Photo Gallery Section with Integrated Tagline -->
     <section class="photo-gallery">
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item gallery-item-1">
                 <img src="./images/Mother_Son_Kitchen_Thermostat.webp" alt="Family at home">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item gallery-item-2">
                 <img src="./images/Downtown_Night_Shot.webp" alt="Small town at night">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item gallery-item-3">
                 <img src="./images/Girl_Showing_Cow.webp" alt="Children playing">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item gallery-item-4">
                 <img src="./images/Scoreboard_Lights.webp" alt="Football scoreboard">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item gallery-item-5">
                 <img src="./images//Native_American_Traditional_Dress_Parade.webp" alt="Native American dancers">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item gallery-item-6">
                 <img src="./images/Group_of_Kids_Country_Bridge.webp" alt="Children fishing">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item gallery-item-7">
                 <img src="./images/Girls_American_Flag_Rodeo.webp" alt="Cowboys at ranch">
             </div>
-            <div class="gallery-item">
-                <img src="./images/Girl_Tire_Swing.webp" alt="Child on swing">
+            <div class="gallery-tagline">
+                <h2 class="cursive-title">Life is bigger in a small town.</h2>
+                <div class="tagline-text">
+                    <p>From prairie sunsets to Fourth of July parades to cheering the team on at every home game, life really is bigger in a small town. It's where you feel rooted, where taking care of your neighbor is every bit as important as your own self-determination.</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Tagline Section -->
-    <section class="tagline-section">
-        <div class="container">
-            <h2 class="cursive-title">Life is bigger in a small town.</h2>
-            <div class="tagline-text">
-                <p>From prairie sunsets to Fourth of July parades to cheering the team on at every home game, life really is bigger in a small town. It's where you feel rooted, where taking care of your neighbor is every bit as important as your own self-determination.</p>
+            <div class="gallery-item gallery-item-8">
+                <img src="./images/Girl_Tire_Swing.webp" alt="Child on swing">
             </div>
         </div>
     </section>
@@ -609,7 +704,7 @@
     <section class="video-section">
         <div class="container">
             <div class="video-container">
-                <img src="https://picsum.photos/800/450" alt="Video Thumbnail" style="width:100%;">
+                        <img src="https://picsum.photos/800/450" alt="Video Thumbnail" style="width:100%;">
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
@@ -627,16 +722,22 @@
     <section class="electric-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <h2 class="electric-title">How <strong>CoBank</strong> supports <span>ELECTRIC DISTRIBUTION</span></h2>
-                    <p class="electric-content">We provide financing, cash management, leasing and other key services to electric cooperatives across the country. This allows them to get the help they need. Our team delivers a depth of knowledge and commitment to rural America like no other bank. We're also equipped to offer insights on strategic considerations facing our clients, ranging from EV infrastructure to broadband development.</p>
+                    <p class="electric-content">We provide financing, cash management, leasing and other key services to electric cooperatives serving millions of people who call this their home. Our team delivers a depth of knowledge and commitment to rural America like no other bank. We're also equipped to offer insights on strategic considerations facing our clients, ranging from EV infrastructure to broadband development.</p>
                     <a href="#contact" class="btn btn-light mt-3">GET IN TOUCH</a>
                 </div>
-                <div class="col-lg-6">
-                    <div class="electric-images">
-                        <img src="/api/placeholder/500/300" alt="Rural Power Lines" class="electric-image">
-                        <img src="/api/placeholder/500/300" alt="Family with Tablet" class="electric-image">
-                        <img src="/api/placeholder/500/300" alt="Rural Sunset" class="electric-image">
+                <div class="col-lg-7">
+                    <div class="electric-images-grid">
+                        <div class="electric-image-1">
+                            <img src="https://picsum.photos/800/400" alt="Rural Power Lines" class="electric-image">
+                        </div>
+                        <div class="electric-image-2">
+                            <img src="https://picsum.photos/400/300" alt="Family with Tablet" class="electric-image">
+                        </div>
+                        <div class="electric-image-3">
+                            <img src="https://picsum.photos/300/300" alt="Rural Sunset" class="electric-image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -788,7 +889,7 @@
                     <h4 class="footer-heading">About Us</h4>
                     <p class="footer-info">CoBank is a national cooperative bank serving vital industries across rural America. The bank provides loans, leasing, and other financial services to agribusinesses, rural infrastructure providers and Farm Credit customers in all 50 states.</p>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4 mb-4">
                     <h4 class="footer-heading">Contact Us</h4>
                     <p class="footer-info">CoBank National Office</p>
                     <p class="footer-info">6340 S. Fiddlers Green Circle</p>
@@ -835,7 +936,6 @@
             </div>
         </div>
     </footer>
-    
 
     <!-- Bootstrap JS and other JS libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
