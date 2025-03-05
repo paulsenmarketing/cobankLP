@@ -219,8 +219,7 @@
             justify-items: center;
             padding-left: 30px;
             padding-right: 30px;
-            text-align: center;
-            
+            text-align: center;            
         }
         
         /* Tagline Section */
@@ -643,6 +642,11 @@
         }
         .fab {
             height: 30px;
+            transition: transform .75s;
+        }
+
+        .fab:hover {
+            transform: rotate(360deg);
         }
 
         .bg-pattern {
@@ -707,11 +711,23 @@
             }
             
             .electric-title {
-                font-size: 1.5rem;
+                font-size: 2.1rem;
             }
             
             .electric-title span {
-                font-size: 1.2rem;
+                font-size: 2rem;
+            }
+
+            .btn-primary-custom {
+                font-size: 20px;
+            }
+
+            .action-button {
+                max-width: 225px;
+            }
+
+            .cursive-title {
+                font-size: 2.5rem;
             }
             
             .video-container iframe {
@@ -728,11 +744,7 @@
             .video-container iframe {
                 height: 250px;
             }
-            
-            .electric-title {
-                font-size: 1.3rem;
-            }
-            
+          
             .testimonial-slide {
                 padding: 30px 20px;
             }
