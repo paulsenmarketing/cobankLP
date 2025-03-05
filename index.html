@@ -359,7 +359,14 @@
         .service-card {
             padding: 30px 0px;
             margin-bottom: 30px;
+            transition: background-color 0.3s ease, padding 0.3s ease;
         }
+
+        .service-card:hover {
+            background-color: rgba(0, 56, 101, 0.1);
+            padding: 30px;
+        }
+
         
         .service-icon {
             width: 90px;
@@ -385,8 +392,10 @@
         
         .service-description {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            width: 300px;
         }
+
         
         /* Testimonial Slider */
         .testimonial-slider {
@@ -401,7 +410,7 @@
         }
         
         .testimonial-text {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-style: italic;
             margin-bottom: 20px;
             position: relative;
@@ -415,8 +424,18 @@
         }
         
         .testimonial-title {
-            font-size: 0.9rem;
+            font-size: 1rem;
             opacity: 0.9;
+        }
+
+        .carousel-control-prev-icon {
+            scale: 1.75;
+            filter: brightness(0) saturate(100%) invert(21%) sepia(56%) saturate(1066%) hue-rotate(93deg) brightness(25%) contrast(101%);
+        }
+
+        .carousel-control-next-icon {
+            scale: 1.75;
+            filter: brightness(0) saturate(100%) invert(21%) sepia(56%) saturate(1066%) hue-rotate(93deg) brightness(25%) contrast(101%);
         }
 
         @media (max-width: 800px) {
@@ -448,6 +467,7 @@
             color: var(--secondary-color);
             font-weight: 700;
             text-transform: uppercase;
+            padding-left: 10px;
             font-style: normal;
             font-family: var(--font-body);
         }
@@ -455,7 +475,7 @@
         .story-card {
             background-color: white;
             margin-bottom: 30px;
-            border: black solid 1px;
+            border: #707070 solid 1px;
             transition: all 0.3s ease;
             height: 100%;
             overflow: hidden;
@@ -477,15 +497,17 @@
         }
         
         .story-title {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin-bottom: 10px;
             color: var(--primary-color);
             font-weight: 600;
+            line-height: 26px;
         }
         
         .story-organization {
             font-size: 1rem;
             color: #666;
+            font-weight: 600;
             text-transform: uppercase;
             margin-top: 15px;
         }
@@ -507,7 +529,7 @@
             font-style: italic;
             margin-bottom: 30px;
             margin-top: 20px;
-            font-size: 1.35rem;
+            font-size: 1.25rem;
         }
         
         .footer-heading {
@@ -523,7 +545,8 @@
         }
         
         .footer-info {
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 200;
             margin-bottom: 3px;
         }
         
@@ -535,7 +558,7 @@
             display: inline-block;
             color: white;
             margin-right: 15px;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         }
         
         .social-links a:hover {
@@ -788,61 +811,78 @@
     </section>
 
     <!-- Services Grid Section -->
-    <section class="services-grid">
+    <section class="services-grid bg-pattern">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg data-name="Group 504" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.356 56.45"><defs><clipPath id="a"><path data-name="Rectangle 344" fill="none" stroke="#fff" stroke-width="2" d="M0 0h66.356v56.451H0z"/></clipPath></defs><g data-name="Group 503" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path data-name="Path 43424" d="M4.349 6.402v-4.34a1.26 1.26 0 0 1 1.26-1.26h39.155a1.26 1.26 0 0 1 1.26 1.26v12.882"/><path data-name="Line 1" d="M4.349 37.463v-4.961"/><path data-name="Path 43425" d="M4.349 48.034v4.032a1.26 1.26 0 0 0 1.26 1.263h26.364"/><path data-name="Line 2" d="M46.024 26.365v5.094"/><path data-name="Line 3" d="M4.349 21.932v-4.961"/><path data-name="Path 43426" d="M46.175 26.365h-7.267a4.508 4.508 0 0 1 0-9.015h7.267a1.8 1.8 0 0 1 1.8 1.8v5.413a1.8 1.8 0 0 1-1.8 1.802"/><path data-name="Rectangle 340" d="M13.681 6.1h23.01v7.617h-23.01z"/><rect data-name="Rectangle 341" width="7.818" height="5.222" rx="2.611" transform="translate(.802 9.076)"/><rect data-name="Rectangle 342" width="7.818" height="5.221" rx="2.611" transform="translate(.802 24.608)"/><path data-name="Rectangle 343" d="M3.413 40.139h2.6A2.61 2.61 0 0 1 8.62 42.75h0a2.61 2.61 0 0 1-2.611 2.61H3.412a2.61 2.61 0 0 1-2.61-2.61h0a2.61 2.61 0 0 1 2.611-2.611"/><path data-name="Path 43427" d="M49.225 29.829c0 1.991 3.655 3.605 8.164 3.605s8.164-1.614 8.164-3.605-3.655-3.605-8.164-3.605-8.164 1.614-8.164 3.605"/><path data-name="Path 43428" d="M65.553 35.544c-1.108 1.5-4.3 2.579-8.057 2.579a19 19 0 0 1-2.55-.173"/><path data-name="Path 43429" d="M65.553 40.06c-1.108 1.5-4.3 2.579-8.057 2.579"/><path data-name="Path 43430" d="M57.804 47.325c3.627-.057 6.673-1.12 7.749-2.577"/><path data-name="Path 43431" d="M56.448 52.172q.463.023.94.024c4.509 0 8.165-1.613 8.165-3.6V29.83"/><path data-name="Line 4" d="M49.225 29.83v2.908"/><path data-name="Path 43432" d="M41.477 49.385a3.38 3.38 0 0 0 2.693 1.229 2.668 2.668 0 1 0 .276-5.274h0a2.63 2.63 0 0 1-2.64-2.389 2.68 2.68 0 0 1 2.893-2.4 3.08 3.08 0 0 1 2.424 1.088"/><path data-name="Line 5" d="M44.416 50.726v1.869"/><path data-name="Line 6" d="M44.416 38.44v1.948"/><circle data-name="Ellipse 2" cx="10.131" cy="10.131" r="10.131" transform="translate(34.286 35.387)"/><path data-name="Line 7" d="M18.746 23.558h12.88"/><path data-name="Line 8" d="M18.746 34.334h12.88"/><path data-name="Line 9" d="M16.455 28.946h17.463"/><path data-name="Path 43433" d="M41.477 49.385a3.38 3.38 0 0 0 2.693 1.229 2.668 2.668 0 1 0 .276-5.274h0a2.63 2.63 0 0 1-2.64-2.389 2.68 2.68 0 0 1 2.893-2.4 3.08 3.08 0 0 1 2.424 1.088"/><path data-name="Line 10" d="M44.416 50.726v1.869"/><path data-name="Line 11" d="M44.416 38.44v1.948"/></g></svg>
-                        </div>
-                        <h3 class="service-title">Financing</h3>
-                        <p class="service-description">Find flexible financing options for operations, infrastructure projects and more.</p>
+                        <a class="service-card-link" href="https://www.cobank.com/web/cobank/corporate/services/loans">
+                            <div class="service-icon">
+                                <svg data-name="Group 504" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.356 56.45"><defs><clipPath id="a"><path data-name="Rectangle 344" fill="none" stroke="#fff" stroke-width="2" d="M0 0h66.356v56.451H0z"/></clipPath></defs><g data-name="Group 503" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path data-name="Path 43424" d="M4.349 6.402v-4.34a1.26 1.26 0 0 1 1.26-1.26h39.155a1.26 1.26 0 0 1 1.26 1.26v12.882"/><path data-name="Line 1" d="M4.349 37.463v-4.961"/><path data-name="Path 43425" d="M4.349 48.034v4.032a1.26 1.26 0 0 0 1.26 1.263h26.364"/><path data-name="Line 2" d="M46.024 26.365v5.094"/><path data-name="Line 3" d="M4.349 21.932v-4.961"/><path data-name="Path 43426" d="M46.175 26.365h-7.267a4.508 4.508 0 0 1 0-9.015h7.267a1.8 1.8 0 0 1 1.8 1.8v5.413a1.8 1.8 0 0 1-1.8 1.802"/><path data-name="Rectangle 340" d="M13.681 6.1h23.01v7.617h-23.01z"/><rect data-name="Rectangle 341" width="7.818" height="5.222" rx="2.611" transform="translate(.802 9.076)"/><rect data-name="Rectangle 342" width="7.818" height="5.221" rx="2.611" transform="translate(.802 24.608)"/><path data-name="Rectangle 343" d="M3.413 40.139h2.6A2.61 2.61 0 0 1 8.62 42.75h0a2.61 2.61 0 0 1-2.611 2.61H3.412a2.61 2.61 0 0 1-2.61-2.61h0a2.61 2.61 0 0 1 2.611-2.611"/><path data-name="Path 43427" d="M49.225 29.829c0 1.991 3.655 3.605 8.164 3.605s8.164-1.614 8.164-3.605-3.655-3.605-8.164-3.605-8.164 1.614-8.164 3.605"/><path data-name="Path 43428" d="M65.553 35.544c-1.108 1.5-4.3 2.579-8.057 2.579a19 19 0 0 1-2.55-.173"/><path data-name="Path 43429" d="M65.553 40.06c-1.108 1.5-4.3 2.579-8.057 2.579"/><path data-name="Path 43430" d="M57.804 47.325c3.627-.057 6.673-1.12 7.749-2.577"/><path data-name="Path 43431" d="M56.448 52.172q.463.023.94.024c4.509 0 8.165-1.613 8.165-3.6V29.83"/><path data-name="Line 4" d="M49.225 29.83v2.908"/><path data-name="Path 43432" d="M41.477 49.385a3.38 3.38 0 0 0 2.693 1.229 2.668 2.668 0 1 0 .276-5.274h0a2.63 2.63 0 0 1-2.64-2.389 2.68 2.68 0 0 1 2.893-2.4 3.08 3.08 0 0 1 2.424 1.088"/><path data-name="Line 5" d="M44.416 50.726v1.869"/><path data-name="Line 6" d="M44.416 38.44v1.948"/><circle data-name="Ellipse 2" cx="10.131" cy="10.131" r="10.131" transform="translate(34.286 35.387)"/><path data-name="Line 7" d="M18.746 23.558h12.88"/><path data-name="Line 8" d="M18.746 34.334h12.88"/><path data-name="Line 9" d="M16.455 28.946h17.463"/><path data-name="Path 43433" d="M41.477 49.385a3.38 3.38 0 0 0 2.693 1.229 2.668 2.668 0 1 0 .276-5.274h0a2.63 2.63 0 0 1-2.64-2.389 2.68 2.68 0 0 1 2.893-2.4 3.08 3.08 0 0 1 2.424 1.088"/><path data-name="Line 10" d="M44.416 50.726v1.869"/><path data-name="Line 11" d="M44.416 38.44v1.948"/></g></svg>
+                            </div>
+                            <h3 class="service-title">Financing</h3>
+                            <p class="service-description">Find flexible financing options for operations, infrastructure projects and more.</p>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg data-name="Group 511" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.92 63.613"><defs><clipPath id="a"><path data-name="Rectangle 345" fill="none" stroke="#fff" stroke-width="2" d="M0 0h56.92v63.613H0z"/></clipPath></defs><g data-name="Group 510" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path data-name="Path 43434" d="M15.107 24.232V3.107A2.337 2.337 0 0 1 17.446.77h27.617L56.15 11.856v41.8a2.34 2.34 0 0 1-2.337 2.337H40.994"/><path data-name="Path 43435" d="M45.064 9.52V.77L56.15 11.856H47.4a2.336 2.336 0 0 1-2.336-2.336"/><path data-name="Line 12" d="M26.99 11.857v21.322"/><path data-name="Line 13" d="M48.31 33.179H26.988"/><path data-name="Path 43436" d="m28.716 29.353 5.385-6.944 4.662 5.372 8.4-10.739"/><path data-name="Path 43437" d="m47.195 22.249-.03-5.206-5.061 1.218"/><ellipse data-name="Ellipse 9" cx="9.871" cy="4.359" rx="9.871" ry="4.359" transform="translate(.771 27.265)"/><path data-name="Path 43438" d="M.77 38.534c1.34 1.811 5.2 3.118 9.742 3.118a22 22 0 0 0 3.083-.209"/><path data-name="Path 43439" d="M.77 43.994c1.34 1.811 5.2 3.118 9.742 3.118"/><path data-name="Path 43440" d="M10.141 52.778C5.755 52.709 2.07 51.424.77 49.662"/><path data-name="Path 43441" d="M11.779 58.639q-.559.028-1.137.029C5.191 58.667.77 56.716.77 54.31V31.625"/><path data-name="Line 14" d="M20.513 31.625v3.516"/><path data-name="Path 43442" d="M22.773 55.269a4.09 4.09 0 0 0 3.256 1.486c2.128 0 3.853-1.43 3.853-3.194 0-1.671-1.552-2.987-3.519-3.182h0a3.18 3.18 0 0 1-3.193-2.889c0-1.6 1.566-2.9 3.5-2.9a3.72 3.72 0 0 1 2.931 1.316"/><path data-name="Line 15" d="M26.327 56.891v2.259"/><path data-name="Line 16" d="M26.327 42.036v2.356"/><circle data-name="Ellipse 10" cx="12.249" cy="12.249" r="12.249" transform="translate(14.078 38.344)"/></g></svg>
-                        </div>
-                        <h3 class="service-title">Cash Management</h3>
-                        <p class="service-description">Handle incoming and outgoing payments with seamless cash management services.</p>
+                        <a class="service-card-link" href="https://www.cobank.com/web/cobank/corporate/services/cash-management">
+                            <div class="service-icon">
+                                <svg data-name="Group 511" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.92 63.613"><defs><clipPath id="a"><path data-name="Rectangle 345" fill="none" stroke="#fff" stroke-width="2" d="M0 0h56.92v63.613H0z"/></clipPath></defs><g data-name="Group 510" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path data-name="Path 43434" d="M15.107 24.232V3.107A2.337 2.337 0 0 1 17.446.77h27.617L56.15 11.856v41.8a2.34 2.34 0 0 1-2.337 2.337H40.994"/><path data-name="Path 43435" d="M45.064 9.52V.77L56.15 11.856H47.4a2.336 2.336 0 0 1-2.336-2.336"/><path data-name="Line 12" d="M26.99 11.857v21.322"/><path data-name="Line 13" d="M48.31 33.179H26.988"/><path data-name="Path 43436" d="m28.716 29.353 5.385-6.944 4.662 5.372 8.4-10.739"/><path data-name="Path 43437" d="m47.195 22.249-.03-5.206-5.061 1.218"/><ellipse data-name="Ellipse 9" cx="9.871" cy="4.359" rx="9.871" ry="4.359" transform="translate(.771 27.265)"/><path data-name="Path 43438" d="M.77 38.534c1.34 1.811 5.2 3.118 9.742 3.118a22 22 0 0 0 3.083-.209"/><path data-name="Path 43439" d="M.77 43.994c1.34 1.811 5.2 3.118 9.742 3.118"/><path data-name="Path 43440" d="M10.141 52.778C5.755 52.709 2.07 51.424.77 49.662"/><path data-name="Path 43441" d="M11.779 58.639q-.559.028-1.137.029C5.191 58.667.77 56.716.77 54.31V31.625"/><path data-name="Line 14" d="M20.513 31.625v3.516"/><path data-name="Path 43442" d="M22.773 55.269a4.09 4.09 0 0 0 3.256 1.486c2.128 0 3.853-1.43 3.853-3.194 0-1.671-1.552-2.987-3.519-3.182h0a3.18 3.18 0 0 1-3.193-2.889c0-1.6 1.566-2.9 3.5-2.9a3.72 3.72 0 0 1 2.931 1.316"/><path data-name="Line 15" d="M26.327 56.891v2.259"/><path data-name="Line 16" d="M26.327 42.036v2.356"/><circle data-name="Ellipse 10" cx="12.249" cy="12.249" r="12.249" transform="translate(14.078 38.344)"/></g></svg>
+                            </div>
+                            <h3 class="service-title">Cash Management</h3>
+                            <p class="service-description">Handle incoming and outgoing payments with seamless cash management services.</p>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg data-name="Group 512" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.428 66.265"><defs><clipPath id="a"><path data-name="Rectangle 346" fill="#fff" d="M0 0h66.428v66.265H0z"/></clipPath></defs><g data-name="Group 512" fill="#fff"><path data-name="Path 43443" d="M41.984 11.337H19.296a1.106 1.106 0 0 0 0 2.212h22.688a1.106 1.106 0 1 0 0-2.212"/><path data-name="Path 43444" d="M7.678 8.016h34.307a1.106 1.106 0 1 0 0-2.212H7.678a1.106 1.106 0 1 0 0 2.212"/><path data-name="Path 43445" d="M7.678 19.083h34.307a1.106 1.106 0 1 0 0-2.212H7.678a1.106 1.106 0 1 0 0 2.212"/><path data-name="Path 43446" d="M7.678 13.549h6.227a1.106 1.106 0 0 0 0-2.212H7.678a1.106 1.106 0 1 0 0 2.212"/><path data-name="Path 43447" d="M42.239 59.372h-7.947a1.06 1.06 0 0 1-1.026-.763l-1.4-4.606a1.108 1.108 0 0 0-2.062-.153l-1.578 3.344a1.1 1.1 0 0 1-.4.449 1.1 1.1 0 0 1-.572.167H24.83a1.108 1.108 0 0 0 0 2.215h2.431a3.3 3.3 0 0 0 2.97-1.884l.354-.749.563 1.858a3.27 3.27 0 0 0 3.144 2.336h7.947a1.108 1.108 0 0 0 0-2.215"/><path data-name="Path 43448" d="M43.091 34.577a1.107 1.107 0 0 0-1.106-1.106H7.678a1.106 1.106 0 1 0 0 2.212h34.307a1.106 1.106 0 0 0 1.106-1.106"/><path data-name="Path 43449" d="M7.678 30.149h34.307a1.106 1.106 0 0 0 0-2.212H7.678a1.106 1.106 0 1 0 0 2.212"/><path data-name="Path 43450" d="M47.447 62.319a1.73 1.73 0 0 1-.767 1.438 1.7 1.7 0 0 1-.967.3h-26.2V48.072a1.5 1.5 0 0 0-.124-.61 1.56 1.56 0 0 0-.566-.688 1.6 1.6 0 0 0-.876-.268H2.321q-.055-.002-.106.006V3.949a1.73 1.73 0 0 1 .764-1.44 1.73 1.73 0 0 1 .97-.3h41.764a1.8 1.8 0 0 1 .675.136 1.8 1.8 0 0 1 .764.631 1.74 1.74 0 0 1 .295.971v22.481l-2.274 5.614-7.294 15.647v.009a.04.04 0 0 1-.006.017 1 1 0 0 0-.032.084l-.018.058a.2.2 0 0 0-.015.046 1 1 0 0 0-.017.1s0 0 0 .006v.015l-1 6.976a1 1 0 0 0-.009.132.2.2 0 0 0 0 .043 2 2 0 0 0 .174.824 2 2 0 0 0 .324.51 2.1 2.1 0 0 0 .693.513 2 2 0 0 0 .844.184 2 2 0 0 0 1.327-.5 1 1 0 0 0 .1-.095l4.713-5.26a1 1 0 0 0 .121-.17l.006-.006a1 1 0 0 0 .044-.083s0-.009.006-.012 0-.006 0-.009l2.162-4.634ZM2.714 49.049a1.7 1.7 0 0 1-.26-.331H17.3V63.3Zm36.365 5.531.682-4.779 2.539 1.183ZM49.96 35.456l-6.38 13.685-3.233-1.506 6.38-13.688Zm15.409-23.989a5 5 0 0 0-.4-.487 5 5 0 0 0 .038-.634 5.31 5.31 0 0 0-3.067-4.819s-.006 0-.012 0a5.31 5.31 0 0 0-7.156 2.823l-.557 1.371a1.108 1.108 0 1 0 2.053.832l.555-1.371a3.1 3.1 0 0 1 4.183-1.645 3.09 3.09 0 0 1 1.719 3.448L50.939 33.471l-3.327-1.553 1.958-4.833.009-.026 3.917-9.67a1.106 1.106 0 1 0-2.05-.832l-1.788 4.408V3.949A3.94 3.94 0 0 0 45.713 0H3.949A3.95 3.95 0 0 0 0 3.949v43.913a3.87 3.87 0 0 0 1.168 2.771l14.878 14.529a3.87 3.87 0 0 0 2.239 1.074h.015a3 3 0 0 0 .451.029h26.962a3.95 3.95 0 0 0 3.946-3.949V62.3l-.206-20.521 2.973-6.377 11.515-21.967a3 3 0 0 1 .136.4 4 4 0 0 1 .139 1.08 6.2 6.2 0 0 1-.307 1.85 11.7 11.7 0 0 1-1.153 2.517 60 60 0 0 0-3.56 6.74 16 16 0 0 0-.7 1.944 5.2 5.2 0 0 0-.212 1.351v.069a1.106 1.106 0 1 0 2.212-.055v-.014a3.3 3.3 0 0 1 .136-.769 18 18 0 0 1 1.144-2.855c.637-1.325 1.563-3.053 2.882-5.286a14 14 0 0 0 1.366-2.99 8.5 8.5 0 0 0 .4-2.5 6.2 6.2 0 0 0-.215-1.659 5.6 5.6 0 0 0-.844-1.788"/></g></svg>
-                        </div>
-                        <h3 class="service-title">Leasing</h3>
-                        <p class="service-description">Lease equipment, vehicles and other resources to address needs as they arise.</p>
+                        <a class="service-card-link" href="https://www.cobank.com/web/cobank/corporate/services/leasing">
+                            <div class="service-icon">
+                                <svg data-name="Group 512" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.428 66.265"><defs><clipPath id="a"><path data-name="Rectangle 346" fill="#fff" d="M0 0h66.428v66.265H0z"/></clipPath></defs><g data-name="Group 512" fill="#fff"><path data-name="Path 43443" d="M41.984 11.337H19.296a1.106 1.106 0 0 0 0 2.212h22.688a1.106 1.106 0 1 0 0-2.212"/><path data-name="Path 43444" d="M7.678 8.016h34.307a1.106 1.106 0 1 0 0-2.212H7.678a1.106 1.106 0 1 0 0 2.212"/><path data-name="Path 43445" d="M7.678 19.083h34.307a1.106 1.106 0 1 0 0-2.212H7.678a1.106 1.106 0 1 0 0 2.212"/><path data-name="Path 43446" d="M7.678 13.549h6.227a1.106 1.106 0 0 0 0-2.212H7.678a1.106 1.106 0 1 0 0 2.212"/><path data-name="Path 43447" d="M42.239 59.372h-7.947a1.06 1.06 0 0 1-1.026-.763l-1.4-4.606a1.108 1.108 0 0 0-2.062-.153l-1.578 3.344a1.1 1.1 0 0 1-.4.449 1.1 1.1 0 0 1-.572.167H24.83a1.108 1.108 0 0 0 0 2.215h2.431a3.3 3.3 0 0 0 2.97-1.884l.354-.749.563 1.858a3.27 3.27 0 0 0 3.144 2.336h7.947a1.108 1.108 0 0 0 0-2.215"/><path data-name="Path 43448" d="M43.091 34.577a1.107 1.107 0 0 0-1.106-1.106H7.678a1.106 1.106 0 1 0 0 2.212h34.307a1.106 1.106 0 0 0 1.106-1.106"/><path data-name="Path 43449" d="M7.678 30.149h34.307a1.106 1.106 0 0 0 0-2.212H7.678a1.106 1.106 0 1 0 0 2.212"/><path data-name="Path 43450" d="M47.447 62.319a1.73 1.73 0 0 1-.767 1.438 1.7 1.7 0 0 1-.967.3h-26.2V48.072a1.5 1.5 0 0 0-.124-.61 1.56 1.56 0 0 0-.566-.688 1.6 1.6 0 0 0-.876-.268H2.321q-.055-.002-.106.006V3.949a1.73 1.73 0 0 1 .764-1.44 1.73 1.73 0 0 1 .97-.3h41.764a1.8 1.8 0 0 1 .675.136 1.8 1.8 0 0 1 .764.631 1.74 1.74 0 0 1 .295.971v22.481l-2.274 5.614-7.294 15.647v.009a.04.04 0 0 1-.006.017 1 1 0 0 0-.032.084l-.018.058a.2.2 0 0 0-.015.046 1 1 0 0 0-.017.1s0 0 0 .006v.015l-1 6.976a1 1 0 0 0-.009.132.2.2 0 0 0 0 .043 2 2 0 0 0 .174.824 2 2 0 0 0 .324.51 2.1 2.1 0 0 0 .693.513 2 2 0 0 0 .844.184 2 2 0 0 0 1.327-.5 1 1 0 0 0 .1-.095l4.713-5.26a1 1 0 0 0 .121-.17l.006-.006a1 1 0 0 0 .044-.083s0-.009.006-.012 0-.006 0-.009l2.162-4.634ZM2.714 49.049a1.7 1.7 0 0 1-.26-.331H17.3V63.3Zm36.365 5.531.682-4.779 2.539 1.183ZM49.96 35.456l-6.38 13.685-3.233-1.506 6.38-13.688Zm15.409-23.989a5 5 0 0 0-.4-.487 5 5 0 0 0 .038-.634 5.31 5.31 0 0 0-3.067-4.819s-.006 0-.012 0a5.31 5.31 0 0 0-7.156 2.823l-.557 1.371a1.108 1.108 0 1 0 2.053.832l.555-1.371a3.1 3.1 0 0 1 4.183-1.645 3.09 3.09 0 0 1 1.719 3.448L50.939 33.471l-3.327-1.553 1.958-4.833.009-.026 3.917-9.67a1.106 1.106 0 1 0-2.05-.832l-1.788 4.408V3.949A3.94 3.94 0 0 0 45.713 0H3.949A3.95 3.95 0 0 0 0 3.949v43.913a3.87 3.87 0 0 0 1.168 2.771l14.878 14.529a3.87 3.87 0 0 0 2.239 1.074h.015a3 3 0 0 0 .451.029h26.962a3.95 3.95 0 0 0 3.946-3.949V62.3l-.206-20.521 2.973-6.377 11.515-21.967a3 3 0 0 1 .136.4 4 4 0 0 1 .139 1.08 6.2 6.2 0 0 1-.307 1.85 11.7 11.7 0 0 1-1.153 2.517 60 60 0 0 0-3.56 6.74 16 16 0 0 0-.7 1.944 5.2 5.2 0 0 0-.212 1.351v.069a1.106 1.106 0 1 0 2.212-.055v-.014a3.3 3.3 0 0 1 .136-.769 18 18 0 0 1 1.144-2.855c.637-1.325 1.563-3.053 2.882-5.286a14 14 0 0 0 1.366-2.99 8.5 8.5 0 0 0 .4-2.5 6.2 6.2 0 0 0-.215-1.659 5.6 5.6 0 0 0-.844-1.788"/></g></svg>
+                            </div>
+                            <h3 class="service-title">Leasing</h3>
+                            <p class="service-description">Lease equipment, vehicles and other resources to address needs as they arise.</p>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66"><defs><clipPath id="a"><path data-name="Rectangle 347" fill="#fff" d="M0 .428h66v66H0z"/></clipPath></defs><g data-name="Group 514"><g data-name="Group 513" fill="#fff"><path data-name="Path 43451" d="M37.472 66.428h-8.516a1.277 1.277 0 0 1-1.278-1.278V4.258A4.263 4.263 0 0 1 31.936 0h2.555a4.263 4.263 0 0 1 4.258 4.258V65.15a1.277 1.277 0 0 1-1.277 1.277m-7.239-2.555h5.961V4.258a1.705 1.705 0 0 0-1.7-1.7h-2.555a1.705 1.705 0 0 0-1.7 1.7Z"/><path data-name="Path 43452" d="M65.15 66.428H17.387a1.2775 1.2775 0 1 1 0-2.555H65.15a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43453" d="M8.871 66.428H1.277a1.2775 1.2775 0 1 1 0-2.555h7.594a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43454" d="M57.278 13.265H9.155a1.2775 1.2775 0 0 1 0-2.555h48.123a1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43455" d="M14.762 8.446h-5.11a1.2775 1.2775 0 0 1 0-2.555h5.11a1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43456" d="M56.776 8.446h-5.11a1.2775 1.2775 0 1 1 0-2.555h5.11a1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43457" d="M57.278 28.984H9.155a1.2775 1.2775 0 0 1 0-2.555h48.123a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43458" d="M14.762 24.165h-5.11a1.2775 1.2775 0 1 1 0-2.555h5.11a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43459" d="M56.776 24.165h-5.11a1.2775 1.2775 0 1 1 0-2.555h5.11a1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43460" d="M39.602 43.789h-2.129a1.2775 1.2775 0 1 1 0-2.555h2.129a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43461" d="M28.956 43.789h-2.129a1.2775 1.2775 0 1 1 0-2.555h2.129a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43462" d="M28.956 39.267a16.525 16.525 0 0 1-13.064-6.344l-3.483-4.426a1.2775 1.2775 0 1 1 2.008-1.58l3.483 4.426a13.986 13.986 0 0 0 11.056 5.369 1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43463" d="M28.956 23.548a16.526 16.526 0 0 1-13.064-6.34l-3.483-4.426a1.2775 1.2775 0 1 1 2.008-1.58l3.483 4.426a13.986 13.986 0 0 0 11.056 5.365 1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43464" d="M37.472 39.267a1.2775 1.2775 0 1 1 0-2.555 13.986 13.986 0 0 0 11.056-5.369l3.483-4.426a1.2775 1.2775 0 1 1 2.008 1.58l-3.483 4.426a16.525 16.525 0 0 1-13.064 6.344"/><path data-name="Path 43465" d="M37.472 23.548a1.2775 1.2775 0 1 1 0-2.555 13.986 13.986 0 0 0 11.056-5.369l3.483-4.426a1.2775 1.2775 0 1 1 2.008 1.58l-3.483 4.43a16.525 16.525 0 0 1-13.064 6.344"/><path data-name="Path 43466" d="M23.491 66.371a1.278 1.278 0 0 1-1.277-1.277 7.311 7.311 0 0 0-13.331-4.147 1.277 1.277 0 0 1-2.1-1.451 9.865 9.865 0 0 1 17.989 5.598 1.278 1.278 0 0 1-1.277 1.277"/><path data-name="Path 43467" d="M46.024 66.429a1.278 1.278 0 0 1-1.277-1.277 16.407 16.407 0 0 1 20.741-15.811 1.2775 1.2775 0 0 1-.676 2.464 13.852 13.852 0 0 0-17.51 13.347 1.277 1.277 0 0 1-1.277 1.277"/><path data-name="Path 43468" d="M53.82 53.201a1.278 1.278 0 0 1-1.247-1.008 7.439 7.439 0 0 0-7.234-5.829 7.35 7.35 0 0 0-2.713.513 1.2774 1.2774 0 0 1-.939-2.376 9.89 9.89 0 0 1 3.652-.692 10.008 10.008 0 0 1 9.731 7.844 1.279 1.279 0 0 1-1.25 1.548"/></g></g></svg>
-                        </div>
-                        <h3 class="service-title">Beacon</h3>
-                        <p class="service-description">Equip your co-op for the future with strategic planning and facilitation from CoBank.</p>
+                        <a class="service-card-link" href="https://www.cobank.com/web/cobank/corporate/services/beacon">
+                            <div class="service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66"><defs><clipPath id="a"><path data-name="Rectangle 347" fill="#fff" d="M0 .428h66v66H0z"/></clipPath></defs><g data-name="Group 514"><g data-name="Group 513" fill="#fff"><path data-name="Path 43451" d="M37.472 66.428h-8.516a1.277 1.277 0 0 1-1.278-1.278V4.258A4.263 4.263 0 0 1 31.936 0h2.555a4.263 4.263 0 0 1 4.258 4.258V65.15a1.277 1.277 0 0 1-1.277 1.277m-7.239-2.555h5.961V4.258a1.705 1.705 0 0 0-1.7-1.7h-2.555a1.705 1.705 0 0 0-1.7 1.7Z"/><path data-name="Path 43452" d="M65.15 66.428H17.387a1.2775 1.2775 0 1 1 0-2.555H65.15a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43453" d="M8.871 66.428H1.277a1.2775 1.2775 0 1 1 0-2.555h7.594a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43454" d="M57.278 13.265H9.155a1.2775 1.2775 0 0 1 0-2.555h48.123a1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43455" d="M14.762 8.446h-5.11a1.2775 1.2775 0 0 1 0-2.555h5.11a1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43456" d="M56.776 8.446h-5.11a1.2775 1.2775 0 1 1 0-2.555h5.11a1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43457" d="M57.278 28.984H9.155a1.2775 1.2775 0 0 1 0-2.555h48.123a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43458" d="M14.762 24.165h-5.11a1.2775 1.2775 0 1 1 0-2.555h5.11a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43459" d="M56.776 24.165h-5.11a1.2775 1.2775 0 1 1 0-2.555h5.11a1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43460" d="M39.602 43.789h-2.129a1.2775 1.2775 0 1 1 0-2.555h2.129a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43461" d="M28.956 43.789h-2.129a1.2775 1.2775 0 1 1 0-2.555h2.129a1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43462" d="M28.956 39.267a16.525 16.525 0 0 1-13.064-6.344l-3.483-4.426a1.2775 1.2775 0 1 1 2.008-1.58l3.483 4.426a13.986 13.986 0 0 0 11.056 5.369 1.2775 1.2775 0 1 1 0 2.555"/><path data-name="Path 43463" d="M28.956 23.548a16.526 16.526 0 0 1-13.064-6.34l-3.483-4.426a1.2775 1.2775 0 1 1 2.008-1.58l3.483 4.426a13.986 13.986 0 0 0 11.056 5.365 1.2775 1.2775 0 0 1 0 2.555"/><path data-name="Path 43464" d="M37.472 39.267a1.2775 1.2775 0 1 1 0-2.555 13.986 13.986 0 0 0 11.056-5.369l3.483-4.426a1.2775 1.2775 0 1 1 2.008 1.58l-3.483 4.426a16.525 16.525 0 0 1-13.064 6.344"/><path data-name="Path 43465" d="M37.472 23.548a1.2775 1.2775 0 1 1 0-2.555 13.986 13.986 0 0 0 11.056-5.369l3.483-4.426a1.2775 1.2775 0 1 1 2.008 1.58l-3.483 4.43a16.525 16.525 0 0 1-13.064 6.344"/><path data-name="Path 43466" d="M23.491 66.371a1.278 1.278 0 0 1-1.277-1.277 7.311 7.311 0 0 0-13.331-4.147 1.277 1.277 0 0 1-2.1-1.451 9.865 9.865 0 0 1 17.989 5.598 1.278 1.278 0 0 1-1.277 1.277"/><path data-name="Path 43467" d="M46.024 66.429a1.278 1.278 0 0 1-1.277-1.277 16.407 16.407 0 0 1 20.741-15.811 1.2775 1.2775 0 0 1-.676 2.464 13.852 13.852 0 0 0-17.51 13.347 1.277 1.277 0 0 1-1.277 1.277"/><path data-name="Path 43468" d="M53.82 53.201a1.278 1.278 0 0 1-1.247-1.008 7.439 7.439 0 0 0-7.234-5.829 7.35 7.35 0 0 0-2.713.513 1.2774 1.2774 0 0 1-.939-2.376 9.89 9.89 0 0 1 3.652-.692 10.008 10.008 0 0 1 9.731 7.844 1.279 1.279 0 0 1-1.25 1.548"/></g></g></svg>
+                            </div>
+                            <h3 class="service-title">Beacon</h3>
+                            <p class="service-description">Equip your co-op for the future with strategic planning and facilitation from CoBank.</p>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><clipPath id="a"><path data-name="Rectangle 349" fill="none" stroke="#fff" d="M0 0h64v64H0z"/></clipPath></defs><g data-name="Group 516" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path data-name="Path 43487" d="M1 31h.94a3 3 0 0 0 1.5-.42l1.37-.81a8 8 0 0 0 2.5-2.38l3.6-5.32a7 7 0 0 1 5.8-3.07H19"/><path data-name="Path 43488" d="M32 33h6.86a3.5 3.5 0 1 0 0-7H17"/><path data-name="Path 43489" d="M30.9 47a3 3 0 0 1 0 6H12.6a6 6 0 0 1-2.38-.5l-4.47-2a6 6 0 0 0-2.39-.5H1"/><path data-name="Path 43490" d="M31 47h1.5a3.5 3.5 0 0 0 0-7H32"/><path data-name="Path 43491" d="M32 40h1.5a3.5 3.5 0 0 0 0-7H32"/><path data-name="Path 43492" d="m13 53 4 7v3"/><path data-name="Path 43493" d="m29 53-5 7v3"/><path data-name="Path 43494" d="m18 26 3.42-14.27A14 14 0 0 1 35.04 1H55a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H39.88a4 4 0 0 0-3.8 2.74L36 26"/><path data-name="Path 43495" d="M61 4h2v15h-6"/><path data-name="Path 43496" d="m42 6-5 6h7l-5 6"/><path data-name="Path 43497" d="m49 50 4 12 4-12"/><path data-name="Line 17" d="M49 33h8"/><path data-name="Path 43498" d="M53 39h-4v6h8"/></g></svg>
-                        </div>
-                        <h3 class="service-title">Emerging Tech</h3>
-                        <p class="service-description">Stay up on trends to make sure your co-op is prepared for new developments.</p>
+                        <a class="service-card-link" href="https://www.cobank.com/corporate/industry/electric-distribution/electric-vehicles">
+                            <div class="service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><clipPath id="a"><path data-name="Rectangle 349" fill="none" stroke="#fff" d="M0 0h64v64H0z"/></clipPath></defs><g data-name="Group 516" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path data-name="Path 43487" d="M1 31h.94a3 3 0 0 0 1.5-.42l1.37-.81a8 8 0 0 0 2.5-2.38l3.6-5.32a7 7 0 0 1 5.8-3.07H19"/><path data-name="Path 43488" d="M32 33h6.86a3.5 3.5 0 1 0 0-7H17"/><path data-name="Path 43489" d="M30.9 47a3 3 0 0 1 0 6H12.6a6 6 0 0 1-2.38-.5l-4.47-2a6 6 0 0 0-2.39-.5H1"/><path data-name="Path 43490" d="M31 47h1.5a3.5 3.5 0 0 0 0-7H32"/><path data-name="Path 43491" d="M32 40h1.5a3.5 3.5 0 0 0 0-7H32"/><path data-name="Path 43492" d="m13 53 4 7v3"/><path data-name="Path 43493" d="m29 53-5 7v3"/><path data-name="Path 43494" d="m18 26 3.42-14.27A14 14 0 0 1 35.04 1H55a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H39.88a4 4 0 0 0-3.8 2.74L36 26"/><path data-name="Path 43495" d="M61 4h2v15h-6"/><path data-name="Path 43496" d="m42 6-5 6h7l-5 6"/><path data-name="Path 43497" d="m49 50 4 12 4-12"/><path data-name="Line 17" d="M49 33h8"/><path data-name="Path 43498" d="M53 39h-4v6h8"/></g></svg>
+                            </div>
+                            <h3 class="service-title">Emerging Tech</h3>
+                            <p class="service-description">Stay up on trends to make sure your co-op is prepared for new developments.</p>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><clipPath id="a"><path d="m.015.016h60v60h-60z"/></clipPath><g fill="#fff"><path d="m33.092 60.008h-6.152a1.154 1.154 0 0 1 -1.154-1.153v-27.686a1.154 1.154 0 0 1 1.154-1.154h6.152a1.154 1.154 0 0 1 1.154 1.154v27.686a1.154 1.154 0 0 1 -1.154 1.154m-5-2.307h3.845v-25.38h-3.845z"/><path d="m11.101 32.323h-6.779a4.307 4.307 0 0 1 -4.3-4.3v-14.83a1.154 1.154 0 0 1 1.154-1.154h13.074a1.154 1.154 0 0 1 1.154 1.154v14.828a4.307 4.307 0 0 1 -4.3 4.3m-8.775-17.975v13.675a2 2 0 0 0 1.993 1.995h6.777a2 2 0 0 0 1.995-1.995v-13.675z"/><path d="m11.173 14.346a1.154 1.154 0 0 1 -1.154-1.154v-6.056h-4.614v6.056a1.154 1.154 0 0 1 -2.307 0v-6.363a2.005 2.005 0 0 1 2-2h5.223a2.005 2.005 0 0 1 2 2v6.361a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m7.713 7.136a1.154 1.154 0 0 1 -1.154-1.154v-4.806a1.154 1.154 0 0 1 2.307 0v4.806a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m3.867 26.426h-2.691a1.154 1.154 0 1 1 0-2.307h2.691a1.154 1.154 0 1 1 0 2.307"/><path d="m14.25 26.426h-6.537a1.154 1.154 0 1 1 0-2.307h6.537a1.154 1.154 0 0 1 0 2.307"/><path d="m55.707 32.323h-6.779a4.307 4.307 0 0 1 -4.3-4.3v-14.83a1.154 1.154 0 0 1 1.154-1.154h13.074a1.154 1.154 0 0 1 1.154 1.154v14.828a4.307 4.307 0 0 1 -4.3 4.3m-8.772-17.977v13.677a2 2 0 0 0 1.995 1.995h6.777a2 2 0 0 0 1.995-1.995v-13.675z"/><path d="m55.779 14.346a1.154 1.154 0 0 1 -1.154-1.154v-6.056h-4.614v6.056a1.154 1.154 0 1 1 -2.307 0v-6.363a2.005 2.005 0 0 1 2-2h5.223a2.005 2.005 0 0 1 2 2v6.361a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m52.319 7.136a1.154 1.154 0 0 1 -1.154-1.154v-4.806a1.154 1.154 0 0 1 2.307 0v4.806a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m48.473 26.426h-2.692a1.154 1.154 0 1 1 0-2.307h2.692a1.154 1.154 0 1 1 0 2.307"/><path d="m58.856 26.426h-6.537a1.154 1.154 0 1 1 0-2.307h6.537a1.154 1.154 0 1 1 0 2.307"/><path d="m33.404 32.323h-6.779a4.307 4.307 0 0 1 -4.3-4.3v-14.83a1.154 1.154 0 0 1 1.154-1.154h13.074a1.154 1.154 0 0 1 1.154 1.154v14.828a4.307 4.307 0 0 1 -4.3 4.3m-8.772-17.977v13.677a2 2 0 0 0 1.995 1.995h6.777a2 2 0 0 0 1.995-1.995v-13.675z"/><path d="m33.476 14.346a1.154 1.154 0 0 1 -1.154-1.154v-6.056h-4.614v6.056a1.154 1.154 0 0 1 -2.307 0v-6.363a2.005 2.005 0 0 1 2-2h5.223a2.005 2.005 0 0 1 2 2v6.361a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m30.016 7.136a1.154 1.154 0 0 1 -1.154-1.154v-4.806a1.154 1.154 0 1 1 2.307 0v4.806a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m26.17 26.426h-2.692a1.154 1.154 0 1 1 0-2.307h2.692a1.154 1.154 0 1 1 0 2.307"/><path d="m36.553 26.426h-6.537a1.154 1.154 0 0 1 0-2.307h6.537a1.154 1.154 0 0 1 0 2.307"/><path d="m26.939 60.008h-6.156a1.154 1.154 0 0 1 -1.154-1.154v-5.774a2.1 2.1 0 0 0 -1.317-1.954l-8.229-3.33a10.52 10.52 0 0 1 -6.6-9.8v-6.832a1.154 1.154 0 0 1 1.154-1.149h6.152a1.154 1.154 0 0 1 1.154 1.154v6.832a2.1 2.1 0 0 0 1.317 1.954l8.231 3.332a10.52 10.52 0 0 1 6.6 9.8v5.774a1.154 1.154 0 0 1 -1.154 1.154m-5-2.307h3.846v-4.621a8.23 8.23 0 0 0 -5.161-7.657l-8.231-3.332a4.4 4.4 0 0 1 -2.758-4.092v-5.678h-3.843v5.678a8.23 8.23 0 0 0 5.161 7.657l8.231 3.332a4.4 4.4 0 0 1 2.758 4.092z"/><path d="m39.244 60.008h-6.152a1.154 1.154 0 0 1 -1.154-1.153v-5.774a10.52 10.52 0 0 1 6.6-9.8l8.231-3.332a2.1 2.1 0 0 0 1.317-1.954v-6.832a1.154 1.154 0 0 1 1.152-1.148h6.152a1.154 1.154 0 0 1 1.154 1.154v6.832a10.52 10.52 0 0 1 -6.6 9.8l-8.231 3.332a2.1 2.1 0 0 0 -1.317 1.954v5.774a1.154 1.154 0 0 1 -1.154 1.154m-5-2.307h3.845v-4.621a4.4 4.4 0 0 1 2.758-4.092l8.231-3.332a8.23 8.23 0 0 0 5.161-7.657v-5.678h-3.845v5.678a4.4 4.4 0 0 1 -2.758 4.092l-8.231 3.332a8.23 8.23 0 0 0 -5.161 7.657z"/></g></svg>
-                        </div>
-                        <h3 class="service-title">Broadband</h3>
-                        <p class="service-description">Get market insights and resources for electric co-op broadband projects.</p>
+                        <a class="service-card-link" href="https://www.cobank.com/corporate/industry/electric-distribution/broadband">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><clipPath id="a"><path d="m.015.016h60v60h-60z"/></clipPath><g fill="#fff"><path d="m33.092 60.008h-6.152a1.154 1.154 0 0 1 -1.154-1.153v-27.686a1.154 1.154 0 0 1 1.154-1.154h6.152a1.154 1.154 0 0 1 1.154 1.154v27.686a1.154 1.154 0 0 1 -1.154 1.154m-5-2.307h3.845v-25.38h-3.845z"/><path d="m11.101 32.323h-6.779a4.307 4.307 0 0 1 -4.3-4.3v-14.83a1.154 1.154 0 0 1 1.154-1.154h13.074a1.154 1.154 0 0 1 1.154 1.154v14.828a4.307 4.307 0 0 1 -4.3 4.3m-8.775-17.975v13.675a2 2 0 0 0 1.993 1.995h6.777a2 2 0 0 0 1.995-1.995v-13.675z"/><path d="m11.173 14.346a1.154 1.154 0 0 1 -1.154-1.154v-6.056h-4.614v6.056a1.154 1.154 0 0 1 -2.307 0v-6.363a2.005 2.005 0 0 1 2-2h5.223a2.005 2.005 0 0 1 2 2v6.361a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m7.713 7.136a1.154 1.154 0 0 1 -1.154-1.154v-4.806a1.154 1.154 0 0 1 2.307 0v4.806a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m3.867 26.426h-2.691a1.154 1.154 0 1 1 0-2.307h2.691a1.154 1.154 0 1 1 0 2.307"/><path d="m14.25 26.426h-6.537a1.154 1.154 0 1 1 0-2.307h6.537a1.154 1.154 0 0 1 0 2.307"/><path d="m55.707 32.323h-6.779a4.307 4.307 0 0 1 -4.3-4.3v-14.83a1.154 1.154 0 0 1 1.154-1.154h13.074a1.154 1.154 0 0 1 1.154 1.154v14.828a4.307 4.307 0 0 1 -4.3 4.3m-8.772-17.977v13.677a2 2 0 0 0 1.995 1.995h6.777a2 2 0 0 0 1.995-1.995v-13.675z"/><path d="m55.779 14.346a1.154 1.154 0 0 1 -1.154-1.154v-6.056h-4.614v6.056a1.154 1.154 0 1 1 -2.307 0v-6.363a2.005 2.005 0 0 1 2-2h5.223a2.005 2.005 0 0 1 2 2v6.361a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m52.319 7.136a1.154 1.154 0 0 1 -1.154-1.154v-4.806a1.154 1.154 0 0 1 2.307 0v4.806a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m48.473 26.426h-2.692a1.154 1.154 0 1 1 0-2.307h2.692a1.154 1.154 0 1 1 0 2.307"/><path d="m58.856 26.426h-6.537a1.154 1.154 0 1 1 0-2.307h6.537a1.154 1.154 0 1 1 0 2.307"/><path d="m33.404 32.323h-6.779a4.307 4.307 0 0 1 -4.3-4.3v-14.83a1.154 1.154 0 0 1 1.154-1.154h13.074a1.154 1.154 0 0 1 1.154 1.154v14.828a4.307 4.307 0 0 1 -4.3 4.3m-8.772-17.977v13.677a2 2 0 0 0 1.995 1.995h6.777a2 2 0 0 0 1.995-1.995v-13.675z"/><path d="m33.476 14.346a1.154 1.154 0 0 1 -1.154-1.154v-6.056h-4.614v6.056a1.154 1.154 0 0 1 -2.307 0v-6.363a2.005 2.005 0 0 1 2-2h5.223a2.005 2.005 0 0 1 2 2v6.361a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m30.016 7.136a1.154 1.154 0 0 1 -1.154-1.154v-4.806a1.154 1.154 0 1 1 2.307 0v4.806a1.154 1.154 0 0 1 -1.154 1.154"/><path d="m26.17 26.426h-2.692a1.154 1.154 0 1 1 0-2.307h2.692a1.154 1.154 0 1 1 0 2.307"/><path d="m36.553 26.426h-6.537a1.154 1.154 0 0 1 0-2.307h6.537a1.154 1.154 0 0 1 0 2.307"/><path d="m26.939 60.008h-6.156a1.154 1.154 0 0 1 -1.154-1.154v-5.774a2.1 2.1 0 0 0 -1.317-1.954l-8.229-3.33a10.52 10.52 0 0 1 -6.6-9.8v-6.832a1.154 1.154 0 0 1 1.154-1.149h6.152a1.154 1.154 0 0 1 1.154 1.154v6.832a2.1 2.1 0 0 0 1.317 1.954l8.231 3.332a10.52 10.52 0 0 1 6.6 9.8v5.774a1.154 1.154 0 0 1 -1.154 1.154m-5-2.307h3.846v-4.621a8.23 8.23 0 0 0 -5.161-7.657l-8.231-3.332a4.4 4.4 0 0 1 -2.758-4.092v-5.678h-3.843v5.678a8.23 8.23 0 0 0 5.161 7.657l8.231 3.332a4.4 4.4 0 0 1 2.758 4.092z"/><path d="m39.244 60.008h-6.152a1.154 1.154 0 0 1 -1.154-1.153v-5.774a10.52 10.52 0 0 1 6.6-9.8l8.231-3.332a2.1 2.1 0 0 0 1.317-1.954v-6.832a1.154 1.154 0 0 1 1.152-1.148h6.152a1.154 1.154 0 0 1 1.154 1.154v6.832a10.52 10.52 0 0 1 -6.6 9.8l-8.231 3.332a2.1 2.1 0 0 0 -1.317 1.954v5.774a1.154 1.154 0 0 1 -1.154 1.154m-5-2.307h3.845v-4.621a4.4 4.4 0 0 1 2.758-4.092l8.231-3.332a8.23 8.23 0 0 0 5.161-7.657v-5.678h-3.845v5.678a4.4 4.4 0 0 1 -2.758 4.092l-8.231 3.332a8.23 8.23 0 0 0 -5.161 7.657z"/></g></svg>
+                            </div>
+                            <h3 class="service-title">Broadband</h3>
+                            <p class="service-description">Get market insights and resources for electric co-op broadband projects.</p>
+                        </a>
+                        
                     </div>
                 </div>
             </div>
