@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoBank - Life is bigger in a small town</title>
-    
+    <link rel="stylesheet" href="https://use.typekit.net/szv8azf.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:400" rel="stylesheet" />
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     
@@ -26,12 +28,13 @@
             --light-gray: #f2f2f2;
             --mid-gray: #e5e5e5;
             --dark-gray: #333333;
-            --font-primary: 'Open Sans', sans-serif;
-            --font-secondary: 'Playfair Display', serif;
+            --font-body: 'Inter', 'Open Sans', sans-serif;
+            --font-heading: "korolev-condensed", sans-serif;
+            --font-decorative: "fenway-park-jf",sans-serif;
         }
         /* Base Styles */
         body {
-            font-family: var(--font-primary);
+            font-family: var(--font-body);
             line-height: 1.6;
             color: var(--dark-gray);
             background-color: var(--light-gray);
@@ -39,7 +42,7 @@
         }
         
         h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-primary);
+            font-family: var(--font-body);
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--primary-color);
@@ -58,6 +61,18 @@
         section {
             padding: 60px 0;
         }
+
+        .font-body {
+            font-family: var(--font-body);
+        }
+
+        .font-title {
+            font-family: var(--font-title);
+        }
+
+        .font-decorative {
+            font-family: var(--font-decorative);
+        }
         
         .section-title {
             position: relative;
@@ -69,7 +84,7 @@
         
         .secondary-title {
             color: var(--secondary-color);
-            font-family: var(--font-secondary);
+            font-family: var(--font-title);
             font-style: italic;
             font-size: 2.5rem;
             text-align: center;
@@ -77,10 +92,10 @@
         }
         
         .cursive-title {
-            font-family: var(--font-secondary);
+            font-family: var(--font-decorative);
             color: var(--secondary-color);
-            font-style: italic;
-            font-size: 2.5rem;
+            font-weight: 100;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
         
@@ -206,6 +221,7 @@
             padding-left: 30px;
             padding-right: 30px;
             text-align: center;
+            
         }
         
         /* Tagline Section */
@@ -217,7 +233,7 @@
         .tagline-text {
             max-width: 800px;
             margin: 0 auto;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #555;
         }
         
@@ -422,7 +438,7 @@
             position: relative;
             display: inline-block;
             margin-bottom: 40px;
-            font-family: var(--font-secondary);
+            font-family: var(--font-title);
             font-style: italic;
             font-size: 2rem;
             color: #333;
@@ -433,7 +449,7 @@
             font-weight: 700;
             text-transform: uppercase;
             font-style: normal;
-            font-family: var(--font-primary);
+            font-family: var(--font-body);
         }
         
         .story-card {
@@ -487,7 +503,7 @@
         }
         
         .footer-tagline {
-            font-family: var(--font-secondary);
+            font-family: var(--font-title);
             font-style: italic;
             margin-bottom: 30px;
             margin-top: 20px;
@@ -646,6 +662,7 @@
             }
             
             .cursive-title, .secondary-title {
+                font: var(--font-tertiary);
                 font-size: 2rem;
             }
             
@@ -749,10 +766,9 @@
     <section class="electric-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
-                    <h2 class="electric-title">How <strong>CoBank</strong> supports <span>ELECTRIC DISTRIBUTION</span></h2>
+                <div class="col-lg-5 d-flex flex-column justify-content-center">
+                    <h2 class="electric-title font-title d-flex flex-wrap"><span class="font-decorative">How</span> CoBank <span class="font-decorative">supports</span> ELECTRIC Distribution</h2>
                     <p class="electric-content">We provide financing, cash management, leasing and other key services to electric cooperatives serving millions of people who call this their home. Our team delivers a depth of knowledge and commitment to rural America like no other bank. We're also equipped to offer insights on strategic considerations facing our clients, ranging from EV infrastructure to broadband development.</p>
-                    <a href="#contact" class="btn btn-light mt-3">GET IN TOUCH</a>
                 </div>
                 <div class="col-lg-7">
                     <div class="electric-images-grid">
