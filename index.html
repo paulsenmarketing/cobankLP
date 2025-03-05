@@ -246,7 +246,6 @@
             position: relative;
             max-width: 800px;
             margin: 0 auto;
-            border-radius: 5px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -300,6 +299,10 @@
             color: white;
             padding: 60px 0;
         }
+
+        .electric-grid {
+                padding-left: 4rem;
+            }
         
         .electric-title {
             color: white;
@@ -329,26 +332,32 @@
         }
         
         .electric-images-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            display: grid; /* You were missing this */
+            grid-template-columns: repeat(12, 1fr); /* Fixed the typo from 1ft to 1fr */
             grid-template-rows: repeat(12, 1fr);
-            gap: 10px;
+            gap: 15px;
+            height: 600px;
+        }
+
+        .electric-image-1, .electric-image-2, .electric-image-3 {
             height: 100%;
+            width: 100%;
+            object-fit: contain;
         }
-        
+
         .electric-image-1 {
-            grid-column: 1 / span 12;
-            grid-row: 1 / span 6;
+            grid-row: 1 / span 5;
+            grid-column: 3 / span 7;
         }
-        
+
         .electric-image-2 {
-            grid-column: 1 / span 7;
-            grid-row: 7 / span 6;
+        grid-row: 6 / span 4;
+        grid-column: 1 / span 6;
         }
-        
+
         .electric-image-3 {
-            grid-column: 8 / span 5;
-            grid-row: 7 / span 6;
+            grid-row: 6 / span 7; 
+            grid-column: 7 / span 5; 
         }
         
         .electric-image {
@@ -662,30 +671,12 @@
             }
 
             /* Electric grid adjustments */
-            .electric-images-grid {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(3, 1fr);
-                gap: 10px;
-                margin-top: 30px;
-            }
-            
-            .electric-image-1, .electric-image-2, .electric-image-3 {
-                grid-column: 1;
-                height: 250px;
-            }
-            
-            .electric-image-1 {
-                grid-row: 1;
-            }
-            
-            .electric-image-2 {
-                grid-row: 2;
-            }
-            
-            .electric-image-3 {
-                grid-row: 3;
-            }
 
+            .electric-grid {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
             .contact-us {
                 padding: 10px;
             }
@@ -790,7 +781,7 @@
     <section class="video-section">
         <div class="container">
             <div style="aspect-ratio: 16/9; background-color: var(--mid-gray);" class="video-container">
-                        <img src="https://picsum.photos/800/450" alt="Video Thumbnail" style="width:100%;">
+                        <img src="./images/Vimeo-Thumb.webp" alt="Video Thumbnail" style="width:100%;">
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
@@ -812,16 +803,16 @@
                     <h2 class="electric-title font-title d-flex flex-wrap"><span class="font-decorative how-span">How</span> COBANK <span class="font-decorative cobank-span">supports</span> ELECTRIC DISTRIBUTION</h2>
                     <p class="electric-content">We provide financing, cash management, leasing and other key services to electric cooperatives serving millions of people who call this their home. Our team delivers a depth of knowledge and commitment to rural America like no other bank. We're also equipped to offer insights on strategic considerations facing our clients, ranging from EV infrastructure to broadband development.</p>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7 electric-grid">
                     <div class="electric-images-grid">
                         <div class="electric-image-1">
-                            <img src="https://picsum.photos/800/400" alt="Rural Power Lines" class="electric-image">
+                            <img alt="Rural Power Lines" src="./images/Country_Road_Power_Poles.webp" class="electric-image">
                         </div>
                         <div class="electric-image-2">
-                            <img src="https://picsum.photos/400/300" alt="Family with Tablet" class="electric-image">
+                            <img src="./images/Father_Son_Shop_Hobby_Car.webp" alt="Family with Tablet" class="electric-image">
                         </div>
                         <div class="electric-image-3">
-                            <img src="https://picsum.photos/300/300" alt="Rural Sunset" class="electric-image">
+                            <img src="./images/Mother_Daughter_Wind_Turbines.webp"  alt="Rural Sunset" class="electric-image">
                         </div>
                     </div>
                 </div>
