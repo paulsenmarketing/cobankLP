@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="https://use.typekit.net/szv8azf.css">
     <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css?family=inter:200,400,700" rel="stylesheet" />
+
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Swiper JS for slider -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" rel="stylesheet"> -->
-
     <!-- Custom CSS -->
     <style>
         /* Root Variables */
@@ -253,10 +251,6 @@
             width: 100%;
             height: 100%;
             border: 0;
-        }
-
-        .video-container iframe > .vp-center {
-            display: block !important;
         }
         
         .play-button {
@@ -596,6 +590,11 @@
             color: white;
             font-size: 1rem;
         }
+
+        .social-links .footer-heading-2 a {
+            color: white;
+            font-size: 1rem;
+        }
         
         .footer-info {
             font-size: 1rem;
@@ -639,6 +638,10 @@
         .info-cobank {
             margin-bottom: 3px;
         }
+
+        .info-cobank a {
+            color:#fff;
+        }
         .contact-us {
             margin-right: 110px;
             padding-left: 90px;
@@ -653,10 +656,10 @@
         }
 
         .bg-pattern {
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMi45IDEyLjkiIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyI+PHN0eWxlPjwhW0NEQVRBWy5Be2lzb2xhdGlvbjppc29sYXRlfS5De21peC1ibGVuZC1tb2RlOnNjcmVlbn0uSHtmaWxsOiNiMGIwYjB9Lkl7ZmlsbDojZDhkOGQ3fS5Ke2ZpbGw6Z3JheX0uS3tmaWxsOiM0MDQwNDB9XV0+PC9zdHlsZT48ZyBjbGFzcz0iQSI+PHBhdGggZD0iTTAsMGgxMi45djEyLjlIMFYwWiIgY2xhc3M9IkkiLz48ZyBjbGFzcz0iQyIgb3BhY2l0eT0iLjMiPjxwYXRoIGQ9Ik05LjIzIDYuNDNjLS4zMSAwIDAgLjQtLjQyLjMtLjEtLjMtLjIxLS43LS40Mi0xIDAgMCAuMS0uMy4zMS0uMiAwIC4yLjIxLjMuMzEuM3YuM2MuMjEgMCAuMzEgMCAuMjEuMmgwdi4xek0yLjEgOS42NHYtLjRoLjIxYy4zMSAwIC40Mi4yLjczLjJ2LjRoMGMtLjMxIDAtLjQyLS4yLS43My0uMkgyLjF6TTEyLjA2LjYxaC0uMjFjLS4yMS4yLjMxLjIgMCAuNC0uMS4yLS4zMSAwLS40MiAwIDAtLjItLjMxLS40LS4yMS0uNy4yMS0uMi4yMS4yLjQyIDAgLjIxIDAgLjMxLS4yLjQyLS4ydi4zaDB2LjJ6IiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0xMS44NSwzLjEyaC0uODR2LS41Yy40MiwwLC43MywwLDEuMDUuM2wtLjIxLjJaIiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTkuMjMgOC4yM3YuNGguMzFjLjEgMCAwIC4zIDAgLjQtLjEuMi0uMzEgMC0uNDIgMCAwLS40LS4zMS0uNy0uMjEtMWguMzF2LjJ6bS4zMi0yLjJoLjQyYy4xIDAgMC0uMi4xLS4zLjEtLjIuMzEgMCAuNTIgMHYuNmgtLjYzcy0uNDIuMi0uNDIgMGgwdi0uM3ptLjEgNS42MWMtLjEgMCAwLS40LS4yMS0uNS0uMSAwLS4zMS0uMi0uMjEtLjRoLjQyYzAgLjIuMjEuNC40Mi41LS4xIDAtLjMxLjMtLjQyLjR6IiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0zLjQ2LDYuMDNoLS41MmMwLS4zLS4zMS0uNiwwLTEsLjMxLDAsLjIxLjYuNjMuNXYuNGgwbC0uMS4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNMS43OSA5LjA0Yy0uMjEuMi0uMjEuNS0uMjEuOGgtLjMxdi0uNkguODVjMC0uMi4yMS0uMi4yMS0uMyAwIC4yLjMxLjIuNDIuMmwuMjEuMmgwbC4xLS4zem0tLjc0IDIuOHYtLjZoLjQyYy4yMS4zIDAgLjQgMCAuNmgtLjQyeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNNy44NywxLjYyYzAtLjItLjIxLDAtLjMxLS4yLS4yMS0uMiwwLS40LDAtLjYuMTQsMCwuMjEuMDcuMjEuMnYuM3MuMjEsMCwuMzEuMnYuM2gtLjMxdi0uMmguMVoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTEuMzcgNC43MnMwLS4yLjIxLS4zSDJ2LjRoLS43M3YtLjJoMGwuMS4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNNy4zNCw4LjAzbC4yMS0uMmMuMzEsMCwuNDIuMy42My40bC0uMjEuMmMtLjIxLDAtLjMxLS4zLS42My0uNWgwdi4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNMy42NyA5LjQ0di0uNGguNDJ2LjRoLS41Mi4xem0xLjg5LTMuMjFjMCAuMy0uMjEgMC0uNDIuMiAwLS4yLS4yMS0uNC0uNDItLjRsLjIxLS4yczAgLjIuMzEuMi4yMS4yLjMxLjNoMHYtLjF6bS0zLjk4LS43aC4yMWMuMjEgMCAwIC4zIDAgLjRoLS41MnYtLjVoLjMxdi4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNOS43NSw1LjEzdi40Yy0uMS4yLS4zMSwwLS40MiwwczAtLjMsMC0uNGMuMjEtLjIuMzEsMCwuNTIsMGgtLjFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik05LjIzLDguMjNoLS4zMXYtLjZoLjMxYy4xLjIsMCwuNCwwLC42Wk02LjUsMTEuMjRjMCwuMiwwLC41LS4yMS43aC0uMzFjLjIxLS4yLjIxLS40LjIxLS43aC4zMVpNMy4zNiwxLjkyYy4yMSwwLDAsLjIuMjEuM3YuM2MtLjIxLDAtLjIxLjMtLjQyLjJ2LS4yYzAtLjMuNDIsMCwuMzEtLjN2LS4zaC0uMVoiIGNsYXNzPSJJIi8+PHBhdGggZD0iTTcuNjYsMTIuNTVjLS4zMSwwLS41Mi40LS44NCwwdi0uMmguODR2LjJaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik0xLjU4IDUuNTNoLS4yMWMtLjMxIDAtLjIxLS40LS4zMS0uNSAwIDAgLjIxLS4yLjMxLS4yaC4yMXYuN3ptMy4xNCAxaC41MmMwIC40LS40Mi4yLS41Mi40IDAgMC0uMjEgMC0uMjEtLjNzMC0uMi4yMS0uMmgwdi4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNOS41NSA2LjAzdi4yYy0uMSAwLS4yMSAwLS4zMS4yIDAtLjMtLjMxIDAtLjMxLS4yIDAgMCAuMjEgMCAuMjEtLjMuMjEgMCAuNDItLjIuNTIuMmgwbC0uMS0uMXptLTQuODMuNXMwIC4yLS4yMS4yYzAgMCAuMjEgMCAuMjEuMi0uMjEgMC0uMzEgMC0uNTIuMnYtLjNoLjIxYzAtLjMuMjEtLjIuMzEtLjJ2LS4xeiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNNi4zLDUuNDN2LjJoLS42M3YtLjJjLjIxLS4yLjMxLS4yLjYzLDBoMFoiIGNsYXNzPSJKIi8+PHBhdGggZD0iTTEuNzksOS4wNHMtLjIxLDAtLjIxLS4yYy4xNC0uMTMuMjgtLjIuNDItLjJ2LjNoLS4zMWwuMS4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNNC4yLDYuOTN2LjZoLS4zMWMwLS4yLDAtLjQuMzEtLjZaIiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0xLjc5LDcuMjNjLS4yMSwwLS40MiwwLS41Mi0uMywwLDAsMC0uMi4yMS0uMmgwczAsLjMuMjEuM2gwdi4yaC4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNLjc0LDIuNjJ2LjNjLS4yMSwwLS40Mi0uMi0uNDItLjUuMjEsMCwuMzEuMi41Mi4yaC0uMVoiIGNsYXNzPSJKIi8+PGcgY2xhc3M9IkgiPjxwYXRoIGQ9Ik0xMC43IDEuNzJ2LS4yaC41MmMwIC40LS4zMS4yLS41Mi4yek0xMi4wNi42MXYtLjNoLjIxYy4yMSAwIC4xLjMgMCAuNWgtLjMxLjF2LS4yem0tOS40MyA5LjkzcS4yMSAwIDAgLjNoLS41MnYtLjNoLjUyem0zLjI1IDEuMWMwIC4zLS4zMS4yLS41Mi4ydi0uMmguNjMtLjF6bS00LjgzLjJoLjMxYy4yMSAwIDAgLjIuMjEuM2gtLjUydi0uM3ptMTAuMTctNC4zMWMuMSAwIC4yMS4yLjIxLjJzLS4yMS4yLS4yMS4zbC0uMjEtLjJzLjEtLjIuMjEtLjN6bS00LjgyLjdjMCAuMi41MiAwIC40Mi41IDAtLjItLjMxLS4yLS40Mi0uMnYtLjN6bTMuNzcgMS43MWwtLjIxLS4ycy4xLS4yLjIxLS4yLjIxIDAgLjMxLjJsLS4yMS4yaC0uMXptLS44My0uMmwuMjEuMnMtLjIxIDAtLjMxLjJjMCAwLS4xIDAtLjIxLS4yIDAgMCAuMS0uMi4yMS0uM2guMXYuMXoiLz48L2c+PHBhdGggZD0iTTMuNjcsMTAuMDRzLjIxLDAsLjMxLS4ybC4zMS4zcy0uMjEsMC0uMzEuMmgtLjIxbC0uMS0uMnYtLjFaIiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0xMS41NCwxMC42NGwtLjIxLjJzLS4xLS4yLS4yMS0uM2MwLDAsLjEsMCwuMjEtLjIuMSwwLC4yMSwwLC4zMS4yaC0uMXYuMVoiIGNsYXNzPSJLIi8+PHBhdGggZD0iTS42MyAxMS41NGwtLjIxLS4ycy4yMSAwIC4zMS0uMmwuMjEuMnMwIC4yLS4yMS4zaC0uMXYtLjF6bS43NC43MWguNDJ2LjNjLS4yMSAwLS40MiAwLS40Mi0uM3oiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTEyLjA2LDEyLjI1di40bC0uMzEtLjNzLjEsMCwuMzEtLjFaIiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik03Ljg3LjkxczAtLjItLjIxLS4yYzAtLjIuMjEtLjMuMzEtLjNsLjIxLjJjMCwuMi0uMjEuMy0uMzEuM1pNMi40Mi45MWwtLjIxLS4ycy4yMSwwLC4zMS0uMmwuMjEuMnMwLC4yLS4yMS4zaC0uMXYtLjFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik0xLjc5LDMuMjJzLS4yMSwwLS4zMS4ybC0uMzEtLjNzLjIxLDAsLjMxLS4yaC4yMWwuMS4ydi4xWiIgY2xhc3M9IkoiLz48ZyBjbGFzcz0iSCI+PHBhdGggZD0iTS40Mi4yMWwuMjEuMnMtLjIxLjItLjIxLjNMLjIxLjUxczAtLjIuMjEtLjN6bS41MyAyLjIxbC0uMjEtLjJzLjIxIDAgLjMxLS4ybC4yMS4yczAgLjItLjIxLjNoLS4xdi0uMXptMy45OC0uMmwtLjIxLS4yczAtLjIuMjEtLjIuMjEgMCAuMzEuMmwtLjIxLjJoLS4xek0zLjY3IDYuMDNsLjIxLS4ycy4yMS4yLjMxLjJsLS4yMS4ycy0uMjEgMC0uMzEtLjJ6bS0uOTQtMy45MWwtLjIxLS4ycy4yMS0uMi4yMS0uM2wuMjEuMnMwIC4yLS4yMS4zeiIvPjwvZz48cGF0aCBkPSJNMTEuMDEgNi4yM2MuMjEgMCAuMzEgMCAuNTIuMy0uMSAwLS4zMSAwLS40Mi4yaC0uMjF2LS4zaDBsLjEtLjJ6bS04LjU5LjhjMC0uMiAwLS4zLjMxLS41IDAgMCAwIC4zLjIxLjR2LjJoLS40MmwtLjEtLjF6IiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0xMC43LDcuMjNsLS4yMS0uMnMuMjEsMCwuMzEtLjJjMCwwLC4xLDAsLjIxLjIsMCwwLS4xLjItLjIxLjNoLS4xdi0uMVoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTExLjg1LDMuMTJzMC0uMi4yMS0uMi4yMS4yLDAsLjNoLS4zMS4xdi0uMVoiIGNsYXNzPSJKIi8+PHBhdGggZD0iTTguMDggMi43MmMuMjEgMCAuMzEgMCAuMjEuM2gtLjIxdi0uM3ptLTQuNjItLjF2LS4zYy4yMSAwIC40MiAwIC4zMS4zaC0uMzF6bS0uOTQtLjFoLS42My42M3oiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTcuODcgMS42MmguMzFjMCAuMiAwIC4zLS4yMS41LS4yMS0uMiAwLS4zIDAtLjVoLS4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNNS40NiAxLjAxYzAtLjIgMC0uMy4zMS0uMnYuMmgtLjMxem01LjM0IDEwLjkzdi41cy0uMS0uMi0uMjEtLjNjMCAwIC4yMSAwIC4zMS0uMmgtLjF6bS00LjgyLS4xaC4zMXYuMmMtLjIxIDAtLjMxIDAtLjMxLS4yeiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNMi4xIDExLjg0YzAtLjIgMC0uMy4zMS0uMnYuMkgyLjF6IiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik05LjAyLDExLjU0YzAsLjItLjIxLjItLjMxLDAsMCwwLDAtLjMuMS0uMy4xNCwwLC4yMS4wNy4yMS4yaDB2LjFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik02LjUsMTEuMjRoLS4zMWMwLS4yLDAtLjQuMzEtLjN2LjNaIiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0zLjY3LDEwLjk0aC4zMXYuMmMtLjIxLDAtLjQyLDAtLjMxLS4yWiIgY2xhc3M9IkoiLz48cGF0aCBkPSJNMTAuNDksMTAuNDR2LjJoLS4zMWMtLjEsMCwwLDAsMC0uMmguMzFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik03LjU1IDEwLjQ0bC0uMzEuM3MwLS4yLS4yMS0uM2guNTJ6bS00LjkyLjFoLS4zMXMtLjIxIDAtLjIxLS4ybC4yMS0uMmMuMjEgMCAuMzEuMi4zMS4zaDB2LjF6bTEuMDQtLjV2LjQtLjNsLjIxLS4yaDBsLS4yMS4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNMTEuMTIsOS42NGMuMzEsMCwuNDIsMCwuMzEuMmgtLjMxdi0uMloiIGNsYXNzPSJKIi8+PHBhdGggZD0iTTYuOTIsOS41NHYuM2gtLjIxYzAtLjIsMC0uMy4yMS0uM1oiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTUuMTQgOS41NGguMjF2LjNoLS4yMXYtLjN6bS0zLjg4LS4xYy4xNCAwIC4yMS4wNy4yMS4yaC0uMjFxLS4yMSAwLS4yMS0uMmguMjF6IiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik02LjkyIDguNzRjLjMxIDAgLjQyIDAgLjMxLjJoLS4zMXYtLjJ6bS40Mi0xLjExYzAgLjIgMCAuMy0uMzEuMnYtLjJoLjMxem0tNS40NS4ydi0uMmguMzF2LjJoLS4zMXoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTMuMzYsNy4yM3MuMjEuMi4zMS4yYzAsLjItLjMxLDAtLjQyLDBxMC0uMi4yMS0uNGgwbC0uMS4yWiIgY2xhc3M9IksiLz48cGF0aCBkPSJNMi40Miw3LjAzaC4zMWMwLC4yLDAsLjQtLjMxLjN2LS4zWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNNS45OCw2LjUzYzAtLjIuMjEtLjIuMzEsMHYuM2MtLjE0LDAtLjIxLS4wNy0uMjEtLjJoMGwtLjEtLjFaIiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik0xMS4wMSA2LjIzdi4zaC0uMzF2LS4zaC4zMXptLjYzLS42di0uMmguMzFjLjEgMCAwIDAgMCAuMmgtLjMxeiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNOC43MSw1LjUzYy0uMSwwLS4yMSwwLS4zMS4ydi0uMmMwLS4xMy4wNy0uMi4yMS0uMmguMzFjMCwuMTMtLjAzLjItLjEuMmgtLjFaIiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik04LjE4IDUuNDNxLS4yMSAwLS4zMS0uM2MuMjEgMCAuNDItLjIuNTIgMGwtLjIxLjJ2LjF6bS01LjY2LS42Yy4yMSAwIC4zMSAwIC40Mi0uMmwuMjEuMmgtLjYzeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNMS4wNSw0LjkzYy0uMjEsMC0uMjEtLjIsMC0uM2guMzFjMCwuMTMtLjA3LjItLjIxLjJoLS4xdi4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNLjYzIDQuNzJILjQydi0uM2guMjF2LjN6IiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik0yLjg0LDMuNjJsLjIxLS4ydi42czAtLjMtLjIxLS40WiIgY2xhc3M9IksiLz48cGF0aCBkPSJNMS43OSAzLjIydi0uNHMwIC4zLjIxLjNjMCAwIDAgLjItLjIxLjN2LS4yeiIgY2xhc3M9IkoiLz48cGF0aCBkPSJNMi4zMSAxMC4yNHMwIC4yLS4yMS4yaDBzMC0uMi4zMS0uM2gwbC0uMS4xem04LjE4LTEuMXYtLjNoLjQyYy0uMSAwLS4yMS4yLS4zMS4zaC0uMXoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTMuNDYsOC45NHMwLS4zLS4yMS0uNGMuMjEsMCwuNDIsMCwuMjEuNFoiIGNsYXNzPSJLIi8+PHBhdGggZD0iTTEuNzkgNy4yM3YtLjQuNGgtLjIxLjIxem0xMC41OS0uMmgtLjMxYzAtLjIuMS0uMi4yMS0uMy4yMSAwIDAgLjIuMS4zem0tNC45My0uM2guNDJjMCAuMi0uMjEuMi0uMzEuM3YtLjNoLS4xem0tMS40Ny0uMnMwIC4yLjIxLjJjMCAuMi0uMjEuMi0uMzEgMHYtLjNoMGwuMS4xem0xLjA1LjJsLjIxLS4ydi4yaC0uMzEuMXptMS4wNS0uNHMtLjIxIDAtLjMxLS4yYy4zMSAwIC40MiAwIC4zMS4yem0tMi41Mi0uMWMtLjIxIDAtLjMxLS4yLS4zMS0uM2guMzF2LjN6bTIuNjItLjhzMC0uMi4yMS0uMi4yMSAwIC4yMS4yYy0uMSAwLS4yMSAwLS4yMS4yLS4xIDAtLjIxIDAtLjIxLS4yem0tNy4xMy0uNXMuMjEgMCAuMjEtLjJoLjIxdi4yYzAgLjItLjIxIDAtLjMxLjJ2LS4yaC0uMXoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTguOTIsNC4yMmwuMjEtLjJ2LjJoLS4zMS4xWiIgY2xhc3M9IkoiLz48cGF0aCBkPSJNMy43OCwzLjEyaC4zMXYuNGwtLjMxLS4zaDB2LS4xWiIgY2xhc3M9IksiLz48cGF0aCBkPSJNMy4zNiwxLjkydi4zaC0uMzFjMC0uMi4yMS0uMy4zMS0uM1oiIGNsYXNzPSJJIi8+PHBhdGggZD0iTTYuNSwyLjEyczAtLjItLjIxLS40Yy4yMSwwLC40MiwwLC4yMS40WiIgY2xhc3M9IksiLz48cGF0aCBkPSJNNi40LjgxczAsLjItLjIxLjNjMC0uMywwLS40LjIxLS4zWk04LjE4LjYxcy0uMjEsMC0uMjEtLjJoMHMuMjEsMCwuMzEuMmgtLjFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik03LjY2LDEyLjU1di0uMmguMzFjMCwuMiwwLC4zLS4zMS4zaDB2LS4xWiIgY2xhc3M9IkoiLz48cGF0aCBkPSJNOS44NiAxMS45NHYuNGgtLjMxYzAtLjIuMjEtLjIuMjEtLjRoLjF6bS0yLjMxLjQxaC0uMzF2LS4ybC4yMS0uMmMuMjEgMCAwIC4yLjIxLjNoMGwtLjEuMXoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTcuMzQsMTIuMDVzMCwuMi0uMjEuMmgwczAtLjIuMzEtLjNoMGwtLjEuMVoiIGNsYXNzPSJLIi8+PHBhdGggZD0iTTkuMDIsMTEuNTRzMC0uMi0uMjEtLjJjMC0uMi4yMS0uMi4zMSwwLDAsMCwwLC4zLS4xLjNoMHYtLjFaIiBjbGFzcz0iSCIvPjwvZz48L2c+PC9zdmc+');
-    background-repeat: repeat;
-    background-size: calc(12.9px * 3) calc(12.9px * 3);
-}
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMi45IDEyLjkiIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyI+PHN0eWxlPjwhW0NEQVRBWy5Be2lzb2xhdGlvbjppc29sYXRlfS5De21peC1ibGVuZC1tb2RlOnNjcmVlbn0uSHtmaWxsOiNiMGIwYjB9Lkl7ZmlsbDojZDhkOGQ3fS5Ke2ZpbGw6Z3JheX0uS3tmaWxsOiM0MDQwNDB9XV0+PC9zdHlsZT48ZyBjbGFzcz0iQSI+PHBhdGggZD0iTTAsMGgxMi45djEyLjlIMFYwWiIgY2xhc3M9IkkiLz48ZyBjbGFzcz0iQyIgb3BhY2l0eT0iLjMiPjxwYXRoIGQ9Ik05LjIzIDYuNDNjLS4zMSAwIDAgLjQtLjQyLjMtLjEtLjMtLjIxLS43LS40Mi0xIDAgMCAuMS0uMy4zMS0uMiAwIC4yLjIxLjMuMzEuM3YuM2MuMjEgMCAuMzEgMCAuMjEuMmgwdi4xek0yLjEgOS42NHYtLjRoLjIxYy4zMSAwIC40Mi4yLjczLjJ2LjRoMGMtLjMxIDAtLjQyLS4yLS43My0uMkgyLjF6TTEyLjA2LjYxaC0uMjFjLS4yMS4yLjMxLjIgMCAuNC0uMS4yLS4zMSAwLS40MiAwIDAtLjItLjMxLS40LS4yMS0uNy4yMS0uMi4yMS4yLjQyIDAgLjIxIDAgLjMxLS4yLjQyLS4ydi4zaDB2LjJ6IiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0xMS44NSwzLjEyaC0uODR2LS41Yy40MiwwLC43MywwLDEuMDUuM2wtLjIxLjJaIiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTkuMjMgOC4yM3YuNGguMzFjLjEgMCAwIC4zIDAgLjQtLjEuMi0uMzEgMC0uNDIgMCAwLS40LS4zMS0uNy0uMjEtMWguMzF2LjJ6bS4zMi0yLjJoLjQyYy4xIDAgMC0uMi4xLS4zLjEtLjIuMzEgMCAuNTIgMHYuNmgtLjYzcy0uNDIuMi0uNDIgMGgwdi0uM3ptLjEgNS42MWMtLjEgMCAwLS40LS4yMS0uNS0uMSAwLS4zMS0uMi0uMjEtLjRoLjQyYzAgLjIuMjEuNC40Mi41LS4xIDAtLjMxLjMtLjQyLjR6IiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0zLjQ2LDYuMDNoLS41MmMwLS4zLS4zMS0uNiwwLTEsLjMxLDAsLjIxLjYuNjMuNXYuNGgwbC0uMS4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNMS43OSA5LjA0Yy0uMjEuMi0uMjEuNS0uMjEuOGgtLjMxdi0uNkguODVjMC0uMi4yMS0uMi4yMS0uMyAwIC4yLjMxLjIuNDIuMmwuMjEuMmgwbC4xLS4zem0tLjc0IDIuOHYtLjZoLjQyYy4yMS4zIDAgLjQgMCAuNmgtLjQyeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNNy44NywxLjYyYzAtLjItLjIxLDAtLjMxLS4yLS4yMS0uMiwwLS40LDAtLjYuMTQsMCwuMjEuMDcuMjEuMnYuM3MuMjEsMCwuMzEuMnYuM2gtLjMxdi0uMmguMVoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTEuMzcgNC43MnMwLS4yLjIxLS4zSDJ2LjRoLS43M3YtLjJoMGwuMS4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNNy4zNCw4LjAzbC4yMS0uMmMuMzEsMCwuNDIuMy42My40bC0uMjEuMmMtLjIxLDAtLjMxLS4zLS42My0uNWgwdi4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNMy42NyA5LjQ0di0uNGguNDJ2LjRoLS41Mi4xem0xLjg5LTMuMjFjMCAuMy0uMjEgMC0uNDIuMiAwLS4yLS4yMS0uNC0uNDItLjRsLjIxLS4yczAgLjIuMzEuMi4yMS4yLjMxLjNoMHYtLjF6bS0zLjk4LS43aC4yMWMuMjEgMCAwIC4zIDAgLjRoLS41MnYtLjVoLjMxdi4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNOS43NSw1LjEzdi40Yy0uMS4yLS4zMSwwLS40MiwwczAtLjMsMC0uNGMuMjEtLjIuMzEsMCwuNTIsMGgtLjFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik05LjIzLDguMjNoLS4zMXYtLjZoLjMxYy4xLjIsMCwuNCwwLC42Wk02LjUsMTEuMjRjMCwuMiwwLC41LS4yMS43aC0uMzFjLjIxLS4yLjIxLS40LjIxLS43aC4zMVpNMy4zNiwxLjkyYy4yMSwwLDAsLjIuMjEuM3YuM2MtLjIxLDAtLjIxLjMtLjQyLjJ2LS4yYzAtLjMuNDIsMCwuMzEtLjN2LS4zaC0uMVoiIGNsYXNzPSJJIi8+PHBhdGggZD0iTTcuNjYsMTIuNTVjLS4zMSwwLS41Mi40LS44NCwwdi0uMmguODR2LjJaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik0xLjU4IDUuNTNoLS4yMWMtLjMxIDAtLjIxLS40LS4zMS0uNSAwIDAgLjIxLS4yLjMxLS4yaC4yMXYuN3ptMy4xNCAxaC41MmMwIC40LS40Mi4yLS41Mi40IDAgMC0uMjEgMC0uMjEtLjNzMC0uMi4yMS0uMmgwdi4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNOS41NSA2LjAzdi4yYy0uMSAwLS4yMSAwLS4zMS4yIDAtLjMtLjMxIDAtLjMxLS4yIDAgMCAuMjEgMCAuMjEtLjMuMjEgMCAuNDItLjIuNTIuMmgwbC0uMS0uMXptLTQuODMuNXMwIC4yLS4yMS4yYzAgMCAuMjEgMCAuMjEuMi0uMjEgMC0uMzEgMC0uNTIuMnYtLjNoLjIxYzAtLjMuMjEtLjIuMzEtLjJ2LS4xeiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNNi4zLDUuNDN2LjJoLS42M3YtLjJjLjIxLS4yLjMxLS4yLjYzLDBoMFoiIGNsYXNzPSJKIi8+PHBhdGggZD0iTTEuNzksOS4wNHMtLjIxLDAtLjIxLS4yYy4xNC0uMTMuMjgtLjIuNDItLjJ2LjNoLS4zMWwuMS4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNNC4yLDYuOTN2LjZoLS4zMWMwLS4yLDAtLjQuMzEtLjZaIiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0xLjc5LDcuMjNjLS4yMSwwLS40MiwwLS41Mi0uMywwLDAsMC0uMi4yMS0uMmgwczAsLjMuMjEuM2gwdi4yaC4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNLjc0LDIuNjJ2LjNjLS4yMSwwLS40Mi0uMi0uNDItLjUuMjEsMCwuMzEuMi41Mi4yaC0uMVoiIGNsYXNzPSJKIi8+PGcgY2xhc3M9IkgiPjxwYXRoIGQ9Ik0xMC43IDEuNzJ2LS4yaC41MmMwIC40LS4zMS4yLS41Mi4yek0xMi4wNi42MXYtLjNoLjIxYy4yMSAwIC4xLjMgMCAuNWgtLjMxLjF2LS4yem0tOS40MyA5LjkzcS4yMSAwIDAgLjNoLS41MnYtLjNoLjUyem0zLjI1IDEuMWMwIC4zLS4zMS4yLS41Mi4ydi0uMmguNjMtLjF6bS00LjgzLjJoLjMxYy4yMSAwIDAgLjIuMjEuM2gtLjUydi0uM3ptMTAuMTctNC4zMWMuMSAwIC4yMS4yLjIxLjJzLS4yMS4yLS4yMS4zbC0uMjEtLjJzLjEtLjIuMjEtLjN6bS00LjgyLjdjMCAuMi41MiAwIC40Mi41IDAtLjItLjMxLS4yLS40Mi0uMnYtLjN6bTMuNzcgMS43MWwtLjIxLS4ycy4xLS4yLjIxLS4yLjIxIDAgLjMxLjJsLS4yMS4yaC0uMXptLS44My0uMmwuMjEuMnMtLjIxIDAtLjMxLjJjMCAwLS4xIDAtLjIxLS4yIDAgMCAuMS0uMi4yMS0uM2guMXYuMXoiLz48L2c+PHBhdGggZD0iTTMuNjcsMTAuMDRzLjIxLDAsLjMxLS4ybC4zMS4zcy0uMjEsMC0uMzEuMmgtLjIxbC0uMS0uMnYtLjFaIiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0xMS41NCwxMC42NGwtLjIxLjJzLS4xLS4yLS4yMS0uM2MwLDAsLjEsMCwuMjEtLjIuMSwwLC4yMSwwLC4zMS4yaC0uMXYuMVoiIGNsYXNzPSJLIi8+PHBhdGggZD0iTS42MyAxMS41NGwtLjIxLS4ycy4yMSAwIC4zMS0uMmwuMjEuMnMwIC4yLS4yMS4zaC0uMXYtLjF6bS43NC43MWguNDJ2LjNjLS4yMSAwLS40MiAwLS40Mi0uM3oiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTEyLjA2LDEyLjI1di40bC0uMzEtLjNzLjEsMCwuMzEtLjFaIiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik03Ljg3LjkxczAtLjItLjIxLS4yYzAtLjIuMjEtLjMuMzEtLjNsLjIxLjJjMCwuMi0uMjEuMy0uMzEuM1pNMi40Mi45MWwtLjIxLS4ycy4yMSwwLC4zMS0uMmwuMjEuMnMwLC4yLS4yMS4zaC0uMXYtLjFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik0xLjc5LDMuMjJzLS4yMSwwLS4zMS4ybC0uMzEtLjNzLjIxLDAsLjMxLS4yaC4yMWwuMS4ydi4xWiIgY2xhc3M9IkoiLz48ZyBjbGFzcz0iSCI+PHBhdGggZD0iTS40Mi4yMWwuMjEuMnMtLjIxLjItLjIxLjNMLjIxLjUxczAtLjIuMjEtLjN6bS41MyAyLjIxbC0uMjEtLjJzLjIxIDAgLjMxLS4ybC4yMS4yczAgLjItLjIxLjNoLS4xdi0uMXptMy45OC0uMmwtLjIxLS4yczAtLjIuMjEtLjIuMjEgMCAuMzEuMmwtLjIxLjJoLS4xek0zLjY3IDYuMDNsLjIxLS4ycy4yMS4yLjMxLjJsLS4yMS4ycy0uMjEgMC0uMzEtLjJ6bS0uOTQtMy45MWwtLjIxLS4ycy4yMS0uMi4yMS0uM2wuMjEuMnMwIC4yLS4yMS4zeiIvPjwvZz48cGF0aCBkPSJNMTEuMDEgNi4yM2MuMjEgMCAuMzEgMCAuNTIuMy0uMSAwLS4zMSAwLS40Mi4yaC0uMjF2LS4zaDBsLjEtLjJ6bS04LjU5LjhjMC0uMiAwLS4zLjMxLS41IDAgMCAwIC4zLjIxLjR2LjJoLS40MmwtLjEtLjF6IiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0xMC43LDcuMjNsLS4yMS0uMnMuMjEsMCwuMzEtLjJjMCwwLC4xLDAsLjIxLjIsMCwwLS4xLjItLjIxLjNoLS4xdi0uMVoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTExLjg1LDMuMTJzMC0uMi4yMS0uMi4yMS4yLDAsLjNoLS4zMS4xdi0uMVoiIGNsYXNzPSJKIi8+PHBhdGggZD0iTTguMDggMi43MmMuMjEgMCAuMzEgMCAuMjEuM2gtLjIxdi0uM3ptLTQuNjItLjF2LS4zYy4yMSAwIC40MiAwIC4zMS4zaC0uMzF6bS0uOTQtLjFoLS42My42M3oiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTcuODcgMS42MmguMzFjMCAuMiAwIC4zLS4yMS41LS4yMS0uMiAwLS4zIDAtLjVoLS4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNNS40NiAxLjAxYzAtLjIgMC0uMy4zMS0uMnYuMmgtLjMxem01LjM0IDEwLjkzdi41cy0uMS0uMi0uMjEtLjNjMCAwIC4yMSAwIC4zMS0uMmgtLjF6bS00LjgyLS4xaC4zMXYuMmMtLjIxIDAtLjMxIDAtLjMxLS4yeiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNMi4xIDExLjg0YzAtLjIgMC0uMy4zMS0uMnYuMkgyLjF6IiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik05LjAyLDExLjU0YzAsLjItLjIxLjItLjMxLDAsMCwwLDAtLjMuMS0uMy4xNCwwLC4yMS4wNy4yMS4yaDB2LjFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik02LjUsMTEuMjRoLS4zMWMwLS4yLDAtLjQuMzEtLjN2LjNaIiBjbGFzcz0iSSIvPjxwYXRoIGQ9Ik0zLjY3LDEwLjk0aC4zMXYuMmMtLjIxLDAtLjQyLDAtLjMxLS4yWiIgY2xhc3M9IkoiLz48cGF0aCBkPSJNMTAuNDksMTAuNDR2LjJoLS4zMWMtLjEsMCwwLDAsMC0uMmguMzFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik03LjU1IDEwLjQ0bC0uMzEuM3MwLS4yLS4yMS0uM2guNTJ6bS00LjkyLjFoLS4zMXMtLjIxIDAtLjIxLS4ybC4yMS0uMmMuMjEgMCAuMzEuMi4zMS4zaDB2LjF6bTEuMDQtLjV2LjQtLjNsLjIxLS4yaDBsLS4yMS4xeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNMTEuMTIsOS42NGMuMzEsMCwuNDIsMCwuMzEuMmgtLjMxdi0uMloiIGNsYXNzPSJKIi8+PHBhdGggZD0iTTYuOTIsOS41NHYuM2gtLjIxYzAtLjIsMC0uMy4yMS0uM1oiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTUuMTQgOS41NGguMjF2LjNoLS4yMXYtLjN6bS0zLjg4LS4xYy4xNCAwIC4yMS4wNy4yMS4yaC0uMjFxLS4yMSAwLS4yMS0uMmguMjF6IiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik02LjkyIDguNzRjLjMxIDAgLjQyIDAgLjMxLjJoLS4zMXYtLjJ6bS40Mi0xLjExYzAgLjIgMCAuMy0uMzEuMnYtLjJoLjMxem0tNS40NS4ydi0uMmguMzF2LjJoLS4zMXoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTMuMzYsNy4yM3MuMjEuMi4zMS4yYzAsLjItLjMxLDAtLjQyLDBxMC0uMi4yMS0uNGgwbC0uMS4yWiIgY2xhc3M9IksiLz48cGF0aCBkPSJNMi40Miw3LjAzaC4zMWMwLC4yLDAsLjQtLjMxLjN2LS4zWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNNS45OCw2LjUzYzAtLjIuMjEtLjIuMzEsMHYuM2MtLjE0LDAtLjIxLS4wNy0uMjEtLjJoMGwtLjEtLjFaIiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik0xMS4wMSA2LjIzdi4zaC0uMzF2LS4zaC4zMXptLjYzLS42di0uMmguMzFjLjEgMCAwIDAgMCAuMmgtLjMxeiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNOC43MSw1LjUzYy0uMSwwLS4yMSwwLS4zMS4ydi0uMmMwLS4xMy4wNy0uMi4yMS0uMmguMzFjMCwuMTMtLjAzLjItLjEuMmgtLjFaIiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik04LjE4IDUuNDNxLS4yMSAwLS4zMS0uM2MuMjEgMCAuNDItLjIuNTIgMGwtLjIxLjJ2LjF6bS01LjY2LS42Yy4yMSAwIC4zMSAwIC40Mi0uMmwuMjEuMmgtLjYzeiIgY2xhc3M9IkkiLz48cGF0aCBkPSJNMS4wNSw0LjkzYy0uMjEsMC0uMjEtLjIsMC0uM2guMzFjMCwuMTMtLjA3LjItLjIxLjJoLS4xdi4xWiIgY2xhc3M9IkgiLz48cGF0aCBkPSJNLjYzIDQuNzJILjQydi0uM2guMjF2LjN6IiBjbGFzcz0iSiIvPjxwYXRoIGQ9Ik0yLjg0LDMuNjJsLjIxLS4ydi42czAtLjMtLjIxLS40WiIgY2xhc3M9IksiLz48cGF0aCBkPSJNMS43OSAzLjIydi0uNHMwIC4zLjIxLjNjMCAwIDAgLjItLjIxLjN2LS4yeiIgY2xhc3M9IkoiLz48cGF0aCBkPSJNMi4zMSAxMC4yNHMwIC4yLS4yMS4yaDBzMC0uMi4zMS0uM2gwbC0uMS4xem04LjE4LTEuMXYtLjNoLjQyYy0uMSAwLS4yMS4yLS4zMS4zaC0uMXoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTMuNDYsOC45NHMwLS4zLS4yMS0uNGMuMjEsMCwuNDIsMCwuMjEuNFoiIGNsYXNzPSJLIi8+PHBhdGggZD0iTTEuNzkgNy4yM3YtLjQuNGgtLjIxLjIxem0xMC41OS0uMmgtLjMxYzAtLjIuMS0uMi4yMS0uMy4yMSAwIDAgLjIuMS4zem0tNC45My0uM2guNDJjMCAuMi0uMjEuMi0uMzEuM3YtLjNoLS4xem0tMS40Ny0uMnMwIC4yLjIxLjJjMCAuMi0uMjEuMi0uMzEgMHYtLjNoMGwuMS4xem0xLjA1LjJsLjIxLS4ydi4yaC0uMzEuMXptMS4wNS0uNHMtLjIxIDAtLjMxLS4yYy4zMSAwIC40MiAwIC4zMS4yem0tMi41Mi0uMWMtLjIxIDAtLjMxLS4yLS4zMS0uM2guMzF2LjN6bTIuNjItLjhzMC0uMi4yMS0uMi4yMSAwIC4yMS4yYy0uMSAwLS4yMSAwLS4yMS4yLS4xIDAtLjIxIDAtLjIxLS4yem0tNy4xMy0uNXMuMjEgMCAuMjEtLjJoLjIxdi4yYzAgLjItLjIxIDAtLjMxLjJ2LS4yaC0uMXoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTguOTIsNC4yMmwuMjEtLjJ2LjJoLS4zMS4xWiIgY2xhc3M9IkoiLz48cGF0aCBkPSJNMy43OCwzLjEyaC4zMXYuNGwtLjMxLS4zaDB2LS4xWiIgY2xhc3M9IksiLz48cGF0aCBkPSJNMy4zNiwxLjkydi4zaC0uMzFjMC0uMi4yMS0uMy4zMS0uM1oiIGNsYXNzPSJJIi8+PHBhdGggZD0iTTYuNSwyLjEyczAtLjItLjIxLS40Yy4yMSwwLC40MiwwLC4yMS40WiIgY2xhc3M9IksiLz48cGF0aCBkPSJNNi40LjgxczAsLjItLjIxLjNjMC0uMywwLS40LjIxLS4zWk04LjE4LjYxcy0uMjEsMC0uMjEtLjJoMHMuMjEsMCwuMzEuMmgtLjFaIiBjbGFzcz0iSCIvPjxwYXRoIGQ9Ik03LjY2LDEyLjU1di0uMmguMzFjMCwuMiwwLC4zLS4zMS4zaDB2LS4xWiIgY2xhc3M9IkoiLz48cGF0aCBkPSJNOS44NiAxMS45NHYuNGgtLjMxYzAtLjIuMjEtLjIuMjEtLjRoLjF6bS0yLjMxLjQxaC0uMzF2LS4ybC4yMS0uMmMuMjEgMCAwIC4yLjIxLjNoMGwtLjEuMXoiIGNsYXNzPSJIIi8+PHBhdGggZD0iTTcuMzQsMTIuMDVzMCwuMi0uMjEuMmgwczAtLjIuMzEtLjNoMGwtLjEuMVoiIGNsYXNzPSJLIi8+PHBhdGggZD0iTTkuMDIsMTEuNTRzMC0uMi0uMjEtLjJjMC0uMi4yMS0uMi4zMSwwLDAsMCwwLC4zLS4xLjNoMHYtLjFaIiBjbGFzcz0iSCIvPjwvZz48L2c+PC9zdmc+');
+            background-repeat: repeat;
+            background-size: calc(12.9px * 3) calc(12.9px * 3);
+        }
 
         @media (max-width: 1400px) {
             .contact-us {
@@ -734,7 +737,7 @@
             }
             
             .video-container iframe {
-                height: 350px;
+                height: 100%;
             }
         }
         
@@ -749,7 +752,7 @@
             }
             
             .video-container iframe {
-                height: 250px;
+                height: 100%;
             }
           
             .testimonial-slide {
@@ -777,31 +780,31 @@
         <div class="gallery-container">
             <div class="gallery-item gallery-item-1">
                 <!-- Image | Mother Son Kitchen Thermostat -->
-                <img src="./images/Mother_Son_Kitchen_Thermostat.webp" alt="Mother and son adjusting thermostat in a cozy kitchen, demonstrating energy-saving habits at home.">
+                <img src="./images/Mother_Son_Kitchen_Thermostat.png" alt="Mother and son adjusting thermostat in a cozy kitchen, demonstrating energy-saving habits at home.">
             </div>
             <div class="gallery-item gallery-item-2">
                 <!-- Image | Downtown Night Shot -->
-                <img src="./images/Downtown_Night_Shot.webp" alt="Charming small town main street at night, illuminated by streetlights and shop windows.">
+                <img src="./images/Downtown_Night_Shot.png" alt="Charming small town main street at night, illuminated by streetlights and shop windows.">
             </div>
             <div class="gallery-item gallery-item-3">
                 <!-- Image | Girl_Showing_Cow -->
-                <img src="./images/Girl_Showing_Cow.webp" alt="Young girl proudly presenting her cow at a rural county fair or agricultural event.">
+                <img src="./images/Girl_Showing_Cow.png" alt="Young girl proudly presenting her cow at a rural county fair or agricultural event.">
             </div>
             <div class="gallery-item gallery-item-4">
                 <!-- Image | Scoreboard_Lights -->
-                <img src="./images/Scoreboard_Lights.webp" alt="Illuminated football scoreboard at night, capturing the excitement of a local high school game.">
+                <img src="./images/Scoreboard_Lights.png" alt="Illuminated football scoreboard at night, capturing the excitement of a local high school game.">
             </div>
             <div class="gallery-item gallery-item-5">
                 <!-- Image | Native_American_Traditional_Dress_Parade -->
-                <img src="./images/Native_American_Traditional_Dress_Parade_cropped.webp" alt="Native American dancers in vibrant traditional regalia performing in a community parade.">
+                <img src="./images/Native_American_Traditional_Dress_Parade_cropped.png" alt="Native American dancers in vibrant traditional regalia performing in a community parade.">
             </div>
             <div class="gallery-item gallery-item-6">
                 <!-- Image | Group of Kids Country Bridge -->
-                <img src="./images/Group_of_Kids_Country_Bridge.webp" alt="Group of children fishing from a rustic wooden bridge over a peaceful country stream.">
+                <img src="./images/Group_of_Kids_Country_Bridge.png" alt="Group of children fishing from a rustic wooden bridge over a peaceful country stream.">
             </div>
             <div class="gallery-item gallery-item-7">
                 <!-- Image | Girls American Flag Rodeo -->
-                <img src="./images/Girls_American_Flag_Rodeo.webp" alt="Young women on horseback carrying American flags at a local rodeo event.">
+                <img src="./images/Girls_American_Flag_Rodeo.png" alt="Young women on horseback carrying American flags at a local rodeo event.">
             </div>
             <div class="gallery-tagline">
                 <h2 class="cursive-title">Life is bigger in a small town.</h2>
@@ -811,7 +814,7 @@
             </div>
             <div class="gallery-item gallery-item-8">
                 <!-- Image | Girl Tire Swing -->
-                <img src="./images/Girl_Tire_Swing.webp" alt="Joyful young girl swinging on a tire swing, enjoying simple pleasures of rural childhood.">
+                <img src="./images/Girl_Tire_Swing.png" alt="Joyful young girl swinging on a tire swing, enjoying simple pleasures of rural childhood.">
             </div>
         </div>
     </section>
@@ -822,7 +825,7 @@
         <div class="container">
             <div style="aspect-ratio: 16/9; background-color: var(--mid-gray);" class="video-container">
                         <!-- Image | Video Thumbnail -->
-                        <img src="./images/Vimeo-Thumb.webp" alt="Video Thumbnail" style="width:100%;">
+                        <img src="./images/Vimeo-Thumb.png" alt="Video Thumbnail" style="width:100%;">
                 <div class="play-button">
                     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class=""><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
                 </div>
@@ -849,17 +852,17 @@
                         <div class="electric-image-1">
                             <!-- Image | Country Road Power Poles -->
                             <img alt="Power lines stretching along a rural country road, symbolizing the reach of electric cooperatives in bringing electricity to remote areas" 
-                            src="./images/Country_Road_Power_Poles.webp" class="electric-image">
+                            src="./images/Country_Road_Power_Poles.png" class="electric-image">
                         </div>
                         <div class="electric-image-2">
                             <!-- Image | Girl Tire Swing -->
                             <img alt="Father and son working together on a hobby car in a well-lit garage, showcasing the importance of reliable electricity in supporting family activities and hobbies" 
-                            src="./images/Father_Son_Shop_Hobby_Car.webp" class="electric-image">
+                            src="./images/Father_Son_Shop_Hobby_Car.png" class="electric-image">
                         </div>
                         <div class="electric-image-3">
                             <!-- Image | Girl Tire Swing -->
                             <img alt="Mother and daughter observing wind turbines at sunset, illustrating the blend of rural life with modern, sustainable energy solutions" 
-                            src="./images/Mother_Daughter_Wind_Turbines.webp" class="electric-image">
+                            src="./images/Mother_Daughter_Wind_Turbines.png" class="electric-image">
                         </div>
                     </div>
                     
@@ -985,7 +988,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <a target="_blank" href="https://cobank.com/stories/customers/united-electric-cooperative">
                         <div class="story-card">
-                            <img src="./images/Serving_Outside_the_Box.webp" alt="Electric vehicle parked in front of a rural home, symbolizing United Electric Cooperative's expansion into broadband services in underserved areas." class="story-img">
+                            <img src="./images/Serving_Outside_the_Box.png" alt="Electric vehicle parked in front of a rural home, symbolizing United Electric Cooperative's expansion into broadband services in underserved areas." class="story-img">
                             <div class="story-content">
                                 <h3 class="story-title">Serving Outside the Box: United Electric Cooperative Delivers Broadband to New Markets</h3>
                                 <p class="story-organization">UNITED ELECTRIC COOPERATIVE</p>
@@ -996,7 +999,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <a target="_blank" href="https://cobank.com/stories/customers/trico-electric-cooperative-bringing-communities-together-through-connection-and-power">
                         <div class="story-card">
-                            <img src="./images/Bringing_Communities_Together_Through_Connection_and_Power.webp" alt="Array of solar panels in a sunny field, representing Todd Electric Cooperative's commitment to renewable energy and community connection." class="story-img">
+                            <img src="./images/Bringing_Communities_Together_Through_Connection_and_Power.png" alt="Array of solar panels in a sunny field, representing Todd Electric Cooperative's commitment to renewable energy and community connection." class="story-img">
                             <div class="story-content">
                                 <h3 class="story-title">Bringing Communities Together Through Connection and Power</h3>
                                 <p class="story-organization">TODD ELECTRIC COOPERATIVE</p>
@@ -1007,7 +1010,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <a target="_blank" href="https://cobank.com/stories/customers/electric-coop-embraces-clean-energy-in-colorado">
                         <div class="story-card">
-                            <img src="./images/Electric_Co-op_Embraces_Clean_Energy_in_Colorado.webp" alt="High-voltage power lines stretching across the Colorado landscape, symbolizing Core Electric Cooperative's initiative to embrace clean energy solutions." class="story-img">
+                            <img src="./images/Electric_Co-op_Embraces_Clean_Energy_in_Colorado.png" alt="High-voltage power lines stretching across the Colorado landscape, symbolizing Core Electric Cooperative's initiative to embrace clean energy solutions." class="story-img">
                             <div class="story-content">
                                 <h3 class="story-title">Electric Co-op Embraces Clean Energy in Colorado</h3>
                                 <p class="story-organization">CORE ELECTRIC COOPERATIVE</p>
@@ -1040,24 +1043,26 @@
                     <p class="footer-info">Greenwood Village, CO 80111</p>
                     <p class="footer-info">800-542-8072</p>
                     
+
+
                     <div class="social-links">
-                        <p class="footer-heading-2">More Contact Information</p>
-                        <a href="#">
+                        <p class="footer-heading-2"><a href="https://www.cobank.com/web/cobank/contact" target="_blank">More Contact Information</a></p>
+                        <a href="https://www.linkedin.com/company/cobank" target="_blank">
                             <svg id="Group_94" data-name="Group 94" class="fab" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.737" height="34.975" viewBox="0 0 37.737 34.975"><defs><clipPath id="clip-path"><rect id="Rectangle_144" data-name="Rectangle 144" width="37.737" height="34.975" fill="#fff"/></clipPath></defs><g id="Group_84" data-name="Group 84" clip-path="url(#clip-path)">
                                 <path id="Path_247" data-name="Path 247" d="M36.738,28.415a1,1,0,1,0,1,1,.986.986,0,0,0-1-1m0,1.847a.848.848,0,1,1,.848-.848.839.839,0,0,1-.848.848m.218-.75a.3.3,0,0,0,.226-.3c0-.19-.129-.3-.345-.3h-.486v1h.173v-.38h.22l.268.38h.213l-.282-.4Zm-.432-.118v-.326h.285c.124,0,.195.057.195.157s-.073.169-.195.169ZM32.394,0H2.582A2.582,2.582,0,0,0,0,2.582V32.393a2.582,2.582,0,0,0,2.582,2.582H32.394a2.582,2.582,0,0,0,2.582-2.582V2.582A2.582,2.582,0,0,0,32.394,0M10.424,29.8H5.166v-16.7h5.258ZM7.8,10.777A2.976,2.976,0,0,1,4.764,7.759,2.978,2.978,0,0,1,7.8,4.74a2.978,2.978,0,0,1,3.032,3.019A2.977,2.977,0,0,1,7.8,10.777M29.809,29.808H24.551V20.685c0-2.692-1.144-3.522-2.62-3.522-1.56,0-3.09,1.174-3.09,3.589v9.056H13.583V13.1H18.64v2.314h.067a5.736,5.736,0,0,1,5-2.784c2.934,0,6.1,1.74,6.1,6.843Z" fill="#fff"/></g>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="https://www.facebook.com/CoBankACB" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" class="fab" width="35.769" height="35.551" viewBox="0 0 35.769 35.551">
                                 <path id="Icon_simple-facebook" data-name="Icon simple-facebook" d="M35.769,17.884A17.884,17.884,0,1,0,15.09,35.551v-12.5H10.549v-5.17H15.09v-3.94c0-4.482,2.67-6.958,6.755-6.958a27.5,27.5,0,0,1,4,.349v4.4H23.593a2.585,2.585,0,0,0-2.915,2.793v3.355h4.96l-.793,5.17H20.679v12.5A17.889,17.889,0,0,0,35.769,17.884Z" transform="translate(0 0)" fill="#fff"/>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="https://www.instagram.com/cobankacb" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" class="fab" width="35.771" height="35.771" viewBox="0 0 35.771 35.771">
                                 <path id="Icon_simple-instagram" data-name="Icon simple-instagram" d="M17.886,0c-4.859,0-5.466.022-7.373.107A13.189,13.189,0,0,0,6.171.939,8.759,8.759,0,0,0,3,3,8.727,8.727,0,0,0,.939,6.171a13.15,13.15,0,0,0-.832,4.342C.018,12.42,0,13.027,0,17.886s.022,5.466.107,7.373A13.2,13.2,0,0,0,.939,29.6,8.771,8.771,0,0,0,3,32.77a8.746,8.746,0,0,0,3.169,2.063,13.205,13.205,0,0,0,4.342.832c1.908.089,2.514.107,7.373.107s5.466-.022,7.373-.107a13.236,13.236,0,0,0,4.342-.832A9.141,9.141,0,0,0,34.832,29.6a13.2,13.2,0,0,0,.832-4.342c.089-1.908.107-2.514.107-7.373s-.022-5.466-.107-7.373a13.227,13.227,0,0,0-.832-4.342A8.778,8.778,0,0,0,32.77,3,8.715,8.715,0,0,0,29.6.939,13.158,13.158,0,0,0,25.259.107C23.351.018,22.745,0,17.886,0Zm0,3.219c4.774,0,5.343.024,7.229.106a9.854,9.854,0,0,1,3.319.619,5.886,5.886,0,0,1,3.4,3.394,9.875,9.875,0,0,1,.616,3.319c.085,1.887.1,2.453.1,7.229s-.022,5.343-.11,7.229a10.065,10.065,0,0,1-.627,3.319,5.679,5.679,0,0,1-1.34,2.06,5.58,5.58,0,0,1-2.057,1.335,9.948,9.948,0,0,1-3.331.616c-1.9.085-2.458.1-7.242.1s-5.345-.022-7.242-.11a10.142,10.142,0,0,1-3.333-.627,5.539,5.539,0,0,1-2.055-1.34,5.431,5.431,0,0,1-1.341-2.057,10.15,10.15,0,0,1-.626-3.331c-.067-1.878-.091-2.458-.091-7.22s.024-5.345.091-7.245a10.139,10.139,0,0,1,.626-3.33A5.3,5.3,0,0,1,5.211,5.23,5.29,5.29,0,0,1,7.266,3.892a9.9,9.9,0,0,1,3.31-.627c1.9-.067,2.459-.089,7.242-.089l.067.045Zm0,5.482a9.184,9.184,0,1,0,9.184,9.184A9.184,9.184,0,0,0,17.886,8.7Zm0,15.146a5.962,5.962,0,1,1,5.962-5.962A5.96,5.96,0,0,1,17.886,23.848ZM29.58,8.339a2.146,2.146,0,1,1-2.146-2.145A2.148,2.148,0,0,1,29.58,8.339Z" transform="translate(0 0)" fill="#fff"/>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="https://www.twitter.com/cobank" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" class="fab" viewBox="0 0 35.653 32.229">
                                 <path id="x-twitter" d="M54.876,48h5.47L48.4,61.651,62.453,80.229h-11L42.829,68.964,32.975,80.229H27.5l12.775-14.6L26.8,48H38.08l7.786,10.3ZM52.955,76.96h3.029L36.43,51.1H33.176Z" transform="translate(-26.8 -48)" fill="#fff"/>
                             </svg>
@@ -1070,11 +1075,15 @@
                     <div class="col-md-8">
                         <p class="info-cobank">@2011-2025 CoBank. All Rights Reserved.</p>
                         <p class="info-cobank">Farm Credit is an Equal Housing Lender, and an Equal Credit Opportunity Lender.</p>
-                        <p class="info-cobank">Conditions of Use  |  Privacy  |  Transparency in Coverage  |  Anti-Money Laundering  |  CoBank Code of Ethics  |  Confidential Hotline</p>
-                        <p class="info-cobank">1‑888‑525‑5391 or online at cobank.ethicspoint.com</p>
+
+                        <p class="info-cobank"> 
+                        <a href="https://www.cobank.com//web/cobank/conditions-of-use" target="_blank">Conditions&nbsp;of&nbsp;Use</a> &nbsp;|&nbsp; <a href="https://www.cobank.com//web/cobank/privacy" target="">Privacy</a> &nbsp;|&nbsp; <a href="https://www.cobank.com//web/cobank/transparency-in-coverage" target="_blank">Transparency&nbsp;in&nbsp;Coverage</a> &nbsp;|&nbsp; <a href="https://www.cobank.com//web/cobank/anti-money-laundering" target="_blank">Anti-Money&nbsp;Laundering</a> &nbsp;|&nbsp; <a href="https://www.cobank.com//web/cobank/code-of-ethics" target="_blank">CoBank&nbsp;Code&nbsp;of&nbsp;Ethics</a></p>
+
+                        <p class="info-cobank">Confidential&nbsp;Hotline&nbsp;1‑888‑525‑5391 or online at <a data-target="#speedbump" data-toggle="modal" href="https://cobank.ethicspoint.com" target="_blank" class="ext_link">cobank.ethicspoint.com</a></p>
+                        
                     </div>
                     <div class="col-md-4 text-md-end">
-                        <p>Proud member of the Farm Credit System <img src="/images/Clover.webp" alt="Equal Housing Lender" class="equal-housing"></p>
+                        <p>Proud member of the Farm Credit System <img src="./images/clover.png" alt="Equal Housing Lender" class="equal-housing"></p>
                     </div>
                 </div>
             </div>
@@ -1102,6 +1111,8 @@
             if (src.indexOf('autoplay') === -1) {
                 iframe.setAttribute('src', src + (src.indexOf('?') !== -1 ? '&' : '?') + 'autoplay=1');
             }
+            console.log(iframe.querySelectorAll('body'));
+            
         });
         
         // Smooth scrolling for anchor links
