@@ -534,26 +534,30 @@
         .quote-carousel-section {
             background: #A0EDF0;
             color: #01556D;
-            padding: 70px 0;
+            padding: 5rem 0;
             text-align: center;
             position: relative;
             min-height: 340px;
+            
         }
 
         #quote-carousel {
-            max-width: 1100px;
-            margin: 2rem 5rem;
-            min-height: 200px;
+            margin: auto auto;
+            min-height: 400px;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .quote-slide {
             opacity: 1;
             transition: opacity 0.6s;
             position: absolute;
-            left: 0;
-            top: 0;
-
+            right:50%;
+            transform: translate(50%, -50%);
+            top: 50%;
+            text-align: center;
             display: block;
         }
 
@@ -567,6 +571,10 @@
             font-weight: 700;
             margin-bottom: 32px;
             color: #01556D;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
 
         .quote-slide div {
@@ -655,6 +663,37 @@
         clip-path: url(#clip-topAndBottom);
     }
 }
+
+@media (max-width: 600px) {
+    #quote-prev {
+        font-size: 2.2rem;
+        left: 10px;
+    }
+    #quote-next {
+        font-size: 2.2rem;
+        right: 10px;
+    }
+    #quote-carousel {
+        max-width: 95vw;
+        margin: 1rem 0.5rem;
+    }
+    .quote-slide h2 {
+        font-size: 1.1rem;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        margin-bottom: 18px;
+        max-width: 95vw;
+    }
+    .quote-slide div {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    .quote-slide div:last-child {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+}
     </style>
 </head>
 <body>
@@ -686,13 +725,11 @@
     <section class="ground-image-section"></section>
 
     <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;"></div> 
-    <!-- Video Section: Intersecting Block -->
     <section class="video-section">
         <div class="container">
             <div class="video-absolute-container">
-                <!-- Video Preview -->
                 <div>
-                    <img src="./images/Vimeo-Thumb.webp" alt="Video Thumbnail">
+                    <img src="./images-next/Vimeo-Thumb.png" alt="Video Thumbnail">
                     <div class="play-button">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="24" cy="24" r="24" fill="none"/>
@@ -774,7 +811,7 @@
     </section>
     <!-- Quote Carousel Section -->
     <section style="background-image: url('./images-next/quotes-bg.png'); margin-top: -30px;" class="quote-carousel-section clip-top">
-        <div style="margin-left: auto; margin-right: auto" id="quote-carousel">
+        <div  id="quote-carousel">
           <div class="quote-slide">
             <h2>"Because we're a smaller rural system, other lenders wouldn't offer us the same kind of flexibility we received from CoBank."</h2>
             <div>- Jason Fell, General Manager</div>
