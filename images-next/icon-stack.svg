@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 351.66 304.45">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 9.77px;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" x="0" y="0" width="351.66" height="304.45"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="0" y="0" width="351.66" height="304.45"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g class="cls-4">
+        <g>
+          <path class="cls-2" d="M200.83,156.97l-72.32,41.07-94.12-52.6-30.25-16.92,82.99-47.14"/>
+          <path class="cls-2" d="M158.17,41.04L223.14,4.14l124.38,69.51-30.25,17.18-43.53,24.72"/>
+        </g>
+      </g>
+      <path class="cls-2" d="M183.17,57.76l35.18-19.9,69.69,38.94-43.05,24.34"/>
+      <path class="cls-2" d="M114.8,96.43l-51.19,28.95,69.69,38.94,47.7-26.98"/>
+      <g class="cls-3">
+        <g>
+          <path class="cls-2" d="M273.72,149.67l13.3-7.54,30.25-17.19,30.25-17.18-30.25-16.92"/>
+          <path class="cls-2" d="M34.4,145.45l-30.25,17.18,30.25,16.92,30.27,16.9,63.86,35.69,72.32-41.07"/>
+          <path class="cls-2" d="M200.83,225.14l-72.32,41.07-94.1-52.6-30.27-16.9,30.25-17.18"/>
+          <path class="cls-2" d="M317.26,124.94l30.25,16.9-30.25,17.19-43.55,24.74"/>
+          <path class="cls-2" d="M317.26,159.03l30.25,16.9-73.78,41.91"/>
+          <path class="cls-2" d="M34.41,213.62l-30.27,17.19,124.38,69.5,72.32-41.07"/>
+        </g>
+      </g>
+      <path class="cls-2" d="M257.92,226.82l-41.14,23.37"/>
+      <path class="cls-2" d="M102.57,72.62l114.2,75.29v102.27"/>
+      <path class="cls-2" d="M143.73,49.88l114.19,75.3v102.27"/>
+    </g>
+  </g>
+</svg>

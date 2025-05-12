@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoBank - About Us</title>
+    <link rel="stylesheet" href="https://use.typekit.net/szv8azf.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:200,400,700" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Root Variables */
+        :root {
+            --primary-color: #003865; /* Dark blue */
+            --secondary-color: #397B2B; /* Green */
+            --light-gray: #f2f2f2;
+            --mid-gray: #e5e5e5;
+            --dark-gray: #333333;
+            --font-body: 'Inter', 'Open Sans', sans-serif;
+            --font-heading: "korolev-condensed", sans-serif;
+            --font-decorative: "fenway-park-jf",sans-serif;
+        }
+        
+        /* Base Styles */
+        body {
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--light-gray);
+            overflow-x: hidden;
+            margin: 0px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        /* General scaling rules for text */
+        h1, h2, h3, h4, h5, h6, p {
+            transition: font-size 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            h3 {
+                font-size: 1.6rem;
+            }
+            h4 {
+                font-size: 1.4rem;
+            }
+            h5 {
+                font-size: 1.2rem;
+            }
+            h6 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 2.5rem;
+            }
+            h3 {
+                font-size: 2rem;
+            }
+            h4 {
+                font-size: 1.8rem;
+            }
+            h5 {
+                font-size: 1.5rem;
+            }
+            h6 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+    
+    
+        /* Header Section */
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            position: relative;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 10px solid var(--secondary-color);
+        }
+        
+        #nav-svg {
+            width: 300px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #23396C;
+            color: #fff;
+            padding:  3rem 0;
+            font-family: var(--font-body);
+        }
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 60px;
+            gap: 40px;
+        }
+        .footer-col {
+            flex: 1 1 0;
+            min-width: 260px;
+            max-width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer-col.left {
+            max-width: 400px;
+        }
+        .footer-col.center {
+            max-width: 420px;
+        }
+        .footer-col.right {
+            max-width: 340px;
+        }
+        .footer-water-logo {
+            width: 220px;
+            margin-bottom: 40px;
+        }
+        .footer-cobank-logo {
+            width: 180px;
+            margin-bottom: 30px;
+        }
+        .footer-legal {
+            font-size: 1.08rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            color: #fff;
+        }
+        .footer-heading {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .footer-desc {
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 0;
+        }
+        .footer-contact {
+            font-size: 1.15rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .footer-contact strong {
+            font-weight: 700;
+        }
+        .footer-social-label {
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+        .footer-social {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: none;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+        .footer-social a:hover {
+            background: rgba(255,255,255,0.08);
+        }
+        .footer-social img, .footer-social svg {
+            width: 32px;
+            height: 32px;
+        }
+        .footer-bottom {
+            width: 100vw;
+            box-sizing: border-box;
+            background: none;
+            margin-top: 60px;
+            padding: 0 60px 40px 60px;
+        }
+
+        .footer-bottom-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .footer-bottom-logo {
+            height: 48px;
+            width: auto;
+        }
+        @media (max-width: 1200px) {
+            .footer-main, .footer-bottom {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+        }
+        @media (max-width: 991px) {
+            .footer-main {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 40px;
+            }
+            .footer-col {
+                max-width: 100% !important;
+                width: 100%;
+            }
+            .footer-bottom-row {
+                justify-content: flex-start;
+            }
+        }
+        @media (max-width: 576px) {
+            .footer-main, .footer-bottom {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .footer-bottom-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* New CSS rules for semantic classes */
+        .hero-water-section {
+            background: none;
+            min-height: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 100px 0 0 0;
+            background-image: url('./images-next/hero-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-water-section > div {
+            background: rgba(255,255,255,0.0);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-water-section > div > div {
+            margin-bottom: 32px;
+        }
+
+        .hero-water-section h2 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: #22577A;
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+
+        .hero-water-section p {
+            font-size: 1.3rem;
+            color: #22577A;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .video-section {
+            height: 0;
+            position: relative;
+            z-index: 2;
+            background: none;
+            margin: 0 2rem;
+            padding: 0;
+        }
+
+        .video-section .container {
+            position: relative;
+        }
+
+        .video-absolute-container {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%) translateY(-50%);
+            width: 100%;
+            max-width: 700px;
+            aspect-ratio: 16/9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .video-absolute-container > div {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #cfd8dc;
+            overflow: hidden;
+        }
+
+        .video-absolute-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 4px solid #fff;
+        }
+
+        .video-absolute-container iframe {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-absolute-container p {
+            color: #22577A;
+            max-width: 800px;
+            margin: 32px auto;
+            text-align: center;
+        }
+
+        .btn-primary-custom {
+            padding: 12px 48px;
+            font-weight: 700;
+            background: #017390;
+            color: #fff;
+            border-radius: 0;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+
+        .btn-priamry-custom:hover {
+            background: #55a8e0;
+        }
+
+        /* Rive Section */
+        #rive-section {
+          position: relative;
+          width: 100vw;
+          aspect-ratio: 1.655;
+          overflow: hidden;
+          background: #e0e0e0;
+        }
+
+        #rive-text-section {
+          position: relative;
+          top: 0;
+          left: 0;
+          color: #22577A;
+          padding: 5rem;
+          display: flex;
+          justify-content: center;
+          z-index: 10;
+        }
+
+        @media screen and (max-width: 1300px) {
+          #rive-text-section {
+            height: 400px;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          #rive-text-section {
+            height: 500px;
+          }
+          #rive-text-section h2 {
+            font-size: 1.8rem;
+          }
+            #rive-text-section p {
+                font-size: 1rem;
+            }
+        }
+
+
+        .rive-text-container {
+          position: absolute;
+          max-width: 100vw;
+          text-align: center;
+        }
+
+        .rive-text-container > div {
+          margin-bottom: 32px;
+        }
+
+        .rive-text-container h2 {
+          font-family: var(--font-heading);
+          font-weight: 700;
+          font-size: 2.2rem;
+          margin-bottom: 18px;
+        }
+
+        .rive-text-container p {
+          font-size: 1.3rem;
+          max-width: 700px;
+          margin: 0 auto;
+        }
+
+        .ground-image-section {
+            width: 100vw;
+            aspect-ratio: 5.0526;
+            background: url('./images-next/Ground.png') center/cover no-repeat;
+            display: block;
+        }
+
+        /* Features Grid Section */
+        .features-grid-section {
+            background: #DDD;
+            padding: 80px 0;
+        }
+
+        .features-grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .features-grid-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-item {
+            flex: 1 1 calc(25% - 30px);
+            max-width: calc(25% - 30px);
+            box-sizing: border-box;
+        }
+
+        .feature-icon {
+            background: #017390;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 24px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+        }
+
+        .feature-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: #017390;
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            color: #017390;
+        }
+
+        @media (max-width: 991px) {
+            .feature-item {
+                flex: 1 1 calc(50% - 30px);
+                max-width: calc(50% - 30px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .feature-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        .quote-carousel-section {
+            background: #A0EDF0;
+            color: #01556D;
+            padding: 70px 0;
+            text-align: center;
+            position: relative;
+            min-height: 340px;
+        }
+
+        #quote-carousel {
+            max-width: 1100px;
+            margin: 2rem 5rem;
+            min-height: 200px;
+            position: relative;
+        }
+
+        .quote-slide {
+            opacity: 1;
+            transition: opacity 0.6s;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            display: block;
+        }
+
+        .quote-slide.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .quote-slide h2 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: #01556D;
+        }
+
+        .quote-slide div {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #01556D;
+        }
+
+        .quote-slide div:last-child {
+            font-size: 1.3rem;
+        }
+
+        #quote-prev, #quote-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #01556D;
+            font-size: 4rem;
+            line-height: 1;
+            z-index: 2;
+        }
+
+        #quote-prev {
+            left: 40px;
+        }
+
+        #quote-next {
+            right: 40px;
+        }
+
+        .text-media-section {
+            display: flex;
+        }
+
+        .text-media-section img {
+            width: 50%;
+            object-fit: cover;
+        }
+
+        .text-media-section > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            width: 50%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .text-media-section {
+                flex-direction: column;
+            }
+            .text-media-section img {
+                width: 100%;
+            }
+            .text-media-section > div {
+                width: 100%;
+            }
+            .flex-reverse {
+                flex-direction: column-reverse;
+            }
+        }
+.clip-top {
+    clip-path: url(#clip-top-mobile);
+}
+.clip-bottom {
+    clip-path: url(#clip-bottom-mobile);
+}
+.clip-topAndBottom {
+    clip-path: url(#clip-topAndBottom-mobile);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .clip-top {
+        clip-path: url(#clip-top);
+    }
+    .clip-bottom {
+        clip-path: url(#clip-bottom);
+    }
+    .clip-topAndBottom {
+        clip-path: url(#clip-topAndBottom);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img id="nav-svg" src="./images-next/logo.svg" alt="CoBank Logo">
+    </header>
+
+    <!-- Rive Text Section -->
+    <section id="rive-text-section" style="background-color: #A7DCDE;">
+      <div class="rive-text-container">
+        <div>
+          <img style="max-width: 85%;" src="./images-next/BecauseOfWater.png" alt="Because of Water">
+        </div>
+        <h2>Rural Communities Can Grow and Thrive</h2>
+        <p>
+          Water is essential to everything we do here in rural America.<br>
+          Farmers, ranchers, small business owners, schools, health clinics, families – we all need reliable access to safe, clean water.
+        </p>
+      </div>
+    </section>
+
+    <!-- Rive Section -->
+    <section id="rive-section">
+      <canvas id="rive-canvas"></canvas>
+    </section>
+
+    <!-- Ground Image Section -->
+    <section class="ground-image-section"></section>
+
+    <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;"></div> 
+    <!-- Video Section: Intersecting Block -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-absolute-container">
+                <!-- Video Preview -->
+                <div>
+                    <img src="./images/Vimeo-Thumb.webp" alt="Video Thumbnail">
+                    <div class="play-button">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="24" fill="none"/>
+                            <polygon points="18,14 36,24 18,34" fill="#22577A"/>
+                        </svg>
+                    </div>
+                    <iframe src="https://player.vimeo.com/video/1062536141?h=9c0be7f5db&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p style="color: #F3F7DE;">
+                    At CoBank, our commitment to the well-being of the 46 million people who call rural America their home extends to our boots-on-the-ground work with municipalities, water districts and cooperatives all across the country.
+                </p>
+                <a href="mailto:mystory@cobank.com?subject=Water Inquiry" class="btn-primary-custom">GET IN TOUCH</a>
+            </div>
+        </div>
+    </section>
+    <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;" class="clip-bottom"></div>
+
+    <!-- Rural Water Section -->
+
+    <section style="margin-top: 2rem;" class="text-media-section">
+        <div>
+            <h2 style="text-align: center; color: #22577A;">Water Meter and Equipment Leasing</h2>
+            <p style="text-align: start; color: #6A6A69; max-width: 600px;">
+                As a member of the Farm Credit System, we're equiped to support you with access to credit, financing and other financial solutions to plan an execture water and waste disposal infrastructure projects to meet the needs of rural communities you serve.
+            </p>
+        </div>
+        <img style="object-fit: contain;" src="./images-next/rural-water-access.png" alt="Rural water access illustration">
+    </section>
+
+    <!-- Water Meter Section -->
+    <section style="margin-bottom: 2rem;" class="text-media-section flex-reverse">
+        <img style="object-fit: contain;" src="./images-next/smart-meters.png" alt="Rural water access illustration">
+        <div>
+            <img style="width: 25%; padding-bottom: 2rem; padding-top: 2rem; max-height: 200px; object-fit: contain;" src="./images-next/NationalRuralWaterAssociation.png" alt="NRWA Logo">
+            <h2 style="text-align: center; color: #22577A;">How Cobank Supports Rural Water Access</h2>
+            <p style="text-align: start; color: #6A6A69; max-width: 600px;">
+                Many rural water systems prefer lease agreements in order to match payments to the life expectancy of assets and more effectively manage cash flow. Through our partnership with the Nationsl Rural Water Association, your municipalities or water districts can lease water meters and other essential equipment.
+            </p>
+            <a href="/" class="btn-primary-custom">Learn More</a>
+        </div>
+    </section>
+
+    
+
+    <!-- Water Access Features Grid Section -->
+    <section class="features-grid-section clip-top">
+      <div class="features-grid-container">
+        <div class="features-grid-row">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <img src="./images-next/icon-uplift.svg" alt="Icon Uplift">
+            </div>
+            <h3 class="feature-title">Lines<br>of Credit</h3>
+            <p class="feature-description">Secure funding for unexpected projects and short-term needs</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <img src="./images-next/icon-radial.svg" alt="Icon Radial">
+            </div>
+            <h3 class="feature-title">Term Project<br>Financing</h3>
+            <p class="feature-description">Longer-term loans for major system and infrastructure upgrades</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <img src="./images-next/icon-finance.svg" alt="Icon Finance">
+            </div>
+            <h3 class="feature-title">USDA Interim<br>Financing</h3>
+            <p class="feature-description">Access to low-cost construction financing for USDA RD projects</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <img src="./images-next/icon-stack.svg" alt="Icon Stack">
+            </div>
+            <h3 class="feature-title">Cash<br>Management</h3>
+            <p class="feature-description">Handle incoming and outgoing payments with cash management</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Quote Carousel Section -->
+    <section style="background-image: url('./images-next/quotes-bg.png'); margin-top: -30px;" class="quote-carousel-section clip-top">
+        <div style="margin-left: auto; margin-right: auto" id="quote-carousel">
+          <div class="quote-slide">
+            <h2>"Because we're a smaller rural system, other lenders wouldn't offer us the same kind of flexibility we received from CoBank."</h2>
+            <div>- Jason Fell, General Manager</div>
+            <div>Saluda County Water and Sewer Authority</div>
+          </div>
+          <div class="quote-slide hidden">
+            <h2>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</h2>
+            <div>- Jane Doe, CEO</div>
+            <div>Generic Water District</div>
+          </div>
+          <div class="quote-slide hidden">
+            <h2>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</h2>
+            <div>- John Smith, Director</div>
+            <div>Rural Water Solutions</div>
+          </div>
+          <div class="quote-slide hidden">
+            <h2>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</h2>
+            <div>- Alex Lee, President</div>
+            <div>Community Water Authority</div>
+          </div>
+        </div>
+        <button id="quote-prev">&#60;</button>
+        <button id="quote-next">&#62;</button>
+    </section>
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-main">
+            <div class="footer-col left">
+                <img class="footer-water-logo" src="./images-next/BecauseOfWater_white.png" alt="Because of Water">
+                <img id="nav-svg" src="./images-next/logo.svg" alt="CoBank Logo">
+                <p class="footer-legal">©2011-2025 CoBank. All Rights Reserved.</p>
+                <p class="footer-legal">Farm Credit is an Equal Housing Lender, and an Equal Credit Opportunity Lender.</p>
+                <p class="footer-legal">Conditions of Use  |  Privacy  |  Transparency in Coverage  |  Anti-Money Laundering  |  CoBank Code of Ethics  |  Confidential Hotline</p>
+                <p class="footer-legal">1-888-525-5391 or online at cobank.ethicspoint.com</p>
+            </div>
+            <div class="footer-col center">
+                <div class="footer-heading">About Us</div>
+                <div class="footer-desc">CoBank is one of the largest private providers of credit to the U.S. rural economy. The bank delivers loans, leases and other financial services to agribusiness, rural infrastructure and Farm Credit customers in all 50 states.</div>
+            </div>
+            <div class="footer-col right">
+                <div class="footer-heading">Contact Us</div>
+                <div class="footer-contact">CoBank National Office</div>
+                <div class="footer-contact">6340 S. Fiddlers Green Circle</div>
+                <div class="footer-contact">Greenwood Village, CO 80111</div>
+                <div class="footer-contact">800-542-8072</div>
+                <div class="footer-social-label">More Contact Information</div>
+                <div class="footer-social">
+                    <a href="#"><img src="./images-next/linkedin.svg" alt="Linkedin Logo"></a>
+                    <a href="#"><img src="./images-next/facebook.svg" alt="Facebook Logo"></a>
+                    <a href="#"><img src="./images-next/instagram.svg" alt="Instagram Logo"></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.653 32.229"><path id="x-twitter" d="M54.876,48h5.47L48.4,61.651,62.453,80.229h-11L42.829,68.964,32.975,80.229H27.5l12.775-14.6L26.8,48H38.08l7.786,10.3ZM52.955,76.96h3.029L36.43,51.1H33.176Z" transform="translate(-26.8 -48)" fill="#fff"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-row">
+                <span class="footer-bottom-text">Proud member of the Farm Credit System</span>
+                <img class="footer-bottom-logo" src="/images/Clover.webp" alt="Equal Housing Lender">
+            </div>
+        </div>
+        <svg style="width: 0px; height: 0px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+               {# vertical paths #}
+               <clipPath id="clip-top" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
+                  <path d="M1000 1000V26.11c-284.5-65.13-390.5 18.91-634.5 18.91S.5 0 .5 0v1000Z"></path>
+               </clipPath>
+               <clipPath id="clip-bottom" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
+                  <path d="M0 0v1000C291 1000 345 955 637 957S1000 1000 1000 1000v-1000Z"></path>
+               </clipPath>
+               <clipPath id="clip-topAndBottom" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
+                  <path d="M1000 27c-285-65-391 19-635 19S0 0 0 0v1000S196 894 483 957C825 1042 1000 966 1000 966Z"></path>
+               </clipPath>
+               {# vertical paths - mobile #}
+               <clipPath id="clip-top-mobile" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
+                  <path d="M1000 1000V14c-295-30.11-399 9-643 7S.5 0 .5 0v1000Z"></path>
+               </clipPath>
+               <clipPath id="clip-bottom-mobile" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
+                  <path d="M0 0v1000c290-4 400-15 634-13S1000 1000 1000 1000v-1000Z"></path>
+               </clipPath>
+               <clipPath id="clip-topAndBottom-mobile" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
+                  <path d="M1000 8c-314-19-361 9-626 6S0 0 0 0v1000S240 966 420 980C571 992 839 1005 1000 994Z"></path>
+               </clipPath>
+            </defs>
+         </svg>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Header background change on scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.header').style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                document.querySelector('.header').style.boxShadow = 'none';
+            }
+        });
+
+        // Quote Carousel Logic with fade and autoplay
+        (function() {
+            const slides = document.querySelectorAll('#quote-carousel .quote-slide');
+            let current = 0;
+            let interval = null;
+            function showSlide(idx) {
+                slides.forEach((slide, i) => {
+                    slide.style.opacity = (i === idx) ? '1' : '0';
+                    slide.style.pointerEvents = (i === idx) ? 'auto' : 'none';
+                });
+            }
+            function nextSlide() {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }
+            function prevSlide() {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            }
+            document.getElementById('quote-prev').addEventListener('click', function() {
+                prevSlide();
+                resetAutoplay();
+            });
+            document.getElementById('quote-next').addEventListener('click', function() {
+                nextSlide();
+                resetAutoplay();
+            });
+            // Optional: swipe support for mobile
+            let startX = null;
+            document.getElementById('quote-carousel').addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+            });
+            document.getElementById('quote-carousel').addEventListener('touchend', function(e) {
+                if (startX !== null) {
+                    let endX = e.changedTouches[0].clientX;
+                    if (endX - startX > 50) {
+                        prevSlide();
+                        resetAutoplay();
+                    } else if (startX - endX > 50) {
+                        nextSlide();
+                        resetAutoplay();
+                    }
+                    startX = null;
+                }
+            });
+            function startAutoplay() {
+                interval = setInterval(nextSlide, 6000);
+            }
+            function resetAutoplay() {
+                clearInterval(interval);
+                startAutoplay();
+            }
+            showSlide(current);
+            startAutoplay();
+        })();
+    </script>
+    <script src="https://unpkg.com/@rive-app/canvas"></script>
+    <script>
+      // Rive integration for cobank2_min.riv with cover fit and play all animations
+      let riveInstance;
+      function resizeRiveCanvas() {
+        const canvas = document.getElementById('rive-canvas');
+        const section = document.getElementById('rive-section');
+        const rect = section.getBoundingClientRect();
+        canvas.width = rect.width * window.devicePixelRatio;
+        canvas.height = rect.height * window.devicePixelRatio;
+        canvas.style.width = rect.width + 'px';
+        canvas.style.height = rect.height + 'px';
+        if (riveInstance) {
+          riveInstance.resizeDrawingSurfaceToCanvas();
+        }
+      }
+      window.addEventListener('DOMContentLoaded', function() {
+        const canvas = document.getElementById('rive-canvas');
+        riveInstance = new rive.Rive({
+          src: './rive/cobank2_min.riv',
+          canvas: canvas,
+          autoplay: true,
+          layout: new rive.Layout({ fit: rive.Fit.Cover, alignment: rive.Alignment.Center }),
+          onLoad: () => {
+            riveInstance.resizeDrawingSurfaceToCanvas();
+            // Play all animations on the artboard
+            const allAnims = riveInstance.animationNames;
+            if (allAnims && allAnims.length > 0) {
+              riveInstance.play(allAnims);
+            }
+          }
+        });
+        resizeRiveCanvas();
+      });
+      window.addEventListener('resize', resizeRiveCanvas);
+    </script>
+</body>
+</html>
