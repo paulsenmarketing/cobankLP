@@ -10,6 +10,13 @@
     
     <!-- Custom CSS -->
     <style>
+        @font-face {
+            font-family: 'Glypha LT Std 75 Black';
+            src: url('./fonts/Glypha LT Std 75 Black.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
         /* Root Variables */
         :root {
             --primary-color: #003865; /* Dark blue */
@@ -18,7 +25,7 @@
             --mid-gray: #e5e5e5;
             --dark-gray: #333333;
             --font-body: 'Inter', 'Open Sans', sans-serif;
-            --font-heading: "korolev-condensed", sans-serif;
+            --font-heading: 'Glypha LT Std 75 Black', "korolev-condensed", sans-serif;
             --font-decorative: "fenway-park-jf",sans-serif;
         }
         
@@ -47,22 +54,16 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-            h3 {
                 font-size: 1.6rem;
             }
-            h4 {
+            h2 {
                 font-size: 1.4rem;
             }
-            h5 {
-                font-size: 1.2rem;
+            h3 {
+                font-size: 1.3rem;
             }
-            h6 {
-                font-size: 1rem;
+            h4 {
+                font-size: 1.2rem;
             }
             p {
                 font-size: 1rem;
@@ -71,27 +72,23 @@
 
         @media (min-width: 769px) {
             h1 {
-                font-size: 3rem;
+                font-size: 2.2rem;
             }
             h2 {
-                font-size: 2.5rem;
+                font-size: 1.9rem;
             }
             h3 {
-                font-size: 2rem;
-            }
-            h4 {
                 font-size: 1.8rem;
             }
-            h5 {
-                font-size: 1.5rem;
-            }
-            h6 {
-                font-size: 1.2rem;
+            h4 {
+                font-size: 1.7rem;
             }
             p {
                 font-size: 1.2rem;
             }
         }
+        
+
         a {
             color: var(--primary-color);
             text-decoration: none;
@@ -119,7 +116,7 @@
 
         /* Footer Styles */
         .footer {
-            background-color: #23396C;
+            background-color: var(--primary-color);
             color: #fff;
             padding:  3rem 0;
             font-family: var(--font-body);
@@ -163,6 +160,17 @@
             margin-bottom: 0.5rem;
             font-weight: 400;
             color: #fff;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+        .footer-legal a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-legal a:hover {
+            color: #A0EDF0;
+            text-decoration: underline;
         }
         .footer-heading {
             font-family: var(--font-heading);
@@ -228,6 +236,7 @@
             align-items: center;
             justify-content: flex-end;
             width: 100%;
+            gap: 20px;
         }
         .footer-bottom-logo {
             height: 48px;
@@ -387,9 +396,10 @@
             border-radius: 0;
             margin-bottom: 40px;
             display: inline-block;
+            text-decoration: none;
         }
 
-        .btn-priamry-custom:hover {
+        .btn-primary-custom:hover {
             background: #55a8e0;
         }
 
@@ -509,7 +519,6 @@
             font-family: var(--font-heading);
             font-weight: 700;
             color: #017390;
-            font-size: 2rem;
             margin-bottom: 12px;
         }
 
@@ -618,13 +627,19 @@
             object-fit: cover;
         }
 
-        .text-media-section > div {
+        .text-media-section div {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 2rem;
             width: 50%;
+            box-sizing: border-box;
+        }
+
+        .text-media-content {
+            padding: 2rem;
+            box-sizing: border-box;
         }
 
         @media screen and (max-width: 768px) {
@@ -633,12 +648,25 @@
             }
             .text-media-section img {
                 width: 100%;
+                max-width: 100%;
+                object-fit: contain;
             }
-            .text-media-section > div {
+            .text-media-section > div,
+            .text-media-content {
                 width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                padding-left: 2rem;
+                padding-right: 2rem;
             }
             .flex-reverse {
                 flex-direction: column-reverse;
+            }
+            .text-media-section p,
+            .text-media-section h2 {
+                max-width: 100%;
+                word-break: break-word;
+                overflow-wrap: break-word;
             }
         }
 .clip-top {
@@ -739,40 +767,23 @@
                     <iframe src="https://player.vimeo.com/video/1062536141?h=9c0be7f5db&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <p style="color: #F3F7DE;">
-                    At CoBank, our commitment to the well-being of the 46 million people who call rural America their home extends to our boots-on-the-ground work with municipalities, water districts and cooperatives all across the country.
+                    In order to meet growing demand, rural municipalities and water districts across the country need access to a range of financial solutions. At CoBank, we're passionate about helping rural communities grow and thrive. Our team will work with you to address whatever challenges your water system faces.
                 </p>
-                <a href="mailto:mystory@cobank.com?subject=Water Inquiry" class="btn-primary-custom">GET IN TOUCH</a>
+                <a href="mailto:EMAIL@cobank.com?subject=Water Web Inquiry" class="btn-primary-custom">GET IN TOUCH</a>
             </div>
         </div>
     </section>
     <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;" class="clip-bottom"></div>
-
-    <!-- Rural Water Section -->
-
-    <section style="margin-top: 2rem;" class="text-media-section">
-        <div>
-            <h2 style="text-align: center; color: #22577A;">Water Meter and Equipment Leasing</h2>
+    <!-- Water Meter Section -->
+    <section style="margin-top: 2rem; margin-bottom: 2rem;" class="text-media-section">
+        <div class="text-media-content">
+            <h2 style="text-align: center; color: #22577A;">How CoBank Supports Rural Water Access</h2>
             <p style="text-align: start; color: #6A6A69; max-width: 600px;">
                 As a member of the Farm Credit System, we're equiped to support you with access to credit, financing and other financial solutions to plan an execture water and waste disposal infrastructure projects to meet the needs of rural communities you serve.
             </p>
         </div>
         <img style="object-fit: contain;" src="./images-next/rural-water-access.png" alt="Rural water access illustration">
     </section>
-
-    <!-- Water Meter Section -->
-    <section style="margin-bottom: 2rem;" class="text-media-section flex-reverse">
-        <img style="object-fit: contain;" src="./images-next/smart-meters.png" alt="Rural water access illustration">
-        <div>
-            <img style="width: 25%; padding-bottom: 2rem; padding-top: 2rem; max-height: 200px; object-fit: contain;" src="./images-next/NationalRuralWaterAssociation.png" alt="NRWA Logo">
-            <h2 style="text-align: center; color: #22577A;">How Cobank Supports Rural Water Access</h2>
-            <p style="text-align: start; color: #6A6A69; max-width: 600px;">
-                Many rural water systems prefer lease agreements in order to match payments to the life expectancy of assets and more effectively manage cash flow. Through our partnership with the Nationsl Rural Water Association, your municipalities or water districts can lease water meters and other essential equipment.
-            </p>
-            <a href="/" class="btn-primary-custom">Learn More</a>
-        </div>
-    </section>
-
-    
 
     <!-- Water Access Features Grid Section -->
     <section class="features-grid-section clip-top">
@@ -783,31 +794,46 @@
               <img src="./images-next/icon-uplift.svg" alt="Icon Uplift">
             </div>
             <h3 class="feature-title">Lines<br>of Credit</h3>
-            <p class="feature-description">Secure funding for unexpected projects and short-term needs</p>
+            <p class="feature-description">Prepare for the unexpected with access to funds when needed.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
               <img src="./images-next/icon-radial.svg" alt="Icon Radial">
             </div>
             <h3 class="feature-title">Term Project<br>Financing</h3>
-            <p class="feature-description">Longer-term loans for major system and infrastructure upgrades</p>
+            <p class="feature-description">Take advantage of long-term financing with multiple advances.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
               <img src="./images-next/icon-finance.svg" alt="Icon Finance">
             </div>
             <h3 class="feature-title">USDA Interim<br>Financing</h3>
-            <p class="feature-description">Access to low-cost construction financing for USDA RD projects</p>
+            <p class="feature-description">Leverage our extensive RD experience for streamlined funding.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
               <img src="./images-next/icon-stack.svg" alt="Icon Stack">
             </div>
             <h3 class="feature-title">Cash<br>Management</h3>
-            <p class="feature-description">Handle incoming and outgoing payments with cash management</p>
+            <p class="feature-description">Utilize idle funds and boost efficiency managing payables and receivables. </p>
           </div>
         </div>
       </div>
+    </section>
+
+        <!-- Rural Water Section -->
+ 
+
+    <section style="margin-bottom: 2rem;" class="text-media-section flex-reverse">
+        <img style="object-fit: contain;" src="./images-next/smart-meters.png" alt="Rural water access illustration">
+        <div class="text-media-content">
+            <img style="width: 25%; padding-bottom: 2rem; padding-top: 2rem; max-height: 200px; object-fit: contain;" src="./images-next/NationalRuralWaterAssociation.png" alt="NRWA Logo">
+            <h2 style="text-align: center; color: #22577A;">Water Meter and Equipment Leasing</h2>
+            <p style="text-align: start; color: #6A6A69; max-width: 600px;">
+                Many rural water systems prefer lease agreements in order to match payments to the life expectancy of assets and more effectively manage cash flow. Through our partnership with the National Rural Water Association, your municipalities or water districts can lease water meters and other essential equipment.
+            </p>
+            <a href="/" class="btn-primary-custom">Lease Equipment Through NRWA</a>
+        </div>
     </section>
     <!-- Quote Carousel Section -->
     <section style="background-image: url('./images-next/quotes-bg.png'); margin-top: -30px;" class="quote-carousel-section clip-top">
@@ -818,19 +844,9 @@
             <div>Saluda County Water and Sewer Authority</div>
           </div>
           <div class="quote-slide hidden">
-            <h2>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</h2>
-            <div>- Jane Doe, CEO</div>
-            <div>Generic Water District</div>
-          </div>
-          <div class="quote-slide hidden">
-            <h2>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</h2>
-            <div>- John Smith, Director</div>
-            <div>Rural Water Solutions</div>
-          </div>
-          <div class="quote-slide hidden">
-            <h2>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</h2>
-            <div>- Alex Lee, President</div>
-            <div>Community Water Authority</div>
+            <h2>"CoBank has been a great partner for more than 20 years, in part because they have the funds and expertise to respond to needs like these, and much faster than other funding sources."</h2>
+            <div>- Angie Hammrich, General Manager</div>
+            <div>WEB Water Development Association</div>
           </div>
         </div>
         <button id="quote-prev">&#60;</button>
@@ -844,8 +860,14 @@
                 <img id="nav-svg" src="./images-next/logo.svg" alt="CoBank Logo">
                 <p class="footer-legal">©2011-2025 CoBank. All Rights Reserved.</p>
                 <p class="footer-legal">Farm Credit is an Equal Housing Lender, and an Equal Credit Opportunity Lender.</p>
-                <p class="footer-legal">Conditions of Use  |  Privacy  |  Transparency in Coverage  |  Anti-Money Laundering  |  CoBank Code of Ethics  |  Confidential Hotline</p>
-                <p class="footer-legal">1-888-525-5391 or online at cobank.ethicspoint.com</p>
+                <p class="footer-legal">
+                    <a href="https://www.cobank.com//web/cobank/conditions-of-use" target="_blank">Conditions of Use</a> |
+                    <a href="https://www.cobank.com//web/cobank/privacy" target="_blank">Privacy</a> |
+                    <a href="https://www.cobank.com//web/cobank/transparency-in-coverage" target="_blank">Transparency in Coverage</a> |
+                    <a href="https://www.cobank.com//web/cobank/anti-money-laundering" target="_blank">Anti-Money Laundering</a> |
+                    <a href="https://www.cobank.com//web/cobank/code-of-ethics" target="_blank">CoBank Code of Ethics</a> |
+                    Confidential Hotline 1‑888‑525‑5391 or online at <a href="https://cobank.ethicspoint.com" target="_blank">cobank.ethicspoint.com</a>
+                </p>
             </div>
             <div class="footer-col center">
                 <div class="footer-heading">About Us</div>
@@ -869,7 +891,7 @@
         <div class="footer-bottom">
             <div class="footer-bottom-row">
                 <span class="footer-bottom-text">Proud member of the Farm Credit System</span>
-                <img class="footer-bottom-logo" src="/images/Clover.webp" alt="Equal Housing Lender">
+                <img class="footer-bottom-logo" src="./images-next/clover.png" alt="Equal Housing Lender">
             </div>
         </div>
         <svg style="width: 0px; height: 0px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -881,18 +903,12 @@
                <clipPath id="clip-bottom" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
                   <path d="M0 0v1000C291 1000 345 955 637 957S1000 1000 1000 1000v-1000Z"></path>
                </clipPath>
-               <clipPath id="clip-topAndBottom" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
-                  <path d="M1000 27c-285-65-391 19-635 19S0 0 0 0v1000S196 894 483 957C825 1042 1000 966 1000 966Z"></path>
-               </clipPath>
                {# vertical paths - mobile #}
                <clipPath id="clip-top-mobile" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
                   <path d="M1000 1000V14c-295-30.11-399 9-643 7S.5 0 .5 0v1000Z"></path>
                </clipPath>
                <clipPath id="clip-bottom-mobile" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
                   <path d="M0 0v1000c290-4 400-15 634-13S1000 1000 1000 1000v-1000Z"></path>
-               </clipPath>
-               <clipPath id="clip-topAndBottom-mobile" clipPathUnits="objectBoundingBox" transform="scale(0.001, 0.001)">
-                  <path d="M1000 8c-314-19-361 9-626 6S0 0 0 0v1000S240 966 420 980C571 992 839 1005 1000 994Z"></path>
                </clipPath>
             </defs>
          </svg>
