@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoBank - About Us</title>
+    <meta name="description" content="Because of water, rural communities can grow and thrive. Learn how CoBank finances water infrastructure projects that impact life in rural America.">
     <link rel="stylesheet" href="https://use.typekit.net/szv8azf.css">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:200,400,700" rel="stylesheet" />
@@ -50,6 +51,11 @@
         /* General scaling rules for text */
         h1, h2, h3, h4, h5, h6, p {
             transition: font-size 0.3s ease;
+            text-wrap: pretty;
+        }
+
+        button {
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -60,10 +66,7 @@
                 font-size: 1.4rem;
             }
             h3 {
-                font-size: 1.3rem;
-            }
-            h4 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             p {
                 font-size: 1rem;
@@ -78,10 +81,7 @@
                 font-size: 1.9rem;
             }
             h3 {
-                font-size: 1.8rem;
-            }
-            h4 {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
             p {
                 font-size: 1.2rem;
@@ -269,7 +269,10 @@
             }
             .footer-bottom-row {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+            }
+            .footer-bottom-logo-wrapper {
+                text-align: center;
             }
         }
 
@@ -721,6 +724,18 @@
         font-size: 1.1rem;
         font-weight: 700;
     }
+    
+}
+
+/* Center the footer-water-logo only on mobile */
+.footer-water-logo-wrapper {
+    width: 100%;
+    text-align: left;
+}
+@media (max-width: 991px) {
+    .footer-water-logo-wrapper {
+        text-align: center;
+    }
 }
     </style>
 </head>
@@ -730,16 +745,16 @@
         <img id="nav-svg" src="./images-next/logo.svg" alt="CoBank Logo">
     </header>
 
+    <main id="main-content">
     <!-- Rive Text Section -->
     <section id="rive-text-section" style="background-color: #A7DCDE;">
       <div class="rive-text-container">
         <div>
-          <img style="max-width: 85%;" src="./images-next/BecauseOfWater.png" alt="Because of Water">
+          <img style="max-width: 85%;" src="./images-next/BecauseOfWater.png" alt="Because of Water logo text">
         </div>
-        <h2>Rural Communities Can Grow and Thrive</h2>
+        <h1>Rural Communities Can Grow and Thrive</h1>
         <p>
-          Water is essential to everything we do here in rural America.<br>
-          Farmers, ranchers, small business owners, schools, health clinics, families – we all need reliable access to safe, clean water.
+            Family restaurants need water. So do farmers and ranchers. Hospitals, schools and local shops — everyone needs water
         </p>
       </div>
     </section>
@@ -750,39 +765,39 @@
     </section>
 
     <!-- Ground Image Section -->
-    <section class="ground-image-section"></section>
+    <section class="ground-image-section" aria-hidden="true"></section>
 
-    <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;"></div> 
+    <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;" aria-hidden="true"></div> 
     <section class="video-section">
         <div class="container">
             <div class="video-absolute-container">
                 <div>
-                    <img src="./images-next/Vimeo-Thumb.png" alt="Video Thumbnail">
-                    <div class="play-button">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <img src="./images-next/Vimeo-Thumb.png" alt="Video thumbnail for water infrastructure video">
+                    <button class="play-button" aria-label="Play video">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                             <circle cx="24" cy="24" r="24" fill="none"/>
                             <polygon points="18,14 36,24 18,34" fill="#22577A"/>
                         </svg>
-                    </div>
-                    <iframe src="https://player.vimeo.com/video/1062536141?h=9c0be7f5db&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </button>
+                    <iframe title="CoBank Water Video" src="https://player.vimeo.com/video/1062536141?h=9c0be7f5db&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <p style="color: #F3F7DE;">
-                    In order to meet growing demand, rural municipalities and water districts across the country need access to a range of financial solutions. At CoBank, we're passionate about helping rural communities grow and thrive. Our team will work with you to address whatever challenges your water system faces.
+                    Access to water is a top priority for rural communities to grow and thrive. And with demand for water on the rise, rural water systems need access to diverse financial solutions to maintain and upgrade their infrastructure.
                 </p>
-                <a href="mailto:EMAIL@cobank.com?subject=Water Web Inquiry" class="btn-primary-custom">GET IN TOUCH</a>
+                <a href="mailto:water@cobank.com?subject=Water Web Inquiry" class="btn-primary-custom">GET IN TOUCH</a>
             </div>
         </div>
     </section>
-    <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;" class="clip-bottom"></div>
+    <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;" class="clip-bottom" aria-hidden="true"></div>
     <!-- Water Meter Section -->
     <section style="margin-top: 2rem; margin-bottom: 2rem;" class="text-media-section">
         <div class="text-media-content">
             <h2 style="text-align: center; color: #22577A;">How CoBank Supports Rural Water Access</h2>
             <p style="text-align: start; color: #6A6A69; max-width: 600px;">
-                As a member of the Farm Credit System, we're equiped to support you with access to credit, financing and other financial solutions to plan an execture water and waste disposal infrastructure projects to meet the needs of rural communities you serve.
+                CoBank understands the importance of timely implementation of projects, offering a streamlined financing process with less paperwork. And as a proud member of the Farm Credit System, we're equipped to support your needs with easier access to capital and other flexible financial solutions.
             </p>
         </div>
-        <img style="object-fit: contain;" src="./images-next/rural-water-access.png" alt="Rural water access illustration">
+        <img style="object-fit: contain;" src="./images-next/rural-water-access.png" alt="Illustration of rural water access">
     </section>
 
     <!-- Water Access Features Grid Section -->
@@ -791,28 +806,28 @@
         <div class="features-grid-row">
           <div class="feature-item">
             <div class="feature-icon">
-              <img src="./images-next/icon-uplift.svg" alt="Icon Uplift">
+              <img src="./images-next/icon-uplift.svg" alt="Uplift icon">
             </div>
             <h3 class="feature-title">Lines<br>of Credit</h3>
             <p class="feature-description">Prepare for the unexpected with access to funds when needed.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <img src="./images-next/icon-radial.svg" alt="Icon Radial">
+              <img src="./images-next/icon-radial.svg" alt="Radial icon">
             </div>
             <h3 class="feature-title">Term Project<br>Financing</h3>
             <p class="feature-description">Take advantage of long-term financing with multiple advances.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <img src="./images-next/icon-finance.svg" alt="Icon Finance">
+              <img src="./images-next/icon-finance.svg" alt="Finance icon">
             </div>
             <h3 class="feature-title">USDA Interim<br>Financing</h3>
-            <p class="feature-description">Leverage our extensive RD experience for streamlined funding.</p>
+            <p class="feature-description">Leverage our extensive RD experience for streamlined construction funding.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <img src="./images-next/icon-stack.svg" alt="Icon Stack">
+              <img src="./images-next/icon-stack.svg" alt="Stack icon">
             </div>
             <h3 class="feature-title">Cash<br>Management</h3>
             <p class="feature-description">Utilize idle funds and boost efficiency managing payables and receivables. </p>
@@ -825,39 +840,44 @@
  
 
     <section style="margin-bottom: 2rem;" class="text-media-section flex-reverse">
-        <img style="object-fit: contain;" src="./images-next/smart-meters.png" alt="Rural water access illustration">
+        <img style="object-fit: contain;" src="./images-next/smart-meters.png" alt="Smart meters illustration">
         <div class="text-media-content">
-            <img style="width: 25%; padding-bottom: 2rem; padding-top: 2rem; max-height: 200px; object-fit: contain;" src="./images-next/NationalRuralWaterAssociation.png" alt="NRWA Logo">
             <h2 style="text-align: center; color: #22577A;">Water Meter and Equipment Leasing</h2>
+            <h3 style="text-align: center; color: #22577A; max-width: 450px;">NRWA and CoBank have teamed up to offer leasing to rural water systems.</h3>
             <p style="text-align: start; color: #6A6A69; max-width: 600px;">
-                Many rural water systems prefer lease agreements in order to match payments to the life expectancy of assets and more effectively manage cash flow. Through our partnership with the National Rural Water Association, your municipalities or water districts can lease water meters and other essential equipment.
+                Leasing gives you full control of how you manage your shorter term assets — on everything from equipment to water meters. You have the freedom to work with your preferred vendor — getting exactly what you want at the best price — with 100% financing. When the lease comes to an end, you have the option to return, replace or own the assets.
             </p>
-            <a href="/" class="btn-primary-custom">Lease Equipment Through NRWA</a>
+            <img style="width: 25%; padding-bottom: 2rem; padding-top: 2rem; max-height: 200px; object-fit: contain;" src="./images-next/NationalRuralWaterAssociation.png" alt="National Rural Water Association logo">
+            <a href="/" style="margin-top: 2rem;" class="btn-primary-custom">Visit NRWA's Leasing Page</a>
         </div>
     </section>
     <!-- Quote Carousel Section -->
-    <section style="background-image: url('./images-next/quotes-bg.png'); margin-top: -30px;" class="quote-carousel-section clip-top">
-        <div  id="quote-carousel">
-          <div class="quote-slide">
+    <section style="background-image: url('./images-next/quotes-bg.png'); margin-top: -30px;" class="quote-carousel-section clip-top" role="region" aria-label="Testimonials carousel">
+        <div  id="quote-carousel" role="listbox" aria-live="polite">
+          <div class="quote-slide" role="option" aria-selected="true">
             <h2>"Because we're a smaller rural system, other lenders wouldn't offer us the same kind of flexibility we received from CoBank."</h2>
             <div>- Jason Fell, General Manager</div>
             <div>Saluda County Water and Sewer Authority</div>
           </div>
-          <div class="quote-slide hidden">
+          <div class="quote-slide hidden" role="option" aria-selected="false">
             <h2>"CoBank has been a great partner for more than 20 years, in part because they have the funds and expertise to respond to needs like these, and much faster than other funding sources."</h2>
             <div>- Angie Hammrich, General Manager</div>
             <div>WEB Water Development Association</div>
           </div>
         </div>
-        <button id="quote-prev">&#60;</button>
-        <button id="quote-next">&#62;</button>
+        <button id="quote-prev" aria-label="Previous testimonial">&#60;</button>
+        <button id="quote-next" aria-label="Next testimonial">&#62;</button>
     </section>
+    </main>
+
     <!-- Footer -->
     <footer class="footer" id="contact">
         <div class="footer-main">
             <div class="footer-col left">
-                <img class="footer-water-logo" src="./images-next/BecauseOfWater_white.png" alt="Because of Water">
-                <img id="nav-svg" src="./images-next/logo.svg" alt="CoBank Logo">
+                <div class="footer-water-logo-wrapper">
+                    <img class="footer-water-logo" src="./images-next/BecauseOfWater_white.png" alt="Because of Water logo text">
+                </div>
+                <img class="footer-cobank-logo" src="./images-next/logo.svg" alt="CoBank Logo">
                 <p class="footer-legal">©2011-2025 CoBank. All Rights Reserved.</p>
                 <p class="footer-legal">Farm Credit is an Equal Housing Lender, and an Equal Credit Opportunity Lender.</p>
                 <p class="footer-legal">
@@ -881,17 +901,19 @@
                 <div class="footer-contact">800-542-8072</div>
                 <div class="footer-social-label">More Contact Information</div>
                 <div class="footer-social">
-                    <a href="#"><img src="./images-next/linkedin.svg" alt="Linkedin Logo"></a>
-                    <a href="#"><img src="./images-next/facebook.svg" alt="Facebook Logo"></a>
-                    <a href="#"><img src="./images-next/instagram.svg" alt="Instagram Logo"></a>
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.653 32.229"><path id="x-twitter" d="M54.876,48h5.47L48.4,61.651,62.453,80.229h-11L42.829,68.964,32.975,80.229H27.5l12.775-14.6L26.8,48H38.08l7.786,10.3ZM52.955,76.96h3.029L36.43,51.1H33.176Z" transform="translate(-26.8 -48)" fill="#fff"/></svg></a>
+                    <a href="#" aria-label="CoBank on LinkedIn"><img src="./images-next/linkedin.svg" alt="LinkedIn Logo"></a>
+                    <a href="#" aria-label="CoBank on Facebook"><img src="./images-next/facebook.svg" alt="Facebook Logo"></a>
+                    <a href="#" aria-label="CoBank on Instagram"><img src="./images-next/instagram.svg" alt="Instagram Logo"></a>
+                    <a href="#" aria-label="CoBank on X (formerly Twitter)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.653 32.229" aria-hidden="true" focusable="false"><path id="x-twitter" d="M54.876,48h5.47L48.4,61.651,62.453,80.229h-11L42.829,68.964,32.975,80.229H27.5l12.775-14.6L26.8,48H38.08l7.786,10.3ZM52.955,76.96h3.029L36.43,51.1H33.176Z" transform="translate(-26.8 -48)" fill="#fff"/></svg></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom-row">
                 <span class="footer-bottom-text">Proud member of the Farm Credit System</span>
-                <img class="footer-bottom-logo" src="./images-next/clover.png" alt="Equal Housing Lender">
+                <div class="footer-bottom-logo-wrapper">
+                    <img class="footer-bottom-logo" src="./images-next/clover.png" alt="Equal Housing Lender">
+                </div>
             </div>
         </div>
         <svg style="width: 0px; height: 0px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
