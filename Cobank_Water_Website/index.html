@@ -20,7 +20,7 @@
         }
         /* Root Variables */
         :root {
-            --primary-color: #003865; /* Dark blue */
+            --primary-color: #005288; /* Dark blue */
             --secondary-color: #397B2B; /* Green */
             --light-gray: #f2f2f2;
             --mid-gray: #e5e5e5;
@@ -100,7 +100,7 @@
         .header {
             background-color: var(--primary-color);
             color: white;
-            padding: 15px 0;
+            padding: 35px 0;
             position: relative;
             width: 100%;
             z-index: 1000;
@@ -264,8 +264,8 @@
         }
         @media (max-width: 576px) {
             .footer-main, .footer-bottom {
-                padding-left: 10px;
-                padding-right: 10px;
+                padding-left: 18px;
+                padding-right: 18px;
             }
             .footer-bottom-row {
                 flex-direction: column;
@@ -394,6 +394,21 @@
         .btn-primary-custom {
             padding: 12px 48px;
             font-weight: 700;
+            background:#d6c096 ;
+            color: #1F1313;
+            border-radius: 0;
+            margin-bottom: 40px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-primary-custom:hover {
+            background: #F3F7DE;
+        }
+
+        .btn-primary-custom-2 {
+            padding: 12px 48px;
+            font-weight: 700;
             background: #017390;
             color: #fff;
             border-radius: 0;
@@ -402,7 +417,7 @@
             text-decoration: none;
         }
 
-        .btn-primary-custom:hover {
+        .btn-primary-custom-2:hover {
             background: #55a8e0;
         }
 
@@ -742,7 +757,7 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <img id="nav-svg" src="./images-next/logo.svg" alt="CoBank Logo">
+        <img id="nav-svg" src="./images-next/Logo.png" alt="CoBank Logo">
     </header>
 
     <main id="main-content">
@@ -754,7 +769,7 @@
         </div>
         <h1>Rural Communities Can Grow and Thrive</h1>
         <p>
-            Family restaurants need water. So do farmers and ranchers. Hospitals, schools and local shops — everyone needs water
+            Family restaurants need water. So do farmers and ranchers. Hospitals, schools and local shops — everyone needs water.
         </p>
       </div>
     </section>
@@ -788,7 +803,7 @@
             </div>
         </div>
     </section>
-    <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;" class="clip-bottom" aria-hidden="true"></div>
+    <div style="background-color: #1F1313; height: 30vh; width: 100%; z-index: 10; margin-top: -5px;" class="clip-bottom" aria-hidden="true"></div>
     <!-- Water Meter Section -->
     <section style="margin-top: 2rem; margin-bottom: 2rem;" class="text-media-section">
         <div class="text-media-content">
@@ -806,31 +821,31 @@
         <div class="features-grid-row">
           <div class="feature-item">
             <div class="feature-icon">
-              <img src="./images-next/icon-uplift.svg" alt="Uplift icon">
+              <img src="./images-next/Uplift.png" alt="Uplift icon">
             </div>
             <h3 class="feature-title">Lines<br>of Credit</h3>
             <p class="feature-description">Prepare for the unexpected with access to funds when needed.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <img src="./images-next/icon-radial.svg" alt="Radial icon">
+              <img src="./images-next/Radial.png" alt="Radial icon">
             </div>
             <h3 class="feature-title">Term Project<br>Financing</h3>
             <p class="feature-description">Take advantage of long-term financing with multiple advances.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <img src="./images-next/icon-finance.svg" alt="Finance icon">
+              <img src="./images-next/Finance.png" alt="Finance icon">
             </div>
             <h3 class="feature-title">USDA Interim<br>Financing</h3>
             <p class="feature-description">Leverage our extensive RD experience for streamlined construction funding.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">
-              <img src="./images-next/icon-stack.svg" alt="Stack icon">
+              <img src="./images-next/Stack.png" alt="Stack icon">
             </div>
             <h3 class="feature-title">Cash<br>Management</h3>
-            <p class="feature-description">Utilize idle funds and boost efficiency managing payables and receivables. </p>
+            <p class="feature-description">Utilize idle funds and boost the efficiency of managing payables and receivables.</p>
           </div>
         </div>
       </div>
@@ -848,25 +863,26 @@
                 Leasing gives you full control of how you manage your shorter term assets — on everything from equipment to water meters. You have the freedom to work with your preferred vendor — getting exactly what you want at the best price — with 100% financing. When the lease comes to an end, you have the option to return, replace or own the assets.
             </p>
             <img style="width: 25%; padding-bottom: 2rem; padding-top: 2rem; max-height: 200px; object-fit: contain;" src="./images-next/NationalRuralWaterAssociation.png" alt="National Rural Water Association logo">
-            <a href="/" style="margin-top: 2rem;" class="btn-primary-custom">Visit NRWA's Leasing Page</a>
+            <a href="/" style="margin-top: 2rem;" class="btn-primary-custom-2">Visit NRWA's Leasing Page</a>
         </div>
     </section>
     <!-- Quote Carousel Section -->
     <section style="background-image: url('./images-next/quotes-bg.png'); margin-top: -30px;" class="quote-carousel-section clip-top" role="region" aria-label="Testimonials carousel">
         <div  id="quote-carousel" role="listbox" aria-live="polite">
           <div class="quote-slide" role="option" aria-selected="true">
-            <h2>"Because we're a smaller rural system, other lenders wouldn't offer us the same kind of flexibility we received from CoBank."</h2>
+            <h2>&#x201C;Because we're a smaller rural system, other lenders wouldn't offer us the same kind of flexibility we received from CoBank.&#x201D;</h2>
             <div>- Jason Fell, General Manager</div>
             <div>Saluda County Water and Sewer Authority</div>
           </div>
           <div class="quote-slide hidden" role="option" aria-selected="false">
-            <h2>"CoBank has been a great partner for more than 20 years, in part because they have the funds and expertise to respond to needs like these, and much faster than other funding sources."</h2>
+            <h2>&#x201C;CoBank has been a great partner for more than 20 years, in part because they have the funds and expertise to respond to needs like these, and much faster than other funding sources.&#x201D;</h2>
             <div>- Angie Hammrich, General Manager</div>
             <div>WEB Water Development Association</div>
           </div>
         </div>
-        <button id="quote-prev" aria-label="Previous testimonial">&#60;</button>
-        <button id="quote-next" aria-label="Next testimonial">&#62;</button>
+
+        <button id="quote-prev" aria-label="Previous testimonial"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></button>
+        <button id="quote-next" aria-label="Next testimonial"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></button>
     </section>
     </main>
 
@@ -901,10 +917,10 @@
                 <div class="footer-contact">800-542-8072</div>
                 <div class="footer-social-label">More Contact Information</div>
                 <div class="footer-social">
-                    <a href="#" aria-label="CoBank on LinkedIn"><img src="./images-next/linkedin.svg" alt="LinkedIn Logo"></a>
-                    <a href="#" aria-label="CoBank on Facebook"><img src="./images-next/facebook.svg" alt="Facebook Logo"></a>
-                    <a href="#" aria-label="CoBank on Instagram"><img src="./images-next/instagram.svg" alt="Instagram Logo"></a>
-                    <a href="#" aria-label="CoBank on X (formerly Twitter)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.653 32.229" aria-hidden="true" focusable="false"><path id="x-twitter" d="M54.876,48h5.47L48.4,61.651,62.453,80.229h-11L42.829,68.964,32.975,80.229H27.5l12.775-14.6L26.8,48H38.08l7.786,10.3ZM52.955,76.96h3.029L36.43,51.1H33.176Z" transform="translate(-26.8 -48)" fill="#fff"/></svg></a>
+                    <a href="https://www.linkedin.com/company/cobank" aria-label="CoBank on LinkedIn"><img src="./images-next/Linkedin.png" alt="LinkedIn Logo"></a>
+                    <a href="https://www.facebook.com/CoBankACB" aria-label="CoBank on Facebook"><img src="./images-next/Facebook.png" alt="Facebook Logo"></a>
+                    <a href="https://www.instagram.com/cobankacb" aria-label="CoBank on Instagram"><img src="./images-next/Instagram.png" alt="Instagram Logo"></a>
+                    <a href="https://www.x.com/cobank" aria-label="CoBank on X (formally Twitter)"><img src="./images-next/X.png" alt="X Logo"></a>
                 </div>
             </div>
         </div>
