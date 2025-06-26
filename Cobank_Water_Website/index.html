@@ -13,7 +13,7 @@
     <style>
         @font-face {
             font-family: 'Glypha LT Std 75 Black';
-            src: url('./fonts/Glypha LT Std 75 Black.otf') format('opentype');
+            src: url('https://cobank-public.s3.us-west-2.amazonaws.com/Water_Website/Glypha+LT+Std+75+Black.otf') format('opentype');
             font-weight: 700;
             font-style: normal;
             font-display: swap;
@@ -899,7 +899,7 @@
                 <div class="footer-water-logo-wrapper">
                     <img class="footer-water-logo" src="./images-next/BecauseOfWater_white.png" alt="Because of Water logo text">
                 </div>
-                <img class="footer-cobank-logo" src="./images-next/logo.svg" alt="CoBank Logo">
+                <img class="footer-cobank-logo" src="./images-next/Logo.png" alt="CoBank Logo">
                 <p class="footer-legal">©2011-2025 CoBank. All Rights Reserved.</p>
                 <p class="footer-legal">Farm Credit is an Equal Housing Lender, and an Equal Credit Opportunity Lender.</p>
                 <p class="footer-legal">
@@ -1065,8 +1065,9 @@
       }
       window.addEventListener('DOMContentLoaded', function() {
         const canvas = document.getElementById('rive-canvas');
+
         riveInstance = new rive.Rive({
-          src: './rive/cobank2_min.riv',
+          src: 'https://cobank-public.s3.us-west-2.amazonaws.com/Water_Website/cobank2_min.riv',
           canvas: canvas,
           autoplay: true,
           layout: new rive.Layout({ fit: rive.Fit.Cover, alignment: rive.Alignment.Center }),
