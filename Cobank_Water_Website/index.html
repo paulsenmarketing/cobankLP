@@ -71,6 +71,9 @@
             p {
                 font-size: 1rem;
             }
+            .btn-primary-custom {
+                margin-bottom: 50px;
+            }
         }
 
         @media (min-width: 769px) {
@@ -85,6 +88,10 @@
             }
             p {
                 font-size: 1.2rem;
+            }
+
+            .btn-primary-custom {
+                margin-bottom: 100px;
             }
         }
         
@@ -397,7 +404,6 @@
             background:#d6c096 ;
             color: #1F1313;
             border-radius: 0;
-            margin-bottom: 40px;
             display: inline-block;
             text-decoration: none;
         }
@@ -794,7 +800,7 @@
                             <polygon points="18,14 36,24 18,34" fill="#22577A"/>
                         </svg>
                     </button>
-                    <iframe title="CoBank Water Video" src="https://player.vimeo.com/video/1062536141?h=9c0be7f5db&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1096076191?h=8018400b16&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Service Dog Salute Teaser"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
                 <p style="color: #F3F7DE;">
                     Access to water is a top priority for rural communities to grow and thrive. And with demand for water on the rise, rural water systems need access to diverse financial solutions to maintain and upgrade their infrastructure.
@@ -1018,6 +1024,28 @@
             showSlide(current);
             startAutoplay();
         })();
+
+        // Video play button logic
+        document.addEventListener('DOMContentLoaded', function() {
+            var playBtn = document.querySelector('.play-button');
+            if (playBtn) {
+                playBtn.addEventListener('click', function() {
+                    var container = this.closest('.video-absolute-container');
+                    var thumb = container.querySelector('img');
+                    var iframe = container.querySelector('iframe');
+                    this.style.display = 'none';
+                    if (thumb) thumb.style.display = 'none';
+                    if (iframe) {
+                        iframe.style.display = 'block';
+                        // Autoplay logic
+                        var src = iframe.src;
+                        if (!src.includes('autoplay=1')) {
+                            iframe.src = src + (src.includes('?') ? '&' : '?') + 'autoplay=1';
+                        }
+                    }
+                });
+            }
+        });
     </script>
     <script src="https://unpkg.com/@rive-app/canvas"></script>
     <script>
