@@ -283,54 +283,12 @@
             }
         }
 
-        /* New CSS rules for semantic classes */
-        .hero-water-section {
-            background: none;
-            min-height: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: start;
-            padding: 100px 0 0 0;
-            background-image: url('./images-next/hero-bg.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .hero-water-section > div {
-            background: rgba(255,255,255,0.0);
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero-water-section > div > div {
-            margin-bottom: 32px;
-        }
-
-        .hero-water-section h2 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            color: #22577A;
-            font-size: 2.2rem;
-            margin-bottom: 18px;
-        }
-
-        .hero-water-section p {
-            font-size: 1.3rem;
-            color: #22577A;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
         .video-section {
             height: 0;
             position: relative;
             z-index: 2;
             background: none;
             margin: 0 2rem;
-            padding: 0;
         }
 
         .video-section .container {
@@ -698,6 +656,11 @@
 }
 .clip-bottom {
     clip-path: url(#clip-bottom-mobile);
+    background-color: #1F1313;
+    width: 100%;
+    z-index: 10;
+    margin-top: -5px;
+    height: 30vh;
 }
 .clip-topAndBottom {
     clip-path: url(#clip-topAndBottom-mobile);
@@ -758,6 +721,33 @@
         text-align: center;
     }
 }
+
+/* Video spacer heights for different breakpoints */
+.video-spacer {
+    background-color: #1F1313;
+    width: 100%;
+    z-index: 10;
+    margin-top: -5px;
+    height: 36vh;
+}
+@media (max-width: 991px) {
+    .video-spacer {
+        height: 32vh;
+    }
+}
+@media (max-width: 480px) {
+    .video-spacer {
+        height: 35vh;
+    }
+}
+@media (max-width: 375px) {
+    .video-spacer {
+        height: 39vh;
+    }
+    .clip-bottom {
+        height: 40vh;
+    }
+}
     </style>
 </head>
 <body>
@@ -788,12 +778,12 @@
     <!-- Ground Image Section -->
     <section class="ground-image-section" aria-hidden="true"></section>
 
-    <div style="background-color: #1F1313; height: 25vh; width: 100%; z-index: 10; margin-top: -5px;" aria-hidden="true"></div> 
+    <div class="video-spacer" aria-hidden="true"></div> 
     <section class="video-section">
         <div class="container">
             <div class="video-absolute-container">
                 <div>
-                    <img src="./images-next/Vimeo-Thumb.png" alt="Video thumbnail for water infrastructure video">
+                    <img src="./images-next/BOW_VideoThumb.png" alt="Video thumbnail for water infrastructure video">
                     <button class="play-button" aria-label="Play video">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                             <circle cx="24" cy="24" r="24" fill="none"/>
@@ -809,7 +799,7 @@
             </div>
         </div>
     </section>
-    <div style="background-color: #1F1313; height: 30vh; width: 100%; z-index: 10; margin-top: -5px;" class="clip-bottom" aria-hidden="true"></div>
+    <div class="clip-bottom" aria-hidden="true"></div>
     <!-- Water Meter Section -->
     <section style="margin-top: 2rem; margin-bottom: 2rem;" class="text-media-section">
         <div class="text-media-content">
